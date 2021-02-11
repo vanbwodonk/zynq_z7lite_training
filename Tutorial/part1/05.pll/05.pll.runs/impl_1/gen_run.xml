@@ -1,74 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1613016668">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-PWR-SUM" Name="pll_led_power_summary_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="pll_led_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="pll_led_drc_routed.rpx"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="pll_led_routed_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pll_led_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DCP" Name="pll_led_routed.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pll_led_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-ERROR-DCP" Name="pll_led_routed_error.dcp"/>
+  <File Type="ROUTE-PWR" Name="pll_led_power_routed.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="pll_led_physopt.dcp"/>
+  <File Type="ROUTE-DRC-PB" Name="pll_led_drc_routed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="pll_led_postplace_pwropt.dcp"/>
+  <File Type="ROUTE-DRC" Name="pll_led_drc_routed.rpt"/>
+  <File Type="OPT-DRC" Name="pll_led_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="pll_led_opt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="pll_led_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="pll_led_control_sets_placed.rpt"/>
+  <File Type="PA-TCL" Name="pll_led.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="pll_led_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="pll_led_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="pll_led_bus_skew_routed.rpx"/>
+  <File Type="OPT-HWDEF" Name="pll_led.hwdef"/>
+  <File Type="PLACE-UTIL-PB" Name="pll_led_utilization_placed.pb"/>
+  <File Type="BG-BIT" Name="pll_led.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="pll_led_route_status.pb"/>
+  <File Type="BG-BIN" Name="pll_led.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="pll_led_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="pll_led.msk"/>
+  <File Type="ROUTE-TIMING-PB" Name="pll_led_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="pll_led.rbt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="pll_led_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="pll_led.nky"/>
+  <File Type="BITSTR-BMM" Name="pll_led_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="pll_led_clock_utilization_routed.rpt"/>
   <File Type="BG-DRC" Name="pll_led.drc"/>
+  <File Type="BITSTR-MMI" Name="pll_led.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="pll_led_bus_skew_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-BGN" Name="pll_led.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="pll_led.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="PLACE-UTIL" Name="pll_led_utilization_placed.rpt"/>
   <File Type="BITSTR-LTX" Name="pll_led.ltx"/>
-  <File Type="BITSTR-MMI" Name="pll_led.mmi"/>
-  <File Type="BITSTR-BMM" Name="pll_led_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="pll_led.nky"/>
-  <File Type="BITSTR-RBT" Name="pll_led.rbt"/>
-  <File Type="BITSTR-MSK" Name="pll_led.msk"/>
-  <File Type="BG-BIN" Name="pll_led.bin"/>
-  <File Type="BG-BIT" Name="pll_led.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="pll_led_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="pll_led_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="pll_led_bus_skew_postroute_physopted.rpt"/>
   <File Type="RDI-RDI" Name="pll_led.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="pll_led_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="pll_led_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="pll_led_timing_summary_postroute_physopted.rpt"/>
+  <File Type="PLACE-IO" Name="pll_led_io_placed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pll_led_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="pll_led_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="pll_led_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="pll_led_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="pll_led_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="pll_led_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="pll_led_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="pll_led_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="pll_led_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="pll_led_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="pll_led_power_routed.rpx"/>
-  <File Type="PLACE-UTIL-PB" Name="pll_led_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="pll_led_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="pll_led_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="pll_led_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="pll_led_placed.dcp"/>
   <File Type="PWROPT-DCP" Name="pll_led_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="pll_led_timing_summary_opted.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="pll_led_incremental_reuse_placed.rpt"/>
-  <File Type="OPT-HWDEF" Name="pll_led.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="pll_led_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="pll_led_reports.tcl"/>
-  <File Type="PWROPT-DRC" Name="pll_led_drc_pwropted.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="pll_led_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="pll_led.tcl"/>
-  <File Type="INIT-TIMING" Name="pll_led_timing_summary_init.rpt"/>
-  <File Type="PLACE-CTRL" Name="pll_led_control_sets_placed.rpt"/>
-  <File Type="PWROPT-TIMING" Name="pll_led_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="pll_led_incremental_reuse_pre_placed.rpt"/>
-  <File Type="OPT-DCP" Name="pll_led_opt.dcp"/>
-  <File Type="OPT-DRC" Name="pll_led_drc_opted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="pll_led_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-TIMING" Name="pll_led_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="pll_led_drc_routed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="pll_led_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="pll_led_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="pll_led_drc_routed.pb"/>
-  <File Type="PHYSOPT-DCP" Name="pll_led_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="pll_led_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="pll_led_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-PWR" Name="pll_led_power_routed.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="pll_led_routed_error.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pll_led_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DCP" Name="pll_led_routed.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pll_led_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="pll_led_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC-RPX" Name="pll_led_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="pll_led_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="pll_led_power_summary_routed.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/pll_led.v">
@@ -103,9 +84,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
