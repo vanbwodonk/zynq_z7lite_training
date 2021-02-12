@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1613149966">
+  <File Type="PA-TCL" Name="hdmi_trans_top.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hdmi_trans_top_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hdmi_trans_top_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hdmi_trans_top_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="hdmi_trans_top_opt.dcp"/>
+  <File Type="OPT-DRC" Name="hdmi_trans_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hdmi_trans_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hdmi_trans_top_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="hdmi_trans_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hdmi_trans_top_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hdmi_trans_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hdmi_trans_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hdmi_trans_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hdmi_trans_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hdmi_trans_top_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="hdmi_trans_top_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hdmi_trans_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hdmi_trans_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hdmi_trans_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hdmi_trans_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hdmi_trans_top_drc_routed.pb"/>
+  <File Type="BG-BIT" Name="hdmi_trans_top.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="hdmi_trans_top_route_status.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hdmi_trans_top_methodology_drc_routed.rpt"/>
+  <File Type="BG-BIN" Name="hdmi_trans_top.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hdmi_trans_top_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="hdmi_trans_top.msk"/>
+  <File Type="ROUTE-TIMING-PB" Name="hdmi_trans_top_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="hdmi_trans_top.rbt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hdmi_trans_top_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="hdmi_trans_top.nky"/>
+  <File Type="BITSTR-BMM" Name="hdmi_trans_top_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="hdmi_trans_top_clock_utilization_routed.rpt"/>
+  <File Type="BG-DRC" Name="hdmi_trans_top.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hdmi_trans_top_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="hdmi_trans_top.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hdmi_trans_top_bus_skew_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="hdmi_trans_top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="hdmi_trans_top.sysdef"/>
+  <File Type="BITSTR-LTX" Name="hdmi_trans_top.ltx"/>
+  <File Type="RDI-RDI" Name="hdmi_trans_top.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hdmi_trans_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hdmi_trans_top_postroute_physopt.dcp"/>
+  <File Type="ROUTE-STATUS" Name="hdmi_trans_top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="hdmi_trans_top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="hdmi_trans_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="hdmi_trans_top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hdmi_trans_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="hdmi_trans_top_drc_routed.rpx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/encode.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_trans.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/parallel_to_serial.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_shift.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdmi_trans_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hdmi_trans_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/top_pin.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clock"/>
+</GenRun>

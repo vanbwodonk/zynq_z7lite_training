@@ -1,0 +1,69 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Feb 13 00:13:08 2021
+| Host         : manjaro running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file hdmi_trans_top_control_sets_placed.rpt
+| Design       : hdmi_trans_top
+| Device       : xc7z020
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |     4 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     13 |            1 |
+|    16+ |            3 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              47 |           14 |
+| No           | No                    | Yes                    |              29 |           15 |
+| No           | Yes                   | No                     |              19 |            9 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              37 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+-----------------------------+---------------------------------+------------------+----------------+
+|        Clock Signal       |        Enable Signal        |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++---------------------------+-----------------------------+---------------------------------+------------------+----------------+
+|  inst_clock/inst/clk_out1 | inst_vga_shift/cnt_v        | inst_vga_shift/cnt_v[0]_i_1_n_0 |                4 |             13 |
+|  inst_clock/inst/clk_out1 | inst_vga_shift/y[0]_i_1_n_0 | inst_vga_shift/rst              |                6 |             24 |
+|  inst_clock/inst/clk_out1 |                             |                                 |               14 |             47 |
+|  inst_clock/inst/clk_out1 |                             | inst_vga_shift/rst              |               24 |             48 |
++---------------------------+-----------------------------+---------------------------------+------------------+----------------+
+
+

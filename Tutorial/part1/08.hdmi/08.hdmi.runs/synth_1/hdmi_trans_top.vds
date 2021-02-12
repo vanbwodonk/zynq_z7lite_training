@@ -1,0 +1,558 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Feb 13 00:12:19 2021
+# Process ID: 96221
+# Current directory: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1
+# Command line: vivado -log hdmi_trans_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_trans_top.tcl
+# Log file: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/hdmi_trans_top.vds
+# Journal file: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source hdmi_trans_top.tcl -notrace
+Command: synth_design -top hdmi_trans_top -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 96233 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1350.395 ; gain = 25.770 ; free physical = 487 ; free virtual = 8165
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hdmi_trans_top' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans_top.v:45]
+	Parameter CNT_MAX bound to: 1000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clock' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/.Xil/Vivado-96221-manjaro/realtime/clock_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clock' (1#1) [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/.Xil/Vivado-96221-manjaro/realtime/clock_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vga_shift' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/vga_shift.v:46]
+	Parameter H_TOTAL bound to: 2199 - type: integer 
+	Parameter H_SYNC bound to: 43 - type: integer 
+	Parameter H_START bound to: 189 - type: integer 
+	Parameter H_END bound to: 2109 - type: integer 
+	Parameter V_TOTAL bound to: 1124 - type: integer 
+	Parameter V_SYNC bound to: 4 - type: integer 
+	Parameter V_START bound to: 40 - type: integer 
+	Parameter V_END bound to: 1120 - type: integer 
+	Parameter SQUARE_X bound to: 500 - type: integer 
+	Parameter SQUARE_Y bound to: 500 - type: integer 
+	Parameter SCREEN_X bound to: 1920 - type: integer 
+	Parameter SCREEN_Y bound to: 1080 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_shift' (2#1) [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/vga_shift.v:46]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_trans' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans.v:44]
+INFO: [Synth 8-6157] synthesizing module 'encode' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:46]
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+INFO: [Synth 8-6155] done synthesizing module 'encode' (3#1) [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:46]
+INFO: [Synth 8-6157] synthesizing module 'parallel_to_serial' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/parallel_to_serial.v:44]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (4#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (5#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (5#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_to_serial' (6#1) [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/parallel_to_serial.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_trans' (7#1) [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans.v:44]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans_top.v:78]
+WARNING: [Synth 8-6014] Unused sequential element hdmi_oen_r_reg was removed.  [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans_top.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_trans_top' (8#1) [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans_top.v:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1395.145 ; gain = 70.520 ; free physical = 504 ; free virtual = 8184
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1395.145 ; gain = 70.520 ; free physical = 505 ; free virtual = 8184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1395.145 ; gain = 70.520 ; free physical = 505 ; free virtual = 8184
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/.Xil/Vivado-96221-manjaro/clock/clock/clock_in_context.xdc] for cell 'inst_clock'
+Finished Parsing XDC File [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/.Xil/Vivado-96221-manjaro/clock/clock/clock_in_context.xdc] for cell 'inst_clock'
+Parsing XDC File [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc:2]
+Finished Parsing XDC File [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_trans_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_trans_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.527 ; gain = 0.000 ; free physical = 220 ; free virtual = 7900
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.527 ; gain = 0.000 ; free physical = 222 ; free virtual = 7901
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS: 4 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.527 ; gain = 0.000 ; free physical = 222 ; free virtual = 7901
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.527 ; gain = 0.000 ; free physical = 222 ; free virtual = 7901
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 297 ; free virtual = 7977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 297 ; free virtual = 7977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/.Xil/Vivado-96221-manjaro/clock/clock/clock_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/.Xil/Vivado-96221-manjaro/clock/clock/clock_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for inst_clock. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 299 ; free virtual = 7978
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/vga_shift.v:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/vga_shift.v:178]
+INFO: [Synth 8-5546] ROM "cnt_v" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vpg_hs" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_v" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vpg_hs" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "rgb" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:162]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 295 ; free virtual = 7975
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 3     
+	   5 Input      5 Bit       Adders := 6     
+	   4 Input      5 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               24 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   5 Input     24 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 12    
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 31    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vga_shift 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 3     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   5 Input     24 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module encode 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_r/c1_q_reg' into 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:141]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_r/c1_reg_reg' into 'inst_hdmi_trans/inst_encode_chn_r/c0_reg_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:142]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_g/de_q_reg' into 'inst_hdmi_trans/inst_encode_chn_r/de_q_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:136]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_g/de_reg_reg' into 'inst_hdmi_trans/inst_encode_chn_r/de_reg_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:137]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_g/c0_q_reg' into 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:139]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_g/c0_reg_reg' into 'inst_hdmi_trans/inst_encode_chn_r/c0_reg_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:140]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_g/c1_q_reg' into 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:141]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_g/c1_reg_reg' into 'inst_hdmi_trans/inst_encode_chn_r/c0_reg_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:142]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_b/de_q_reg' into 'inst_hdmi_trans/inst_encode_chn_r/de_q_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:136]
+INFO: [Synth 8-4471] merging register 'inst_hdmi_trans/inst_encode_chn_b/de_reg_reg' into 'inst_hdmi_trans/inst_encode_chn_r/de_reg_reg' [/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v:137]
+INFO: [Synth 8-5546] ROM "inst_vga_shift/cnt_v" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_vga_shift/vpg_hs" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[7]' (FDR) to 'inst_vga_shift/rgb_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[6]' (FDR) to 'inst_vga_shift/rgb_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[4]' (FDR) to 'inst_vga_shift/rgb_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[5]' (FDR) to 'inst_vga_shift/rgb_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[3]' (FDR) to 'inst_vga_shift/rgb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[2]' (FDR) to 'inst_vga_shift/rgb_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[15]' (FDR) to 'inst_vga_shift/rgb_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[14]' (FDR) to 'inst_vga_shift/rgb_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[12]' (FDR) to 'inst_vga_shift/rgb_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[13]' (FDR) to 'inst_vga_shift/rgb_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[11]' (FDR) to 'inst_vga_shift/rgb_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[10]' (FDR) to 'inst_vga_shift/rgb_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[23]' (FDR) to 'inst_vga_shift/rgb_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[22]' (FDR) to 'inst_vga_shift/rgb_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[20]' (FDR) to 'inst_vga_shift/rgb_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[21]' (FDR) to 'inst_vga_shift/rgb_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[19]' (FDR) to 'inst_vga_shift/rgb_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[18]' (FDR) to 'inst_vga_shift/rgb_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst_vga_shift/rgb_reg[17]' (FDR) to 'inst_vga_shift/rgb_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[7]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[6]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[5]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[4]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[3]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[7]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[6]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[5]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[4]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[3]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[7]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[6]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[5]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[4]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[3]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[1]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_hdmi_trans/inst_encode_chn_r/c0_q_reg )
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/n0q_m_reg[0]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/n0q_m_reg[0]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n0q_m_reg[0]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/c0_reg_reg' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n1d_reg[0]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n1d_reg[3]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/din_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n1d_reg[1]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n1d_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_hdmi_trans/inst_encode_chn_r/c0_q_reg )
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/c0_q_reg' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[0]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[7]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[6]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[5]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[4]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[3]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[1]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/q_m_reg_reg[0]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n0q_m_reg[1]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[1]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/n0q_m_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_hdmi_trans/inst_encode_chn_r/n1q_m_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[7]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[6]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[5]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[4]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[3]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[1]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_r/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[7]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[5]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[4]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[6]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[7]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[5]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[4]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/dout_reg[6]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_g/dout_reg[2]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 274 ; free virtual = 7956
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'inst_clock/clk_out1' to pin 'inst_clock/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'inst_clock/clk_out2' to pin 'inst_clock/bbstub_clk_out2/O'
+WARNING: [Synth 8-565] redefining clock 'clk'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 147 ; free virtual = 7826
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 135 ; free virtual = 7818
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[3]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_b/q_m_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[7]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[5]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[2]' (FD) to 'inst_hdmi_trans/inst_encode_chn_g/q_m_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[3]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_b/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/dout_reg[7]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_g/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_hdmi_trans/inst_encode_chn_g/dout_reg[5]' (FDC) to 'inst_hdmi_trans/inst_encode_chn_g/dout_reg[3]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clock         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |clock       |     1|
+|2     |CARRY4      |    31|
+|3     |LUT1        |    13|
+|4     |LUT2        |    84|
+|5     |LUT3        |    43|
+|6     |LUT4        |    55|
+|7     |LUT5        |    36|
+|8     |LUT6        |    66|
+|9     |OSERDESE2   |     4|
+|10    |OSERDESE2_1 |     4|
+|11    |FDCE        |    29|
+|12    |FDRE        |   103|
+|13    |IBUF        |     1|
+|14    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+----------------------------------+---------------------+------+
+|      |Instance                          |Module               |Cells |
++------+----------------------------------+---------------------+------+
+|1     |top                               |                     |   476|
+|2     |  inst_hdmi_trans                 |hdmi_trans           |   199|
+|3     |    inst_encode_chn_b             |encode               |    78|
+|4     |    inst_encode_chn_g             |encode_0             |    77|
+|5     |    inst_encode_chn_r             |encode_1             |    32|
+|6     |    inst_parallel_to_serial_chn_b |parallel_to_serial   |     3|
+|7     |    inst_parallel_to_serial_chn_g |parallel_to_serial_2 |     3|
+|8     |    inst_parallel_to_serial_chn_r |parallel_to_serial_3 |     3|
+|9     |    inst_parallel_to_serial_clk   |parallel_to_serial_4 |     3|
+|10    |  inst_vga_shift                  |vga_shift            |   273|
++------+----------------------------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 156 ; free virtual = 7823
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1780.527 ; gain = 70.520 ; free physical = 213 ; free virtual = 7881
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1780.527 ; gain = 455.902 ; free physical = 213 ; free virtual = 7881
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.527 ; gain = 0.000 ; free physical = 154 ; free virtual = 7821
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+139 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1780.527 ; gain = 456.133 ; free physical = 212 ; free virtual = 7879
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1780.527 ; gain = 0.000 ; free physical = 212 ; free virtual = 7879
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/hdmi_trans_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hdmi_trans_top_utilization_synth.rpt -pb hdmi_trans_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 13 00:12:39 2021...
