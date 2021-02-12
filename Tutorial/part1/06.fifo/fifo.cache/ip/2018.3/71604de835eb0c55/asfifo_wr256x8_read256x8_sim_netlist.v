@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Fri Feb 12 18:01:19 2021
+// Date        : Fri Feb 12 18:01:18 2021
 // Host        : manjaro running 64-bit Manjaro Linux
-// Command     : write_verilog -force -mode funcsim
-//               /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ asfifo_wr256x8_read256x8_sim_netlist.v
 // Design      : asfifo_wr256x8_read256x8
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@
 
 (* CHECK_LICENSE_TYPE = "asfifo_wr256x8_read256x8,fifo_generator_v13_2_3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v13_2_3,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
-module asfifo_wr256x8_read256x8
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (wr_clk,
     rd_clk,
     din,
@@ -366,7 +366,7 @@ module asfifo_wr256x8_read256x8
   (* C_WR_PNTR_WIDTH_WDCH = "10" *) 
   (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
   (* C_WR_RESPONSE_LATENCY = "1" *) 
-  asfifo_wr256x8_read256x8_fifo_generator_v13_2_3 U0
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_2_3 U0
        (.almost_empty(NLW_U0_almost_empty_UNCONNECTED),
         .almost_full(NLW_U0_almost_full_UNCONNECTED),
         .axi_ar_data_count(NLW_U0_axi_ar_data_count_UNCONNECTED[4:0]),
@@ -600,11 +600,10 @@ module asfifo_wr256x8_read256x8
         .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
 endmodule
 
-(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
-(* REG_OUTPUT = "1" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-(* VERSION = "0" *) (* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "GRAY" *) 
-module asfifo_wr256x8_read256x8_xpm_cdc_gray
+(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* REG_OUTPUT = "1" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
+(* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_xpm_cdc_gray
    (src_clk,
     src_in_bin,
     dest_clk,
@@ -971,7 +970,7 @@ endmodule
 (* REG_OUTPUT = "1" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
 (* VERSION = "0" *) (* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) 
 (* xpm_cdc = "GRAY" *) 
-module asfifo_wr256x8_read256x8_xpm_cdc_gray__2
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_xpm_cdc_gray__2
    (src_clk,
     src_in_bin,
     dest_clk,
@@ -1334,8 +1333,7 @@ module asfifo_wr256x8_read256x8_xpm_cdc_gray__2
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
-module asfifo_wr256x8_read256x8_blk_mem_gen_generic_cstr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_generic_cstr
    (D,
     rd_clk,
     wr_clk,
@@ -1362,7 +1360,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_generic_cstr
   wire rd_clk;
   wire wr_clk;
 
-  asfifo_wr256x8_read256x8_blk_mem_gen_prim_width \ramloop[0].ram.r 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(E),
@@ -1373,8 +1371,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_generic_cstr
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module asfifo_wr256x8_read256x8_blk_mem_gen_prim_width
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_width
    (D,
     rd_clk,
     wr_clk,
@@ -1401,7 +1398,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_prim_width
   wire rd_clk;
   wire wr_clk;
 
-  asfifo_wr256x8_read256x8_blk_mem_gen_prim_wrapper \prim_noinit.ram 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_wrapper \prim_noinit.ram 
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_0 (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(E),
@@ -1412,8 +1409,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_prim_width
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module asfifo_wr256x8_read256x8_blk_mem_gen_prim_wrapper
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_wrapper
    (D,
     rd_clk,
     wr_clk,
@@ -1594,8 +1590,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_prim_wrapper
         .WEBWE({E,E,E,E}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
-module asfifo_wr256x8_read256x8_blk_mem_gen_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_top
    (D,
     rd_clk,
     wr_clk,
@@ -1622,7 +1617,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_top
   wire rd_clk;
   wire wr_clk;
 
-  asfifo_wr256x8_read256x8_blk_mem_gen_generic_cstr \valid.cstr 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_generic_cstr \valid.cstr 
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(E),
@@ -1633,8 +1628,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_top
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) 
-module asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_2
    (D,
     rd_clk,
     wr_clk,
@@ -1661,7 +1655,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2
   wire rd_clk;
   wire wr_clk;
 
-  asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(E),
@@ -1672,8 +1666,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
-module asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2_synth
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_2_synth
    (D,
     rd_clk,
     wr_clk,
@@ -1700,7 +1693,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2_synth
   wire rd_clk;
   wire wr_clk;
 
-  asfifo_wr256x8_read256x8_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(E),
@@ -1711,8 +1704,7 @@ module asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2_synth
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "clk_x_pntrs" *) 
-module asfifo_wr256x8_read256x8_clk_x_pntrs
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs
    (wr_en_0,
     WR_PNTR_RD,
     wr_en,
@@ -1841,7 +1833,7 @@ module asfifo_wr256x8_read256x8_clk_x_pntrs
   (* WIDTH = "8" *) 
   (* XPM_CDC = "GRAY" *) 
   (* XPM_MODULE = "TRUE" *) 
-  asfifo_wr256x8_read256x8_xpm_cdc_gray rd_pntr_cdc_inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_xpm_cdc_gray rd_pntr_cdc_inst
        (.dest_clk(wr_clk),
         .dest_out_bin(p_23_out),
         .src_clk(rd_clk),
@@ -1855,15 +1847,14 @@ module asfifo_wr256x8_read256x8_clk_x_pntrs
   (* WIDTH = "8" *) 
   (* XPM_CDC = "GRAY" *) 
   (* XPM_MODULE = "TRUE" *) 
-  asfifo_wr256x8_read256x8_xpm_cdc_gray__2 wr_pntr_cdc_inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_xpm_cdc_gray__2 wr_pntr_cdc_inst
        (.dest_clk(rd_clk),
         .dest_out_bin(WR_PNTR_RD),
         .src_clk(wr_clk),
         .src_in_bin(\src_gray_ff_reg[7] ));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
-module asfifo_wr256x8_read256x8_fifo_generator_ramfifo
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
    (empty,
     full,
     dout,
@@ -1900,7 +1891,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_ramfifo
   wire wr_en;
   wire [7:0]wr_pntr_plus2;
 
-  asfifo_wr256x8_read256x8_clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
        (.Q(p_13_out),
         .WR_PNTR_RD(p_22_out),
         .out(\gntv_or_sync_fifo.gl0.wr_n_1 ),
@@ -1911,7 +1902,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_ramfifo
         .wr_clk(wr_clk),
         .wr_en(wr_en),
         .wr_en_0(\gntv_or_sync_fifo.gcx.clkx_n_0 ));
-  asfifo_wr256x8_read256x8_rd_logic \gntv_or_sync_fifo.gl0.rd 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic \gntv_or_sync_fifo.gl0.rd 
        (.E(p_5_out),
         .Q(p_0_out),
         .WR_PNTR_RD(p_22_out),
@@ -1919,7 +1910,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_ramfifo
         .ram_rd_en_i(ram_rd_en_i),
         .rd_clk(rd_clk),
         .rd_en(rd_en));
-  asfifo_wr256x8_read256x8_wr_logic \gntv_or_sync_fifo.gl0.wr 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic \gntv_or_sync_fifo.gl0.wr 
        (.E(p_18_out),
         .Q(wr_pntr_plus2),
         .full(full),
@@ -1929,7 +1920,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_ramfifo
         .ram_full_fb_i_reg(\gntv_or_sync_fifo.gcx.clkx_n_0 ),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-  asfifo_wr256x8_read256x8_memory \gntv_or_sync_fifo.mem 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory \gntv_or_sync_fifo.mem 
        (.\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (p_12_out),
         .E(p_18_out),
         .Q(p_0_out),
@@ -1941,8 +1932,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_ramfifo
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
-module asfifo_wr256x8_read256x8_fifo_generator_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top
    (empty,
     full,
     dout,
@@ -1969,7 +1959,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_top
   wire wr_clk;
   wire wr_en;
 
-  asfifo_wr256x8_read256x8_fifo_generator_ramfifo \grf.rf 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo \grf.rf 
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -2047,8 +2037,8 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "8" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_3" *) 
-module asfifo_wr256x8_read256x8_fifo_generator_v13_2_3
+(* C_WR_RESPONSE_LATENCY = "1" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_2_3
    (backup,
     backup_marker,
     clk,
@@ -3046,7 +3036,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_v13_2_3
        (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
-  asfifo_wr256x8_read256x8_fifo_generator_v13_2_3_synth inst_fifo_gen
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_2_3_synth inst_fifo_gen
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -3057,8 +3047,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_v13_2_3
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_3_synth" *) 
-module asfifo_wr256x8_read256x8_fifo_generator_v13_2_3_synth
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_2_3_synth
    (empty,
     full,
     dout,
@@ -3085,7 +3074,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_v13_2_3_synth
   wire wr_clk;
   wire wr_en;
 
-  asfifo_wr256x8_read256x8_fifo_generator_top \gconvfifo.rf 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top \gconvfifo.rf 
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -3096,8 +3085,7 @@ module asfifo_wr256x8_read256x8_fifo_generator_v13_2_3_synth
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
-module asfifo_wr256x8_read256x8_memory
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory
    (dout,
     rd_clk,
     wr_clk,
@@ -3128,7 +3116,7 @@ module asfifo_wr256x8_read256x8_memory
   wire rd_clk;
   wire wr_clk;
 
-  asfifo_wr256x8_read256x8_blk_mem_gen_v8_4_2 \gbm.gbmg.gbmga.ngecc.bmg 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_4_2 \gbm.gbmg.gbmga.ngecc.bmg 
        (.D(doutb),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(E),
@@ -3203,8 +3191,7 @@ module asfifo_wr256x8_read256x8_memory
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
-module asfifo_wr256x8_read256x8_rd_bin_cntr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr
    (\dest_out_bin_ff_reg[5] ,
     Q,
     E,
@@ -3516,8 +3503,7 @@ module asfifo_wr256x8_read256x8_rd_bin_cntr
         .O(ram_empty_i_i_9_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
-module asfifo_wr256x8_read256x8_rd_fwft
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft
    (empty,
     ram_rd_en_i,
     E,
@@ -3705,8 +3691,7 @@ module asfifo_wr256x8_read256x8_rd_fwft
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
-module asfifo_wr256x8_read256x8_rd_logic
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic
    (empty,
     Q,
     ram_rd_en_i,
@@ -3733,7 +3718,7 @@ module asfifo_wr256x8_read256x8_rd_logic
   wire rd_en;
   wire rpntr_n_0;
 
-  asfifo_wr256x8_read256x8_rd_fwft \gr1.gr1_int.rfwft 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft \gr1.gr1_int.rfwft 
        (.E(E),
         .empty(empty),
         .out(p_2_out),
@@ -3741,11 +3726,11 @@ module asfifo_wr256x8_read256x8_rd_logic
         .ram_rd_en_i(ram_rd_en_i),
         .rd_clk(rd_clk),
         .rd_en(rd_en));
-  asfifo_wr256x8_read256x8_rd_status_flags_as \gras.rsts 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as \gras.rsts 
        (.out(p_2_out),
         .ram_empty_i_reg_0(rpntr_n_0),
         .rd_clk(rd_clk));
-  asfifo_wr256x8_read256x8_rd_bin_cntr rpntr
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr rpntr
        (.E(p_7_out),
         .Q(Q),
         .WR_PNTR_RD(WR_PNTR_RD),
@@ -3753,8 +3738,7 @@ module asfifo_wr256x8_read256x8_rd_logic
         .rd_clk(rd_clk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_as" *) 
-module asfifo_wr256x8_read256x8_rd_status_flags_as
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as
    (out,
     ram_empty_i_reg_0,
     rd_clk);
@@ -3792,8 +3776,7 @@ module asfifo_wr256x8_read256x8_rd_status_flags_as
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
-module asfifo_wr256x8_read256x8_wr_bin_cntr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr
    (Q,
     \gic0.gc0.count_d1_reg[7]_0 ,
     \gic0.gc0.count_d2_reg[7]_0 ,
@@ -4081,8 +4064,7 @@ module asfifo_wr256x8_read256x8_wr_bin_cntr
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
-module asfifo_wr256x8_read256x8_wr_logic
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic
    (full,
     out,
     E,
@@ -4112,14 +4094,14 @@ module asfifo_wr256x8_read256x8_wr_logic
   wire wr_clk;
   wire wr_en;
 
-  asfifo_wr256x8_read256x8_wr_status_flags_as \gwas.wsts 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as \gwas.wsts 
        (.E(E),
         .full(full),
         .out(out),
         .ram_full_fb_i_reg_0(ram_full_fb_i_reg),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-  asfifo_wr256x8_read256x8_wr_bin_cntr wpntr
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr wpntr
        (.E(E),
         .Q(Q),
         .\gic0.gc0.count_d1_reg[7]_0 (\gic0.gc0.count_d1_reg[7] ),
@@ -4127,8 +4109,7 @@ module asfifo_wr256x8_read256x8_wr_logic
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_as" *) 
-module asfifo_wr256x8_read256x8_wr_status_flags_as
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as
    (full,
     out,
     E,

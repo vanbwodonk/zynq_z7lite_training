@@ -54,7 +54,6 @@
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module asfifo_wr256x8_read256x8 (
-  rst,
   wr_clk,
   rd_clk,
   din,
@@ -62,12 +61,9 @@ module asfifo_wr256x8_read256x8 (
   rd_en,
   dout,
   full,
-  empty,
-  wr_rst_busy,
-  rd_rst_busy
+  empty
 );
 
-input wire rst;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME write_clk, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 write_clk CLK" *)
 input wire wr_clk;
@@ -86,8 +82,6 @@ output wire [7 : 0] dout;
 output wire full;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
-output wire wr_rst_busy;
-output wire rd_rst_busy;
 
   fifo_generator_v13_2_3 #(
     .C_COMMON_CLOCK(0),
@@ -100,7 +94,7 @@ output wire rd_rst_busy;
     .C_DOUT_WIDTH(8),
     .C_ENABLE_RLOCS(0),
     .C_FAMILY("zynq"),
-    .C_FULL_FLAGS_RST_VAL(1),
+    .C_FULL_FLAGS_RST_VAL(0),
     .C_HAS_ALMOST_EMPTY(0),
     .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
@@ -110,7 +104,7 @@ output wire rd_rst_busy;
     .C_HAS_OVERFLOW(0),
     .C_HAS_RD_DATA_COUNT(0),
     .C_HAS_RD_RST(0),
-    .C_HAS_RST(1),
+    .C_HAS_RST(0),
     .C_HAS_SRST(0),
     .C_HAS_UNDERFLOW(0),
     .C_HAS_VALID(0),
@@ -123,21 +117,21 @@ output wire rd_rst_busy;
     .C_MIF_FILE_NAME("BlankString"),
     .C_OPTIMIZATION_MODE(0),
     .C_OVERFLOW_LOW(0),
-    .C_PRELOAD_LATENCY(1),
-    .C_PRELOAD_REGS(0),
+    .C_PRELOAD_LATENCY(0),
+    .C_PRELOAD_REGS(1),
     .C_PRIM_FIFO_TYPE("512x36"),
-    .C_PROG_EMPTY_THRESH_ASSERT_VAL(2),
-    .C_PROG_EMPTY_THRESH_NEGATE_VAL(3),
+    .C_PROG_EMPTY_THRESH_ASSERT_VAL(4),
+    .C_PROG_EMPTY_THRESH_NEGATE_VAL(5),
     .C_PROG_EMPTY_TYPE(0),
-    .C_PROG_FULL_THRESH_ASSERT_VAL(253),
-    .C_PROG_FULL_THRESH_NEGATE_VAL(252),
+    .C_PROG_FULL_THRESH_ASSERT_VAL(255),
+    .C_PROG_FULL_THRESH_NEGATE_VAL(254),
     .C_PROG_FULL_TYPE(0),
     .C_RD_DATA_COUNT_WIDTH(8),
     .C_RD_DEPTH(256),
     .C_RD_FREQ(1),
     .C_RD_PNTR_WIDTH(8),
     .C_UNDERFLOW_LOW(0),
-    .C_USE_DOUT_RST(1),
+    .C_USE_DOUT_RST(0),
     .C_USE_ECC(0),
     .C_USE_EMBEDDED_REG(0),
     .C_USE_PIPELINE_REG(0),
@@ -153,7 +147,7 @@ output wire rd_rst_busy;
     .C_WR_RESPONSE_LATENCY(1),
     .C_MSGON_VAL(1),
     .C_ENABLE_RST_SYNC(1),
-    .C_EN_SAFETY_CKT(1),
+    .C_EN_SAFETY_CKT(0),
     .C_ERROR_INJECTION_TYPE(0),
     .C_SYNCHRONIZER_STAGE(2),
     .C_INTERFACE_TYPE(0),
@@ -296,7 +290,7 @@ output wire rd_rst_busy;
     .backup(1'D0),
     .backup_marker(1'D0),
     .clk(1'D0),
-    .rst(rst),
+    .rst(1'D0),
     .srst(1'D0),
     .wr_clk(wr_clk),
     .wr_rst(1'D0),
@@ -331,8 +325,8 @@ output wire rd_rst_busy;
     .prog_empty(),
     .sbiterr(),
     .dbiterr(),
-    .wr_rst_busy(wr_rst_busy),
-    .rd_rst_busy(rd_rst_busy),
+    .wr_rst_busy(),
+    .rd_rst_busy(),
     .m_aclk(1'D0),
     .s_aclk(1'D0),
     .s_aresetn(1'D0),

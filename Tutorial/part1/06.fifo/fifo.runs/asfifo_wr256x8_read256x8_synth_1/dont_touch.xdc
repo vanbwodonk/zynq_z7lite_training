@@ -8,11 +8,11 @@
 # XDC: The top module name and the constraint reference have the same name: 'asfifo_wr256x8_read256x8'. Do not add the DONT_TOUCH constraint.
 set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
 
-# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_ooc.xdc
+# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_clocks.xdc
 # XDC: The top module name and the constraint reference have the same name: 'asfifo_wr256x8_read256x8'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
 
-# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_clocks.xdc
+# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'asfifo_wr256x8_read256x8'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
 
@@ -23,10 +23,10 @@ set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
 # XDC: The top module name and the constraint reference have the same name: 'asfifo_wr256x8_read256x8'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
 
-# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_ooc.xdc
+# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_clocks.xdc
 # XDC: The top module name and the constraint reference have the same name: 'asfifo_wr256x8_read256x8'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
 
-# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_clocks.xdc
+# XDC: /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.srcs/sources_1/ip/asfifo_wr256x8_read256x8/asfifo_wr256x8_read256x8_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'asfifo_wr256x8_read256x8'. Do not add the DONT_TOUCH constraint.
 #dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
