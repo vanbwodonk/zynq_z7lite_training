@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="asfifo_wr256x8_read256x8_synth_1" LaunchDir="/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.runs/asfifo_wr256x8_read256x8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/06.fifo/fifo.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="asfifo_wr256x8_read256x8_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
