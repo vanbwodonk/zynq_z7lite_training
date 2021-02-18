@@ -1,0 +1,137 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Feb 18 16:41:22 2021
+| Host         : tekPC running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file system_control_sets_placed.rpt
+| Design       : system
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    60 |
+| Unused register locations in slices containing registers |   248 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            2 |
+|      3 |            2 |
+|      4 |            6 |
+|      5 |            5 |
+|      6 |            2 |
+|      7 |            4 |
+|      8 |            2 |
+|      9 |            7 |
+|     10 |            1 |
+|     12 |            3 |
+|     13 |            1 |
+|     14 |            4 |
+|    16+ |           20 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             197 |           66 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             201 |           86 |
+| Yes          | No                    | No                     |             674 |          174 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             312 |          113 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                                   Enable Signal                                  |                                Set/Reset Signal                                | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------+------------------+----------------+
+|  pixel_clk   | svo_pong/svo_pong_video/compose_9/svo_buf_out/svo_axis_pipe/in_axis_tready_reg   | svo_pong/svo_pong_video/compose_9/svo_buf_out/svo_axis_pipe/tvalid_q0_reg_1[0] |                1 |              1 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_fstart           | svo_pong/svo_pong_video/compose_6/p4_addr_left_up                              |                1 |              2 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_fstart           | svo_pong/svo_pong_video/compose_6/p4_addr_right_up                             |                2 |              2 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_fstart           | svo_pong/svo_pong_video/compose_6/p4_addr_left_down                            |                1 |              3 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_fstart           | svo_pong/svo_pong_video/compose_6/p4_addr_right_down                           |                2 |              3 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/resetn_reg_2[0]                  |                                                                                |                2 |              4 |
+|  pixel_clk   | svo_enc/out_fifo_wraddr[1]_i_1_n_0                                               | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                3 |              4 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_6/per_digit_y0_out                               |                                                                                |                1 |              4 |
+|  pixel_clk   | svo_pong/svo_pong_control/p1y[8]_i_1_n_0                                         | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                1 |              4 |
+|  pixel_clk   | svo_pong/svo_pong_control/p2y[8]_i_1_n_0                                         | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                1 |              4 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/pipeline_enable     | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                1 |              4 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tvalid_q1_reg_1[0]               | svo_tcard/xoff[4]_i_1_n_0                                                      |                2 |              5 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/resetn_reg_1[0]                  | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/resetn_reg_0                   |                2 |              5 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/resetn_reg_1[0]                  |                                                                                |                2 |              5 |
+|  pixel_clk   | svo_pong/svo_pong_control/pvy[4]_i_1_n_0                                         |                                                                                |                3 |              5 |
+|  pixel_clk   | svo_tcard/vcursor[13]_i_1_n_0                                                    | svo_tcard/yoff[4]_i_1_n_0                                                      |                3 |              5 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_9/svo_buf_out/svo_axis_pipe/tuser_q0_reg[0]_0[0] | svo_pong/svo_pong_video/compose_9/svo_buf_out/svo_axis_pipe/tvalid_q0_reg_1[0] |                2 |              6 |
+|  pixel_clk   |                                                                                  | resetcnt[5]_i_1_n_0                                                            |                2 |              6 |
+|  pixel_clk   | svo_pong/svo_pong_control/p1_points[6]_i_1_n_0                                   | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                2 |              7 |
+|  pixel_clk   | svo_pong/svo_pong_control/p2y[10]_i_2_n_0                                        | svo_pong/svo_pong_control/p2y[10]_i_1_n_0                                      |                3 |              7 |
+|  pixel_clk   | svo_pong/svo_pong_control/p2_points[6]_i_1_n_0                                   | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                2 |              7 |
+|  pixel_clk   | svo_pong/svo_pong_control/p1y[10]_i_2_n_0                                        | svo_pong/svo_pong_control/p1y[10]_i_1_n_0                                      |                2 |              7 |
+|  pixel_clk   | svo_pong/svo_pong_control/rng_q[7]_i_1_n_0                                       | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                4 |              8 |
+|  pixel_clk   | svo_enc/p_0_in__0                                                                |                                                                                |                1 |              8 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/E[0]                |                                                                                |                3 |              9 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/E[0]                |                                                                                |                2 |              9 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/E[0]                |                                                                                |                2 |              9 |
+|  pixel_clk   | svo_tcard/x                                                                      | svo_tcard/xoff[4]_i_1_n_0                                                      |                3 |              9 |
+|  pixel_clk   | svo_tcard/y[8]_i_1__2_n_0                                                        | svo_tcard/yoff[4]_i_1_n_0                                                      |                5 |              9 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/E[0]                |                                                                                |                3 |              9 |
+|  pixel_clk   | resetn                                                                           |                                                                                |                5 |              9 |
+|  pixel_clk   | svo_pong/svo_pong_control/px[11]_i_2_n_0                                         | svo_pong/svo_pong_control/px[11]_i_1_n_0                                       |                7 |             10 |
+|  pixel_clk   | svo_pong/svo_pong_control/ppy[11]_i_1_n_0                                        | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                3 |             12 |
+|  pixel_clk   | svo_pong/svo_pong_control/ppx[0]_i_1_n_0                                         | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                3 |             12 |
+|  pixel_clk   | svo_pong/svo_pong_control/py[11]_i_1_n_0                                         | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                6 |             12 |
+|  pixel_clk   |                                                                                  | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |                7 |             13 |
+|  pixel_clk   | svo_tcard/vcursor[13]_i_1_n_0                                                    | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                4 |             14 |
+|  pixel_clk   | svo_enc/vcursor[13]_i_1__0_n_0                                                   | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                4 |             14 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_6/p1_y[13]_i_1_n_0                               | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                4 |             14 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_6/p1_x[13]_i_1_n_0                               | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                4 |             14 |
+|  pixel_clk   | svo_enc/ctrl_fifo_wraddr[1]_i_1_n_0                                              | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                5 |             16 |
+|  pixel_clk   |                                                                                  | svo_enc/out_axis_tuser_reg[3]_2[0]                                             |               13 |             21 |
+|  pixel_clk   | svo_enc/out_fifo_rdaddr[1]_i_1_n_0                                               | svo_pong/svo_pong_video/compose_6/SR[0]                                        |                5 |             24 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_9/svo_buf_out/svo_axis_pipe/p_0_in0_in           |                                                                                |                4 |             32 |
+|  pixel_clk   | svo_enc/out_fifo_reg_0_3_0_5_i_1_n_0                                             |                                                                                |                4 |             32 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tvalid_q1_reg_3                  | svo_pong/svo_pong_control/FSM_sequential_state[2]_i_1_n_0                      |               14 |             34 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tvalid_q1_reg_1[0]               | svo_pong/svo_pong_video/compose_6/SR[0]                                        |               11 |             34 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/resetn_reg[0]                    |                                                                                |               20 |             49 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_fstart           |                                                                                |               21 |             54 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_3/svo_buf_in/svo_axis_pipe/tvalid_q1_reg_2[0]    |                                                                                |               11 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_9/svo_buf_in/svo_axis_pipe/tvalid_q1_reg_2[0]    |                                                                                |               20 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/E[0]                             |                                                                                |               11 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_in/svo_axis_pipe/tvalid_q1_reg_2[0]    |                                                                                |               12 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_7/svo_buf_out/svo_axis_pipe/tvalid_q1_reg_1[0]   |                                                                                |               19 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_5/svo_buf_out/svo_axis_pipe/tvalid_q1_reg_1[0]   |                                                                                |               11 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_5/svo_buf_in/svo_axis_pipe/tvalid_q1_reg_2[0]    |                                                                                |                9 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_3/svo_buf_out/svo_axis_pipe/tvalid_q1_reg_1[0]   |                                                                                |                9 |             57 |
+|  pixel_clk   | svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tvalid_q1_reg_4[0]               |                                                                                |               10 |             57 |
+|  pixel_clk   |                                                                                  | svo_pong/svo_pong_video/compose_6/SR[0]                                        |               64 |            161 |
+|  pixel_clk   |                                                                                  |                                                                                |               66 |            198 |
++--------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,1241 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 18 16:39:57 2021
+# Process ID: 42488
+# Current directory: /home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1
+# Command line: vivado -log system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
+# Log file: /home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1/system.vds
+# Journal file: /home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source system.tcl -notrace
+Command: synth_design -top system -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 42503 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1349.035 ; gain = 0.000 ; free physical = 1203 ; free virtual = 6650
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system' [/home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v:29]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_BASE' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41124]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 33 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 70 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 14 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_BASE' (1#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41124]
+WARNING: [Synth 8-350] instance 'PLL_1' of module 'PLLE2_BASE' requires 12 connections, but only 9 given [/home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v:142]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6157] synthesizing module 'svo_tcard' [/home/arif/Downloads/SimpleVOut/svosrc/svo_tcard.v:23]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter HOFFSET bound to: 0 - type: integer 
+	Parameter VOFFSET bound to: 0 - type: integer 
+	Parameter HOR_CELLS bound to: 20 - type: integer 
+	Parameter VER_CELLS bound to: 15 - type: integer 
+	Parameter BAR_W bound to: 6 - type: integer 
+	Parameter X1 bound to: 2 - type: integer 
+	Parameter X2 bound to: 8 - type: integer 
+	Parameter X3 bound to: 10 - type: integer 
+	Parameter X4 bound to: 16 - type: integer 
+	Parameter Y_BLK bound to: 3 - type: integer 
+	Parameter Y_GAP bound to: 1 - type: integer 
+	Parameter Y_OFF bound to: 1 - type: integer 
+	Parameter Y1 bound to: 1 - type: integer 
+	Parameter Y2 bound to: 4 - type: integer 
+	Parameter Y3 bound to: 5 - type: integer 
+	Parameter Y4 bound to: 8 - type: integer 
+	Parameter Y5 bound to: 9 - type: integer 
+	Parameter Y6 bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'svo_tcard' (3#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_tcard.v:23]
+INFO: [Synth 8-6157] synthesizing module 'svo_pong' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:33]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'svo_pong_control' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:109]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter max_vx bound to: 15 - type: integer 
+	Parameter max_vy bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'svo_pong_control' (4#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:109]
+INFO: [Synth 8-6157] synthesizing module 'svo_pong_video' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:350]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter s_maxidx bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'svo_dim' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:178]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'svo_axis_pipe' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
+	Parameter TDATA_WIDTH bound to: 18 - type: integer 
+	Parameter TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'svo_axis_pipe' (5#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'svo_dim' (6#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:178]
+INFO: [Synth 8-6157] synthesizing module 'svo_rect' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:359]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element on_x_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:399]
+WARNING: [Synth 8-6014] Unused sequential element on_y_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:400]
+WARNING: [Synth 8-6014] Unused sequential element border_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:401]
+INFO: [Synth 8-6155] done synthesizing module 'svo_rect' (7#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:359]
+INFO: [Synth 8-6157] synthesizing module 'svo_overlay' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:250]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'svo_buf' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
+	Parameter TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'svo_buf' (8#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
+INFO: [Synth 8-6157] synthesizing module 'svo_buf__parameterized0' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
+	Parameter TUSER_WIDTH bound to: 2 - type: integer 
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'svo_axis_pipe__parameterized0' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
+	Parameter TDATA_WIDTH bound to: 18 - type: integer 
+	Parameter TUSER_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'svo_axis_pipe__parameterized0' (8#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'svo_buf__parameterized0' (8#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'svo_overlay' (9#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:250]
+INFO: [Synth 8-6157] synthesizing module 'svo_pong_scores' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:486]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter digit0_xoff bound to: 80 - type: integer 
+	Parameter digit1_xoff bound to: 180 - type: integer 
+	Parameter digit2_xoff bound to: 370 - type: integer 
+	Parameter digit3_xoff bound to: 470 - type: integer 
+	Parameter digit0_yoff bound to: 15 - type: integer 
+	Parameter digit1_yoff bound to: 15 - type: integer 
+	Parameter digit2_yoff bound to: 15 - type: integer 
+	Parameter digit3_yoff bound to: 15 - type: integer 
+	Parameter digit_width bound to: 91 - type: integer 
+	Parameter digit_height bound to: 151 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:660]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:676]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:728]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:738]
+WARNING: [Synth 8-6014] Unused sequential element p3_digit_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:652]
+WARNING: [Synth 8-6014] Unused sequential element p4_digit_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:725]
+WARNING: [Synth 8-6014] Unused sequential element neigh_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:835]
+INFO: [Synth 8-6155] done synthesizing module 'svo_pong_scores' (10#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:486]
+INFO: [Synth 8-6155] done synthesizing module 'svo_pong_video' (11#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:350]
+INFO: [Synth 8-6155] done synthesizing module 'svo_pong' (12#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:33]
+INFO: [Synth 8-6157] synthesizing module 'svo_enc' [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:23]
+	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element is_blank_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:69]
+WARNING: [Synth 8-6014] Unused sequential element is_hsync_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:70]
+WARNING: [Synth 8-6014] Unused sequential element is_vsync_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:71]
+WARNING: [Synth 8-6014] Unused sequential element next_out_fifo_rdaddr_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:157]
+INFO: [Synth 8-6155] done synthesizing module 'svo_enc' (13#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (14#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (15#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (15#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6157] synthesizing module 'svo_tmds' [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:23]
+WARNING: [Synth 8-6014] Unused sequential element N0_q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:99]
+WARNING: [Synth 8-6014] Unused sequential element N1_q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:100]
+WARNING: [Synth 8-6014] Unused sequential element cnt_next_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:107]
+WARNING: [Synth 8-6014] Unused sequential element cnt_tmp_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:115]
+WARNING: [Synth 8-6014] Unused sequential element q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:77]
+WARNING: [Synth 8-6014] Unused sequential element q_out_next_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'svo_tmds' (16#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system' (17#1) [/home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v:29]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.277 ; gain = 28.242 ; free physical = 1217 ; free virtual = 6661
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.277 ; gain = 28.242 ; free physical = 1220 ; free virtual = 6664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.277 ; gain = 28.242 ; free physical = 1220 ; free virtual = 6664
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/arif/Downloads/SimpleVOut/zybo_vl/system.xdc]
+Finished Parsing XDC File [/home/arif/Downloads/SimpleVOut/zybo_vl/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/arif/Downloads/SimpleVOut/zybo_vl/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  OBUFDS => OBUFDS: 4 instances
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1016 ; free virtual = 6463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1016 ; free virtual = 6463
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1018 ; free virtual = 6465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'svo_pong_control'
+INFO: [Synth 8-5545] ROM "pvx0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pvx0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "pvy0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "per_digit_y" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "p1_y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "p3_x" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "font" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ok_status" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              000 |                              000
+                 iSTATE1 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              011
+                 iSTATE4 |                              100 |                              100
+                 iSTATE5 |                              101 |                              101
+                 iSTATE6 |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'svo_pong_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1007 ; free virtual = 6455
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 6     
+	   2 Input     14 Bit       Adders := 12    
+	   2 Input     13 Bit       Adders := 8     
+	   2 Input     12 Bit       Adders := 17    
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 12    
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 4     
+	   4 Input      5 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 9     
+	   2 Input      3 Bit       Adders := 3     
+	   3 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 5     
+	   3 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
+	   4 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 42    
++---XORs : 
+	               28 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               18 Bit    Registers := 45    
+	               14 Bit    Registers := 12    
+	               12 Bit    Registers := 21    
+	               10 Bit    Registers := 9     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 97    
++---RAMs : 
+	              152 Bit         RAMs := 1     
+	               88 Bit         RAMs := 1     
+	               16 Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 20    
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 39    
+	   2 Input     12 Bit        Muxes := 11    
+	   7 Input     12 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   7 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 9     
+	   4 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 20    
+	   2 Input      6 Bit        Muxes := 61    
+	   2 Input      5 Bit        Muxes := 17    
+	   3 Input      5 Bit        Muxes := 3     
+	   7 Input      5 Bit        Muxes := 2     
+	   6 Input      5 Bit        Muxes := 2     
+	   8 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 7     
+	   3 Input      4 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   3 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 2     
+	  12 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 10    
+	   8 Input      2 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 82    
+	   5 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module system 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module svo_tcard 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 60    
+	   2 Input      1 Bit        Muxes := 6     
+Module svo_pong_control 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 6     
+	   2 Input     13 Bit       Adders := 8     
+	   2 Input     12 Bit       Adders := 11    
+	   2 Input      7 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 6     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---XORs : 
+	               28 Bit    Wide XORs := 1     
++---Registers : 
+	               12 Bit    Registers := 9     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 11    
+	   7 Input     12 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	   7 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 17    
+	   3 Input      5 Bit        Muxes := 3     
+	   7 Input      5 Bit        Muxes := 2     
+	   6 Input      5 Bit        Muxes := 2     
+	   8 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 6     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   5 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 4     
+Module svo_axis_pipe 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module svo_dim 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+Module svo_rect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 4     
+Module svo_buf 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module svo_axis_pipe__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module svo_buf__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module svo_overlay 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module svo_pong_scores 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---RAMs : 
+	               16 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 2     
+	  12 Input      3 Bit        Muxes := 8     
+	   8 Input      2 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module svo_pong_video 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 6     
++---Registers : 
+	               12 Bit    Registers := 12    
+Module svo_enc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
+	   3 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 5     
+	   3 Input      2 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              152 Bit         RAMs := 1     
+	               88 Bit         RAMs := 1     
+	               16 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 1     
+Module svo_tmds 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      8 Bit       Adders := 4     
+	   8 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "pvy0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p1_y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "p_3_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ok_status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[14]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[15]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[12]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[13]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[10]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[11]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[8]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[9]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[6]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[7]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[4]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[5]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[2]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[3]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[1]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[14]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[15]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[12]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[13]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[10]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[11]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[8]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[9]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[6]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[7]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[4]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[5]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[2]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[3]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[0]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/pipe_out_tdata_reg[1]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[14]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[15]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[12]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[13]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[10]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[11]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[8]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[9]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[6]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[7]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[4]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[5]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[2]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[3]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q1_reg[0]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q1_reg[1]' (FDE) to 'svo_pong/svo_pong_video/compose_3/svo_buf_over/svo_axis_pipe/tdata_q1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[15]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[14]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[15]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[15]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[13]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[12]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[13]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[13]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[11]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[10]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[11]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[11]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[8]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[9]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[7]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[6]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[7]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[7]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[4]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[5]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[3]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[2]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[3]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[3]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[1]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[0]' (FDE) to 'svo_pong/svo_pong_video/compose_4/out_axis_tdata_reg[1]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[14]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[15]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[12]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[13]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[10]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[11]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[8]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[9]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[6]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[7]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[4]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[5]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[2]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[3]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[0]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/pipe_out_tdata_reg[1]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[14]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[15]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[12]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[13]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[10]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[11]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[8]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[9]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[6]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[7]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[4]' (FDE) to 'svo_pong/svo_pong_video/compose_5/svo_buf_over/svo_axis_pipe/tdata_q0_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x2_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect1_x1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\compose_8/out_axis_tvalid_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_control /\puck_x_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect3_x2_reg[11] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 974 ; free virtual = 6427
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++--------------------------+---------------------------+-----------+----------------------+----------------+
+|Module Name               | RTL Object                | Inference | Size (Depth x Width) | Primitives     | 
++--------------------------+---------------------------+-----------+----------------------+----------------+
+|\svo_pong/svo_pong_video  | compose_6/per_digit_y_reg | Implied   | 4 x 4                | RAM16X1S x 4   | 
+|svo_enc                   | pixel_fifo_reg            | Implied   | 8 x 19               | RAM32M x 4     | 
+|svo_enc                   | ctrl_fifo_reg             | Implied   | 4 x 4                | RAM32M x 1     | 
+|svo_enc                   | out_fifo_reg              | Implied   | 4 x 22               | RAM32M x 4     | 
++--------------------------+---------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 850 ; free virtual = 6303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (svo_tmds_0/\cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (svo_tmds_1/\cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (svo_tmds_2/\cnt_reg[0] )
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1738.676 ; gain = 389.641 ; free physical = 840 ; free virtual = 6293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++--------------------------+---------------------------+-----------+----------------------+----------------+
+|Module Name               | RTL Object                | Inference | Size (Depth x Width) | Primitives     | 
++--------------------------+---------------------------+-----------+----------------------+----------------+
+|\svo_pong/svo_pong_video  | compose_6/per_digit_y_reg | Implied   | 4 x 4                | RAM16X1S x 4   | 
+|svo_enc                   | pixel_fifo_reg            | Implied   | 8 x 19               | RAM32M x 4     | 
+|svo_enc                   | ctrl_fifo_reg             | Implied   | 4 x 4                | RAM32M x 1     | 
+|svo_enc                   | out_fifo_reg              | Implied   | 4 x 22               | RAM32M x 4     | 
++--------------------------+---------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_control/p2y_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_control/p1y_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video/rect1_y1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video/rect2_y1_reg[11] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 834 ; free virtual = 6288
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|system      | svo_pong/svo_pong_video/compose_6/p5_fstart_reg | 4      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|system      | resetn_reg                                      | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |CARRY4      |   223|
+|3     |LUT1        |   176|
+|4     |LUT2        |   456|
+|5     |LUT3        |   266|
+|6     |LUT4        |   294|
+|7     |LUT5        |   290|
+|8     |LUT6        |   500|
+|9     |MUXF7       |    12|
+|10    |MUXF8       |     3|
+|11    |OSERDESE2   |     3|
+|12    |OSERDESE2_1 |     3|
+|13    |PLLE2_BASE  |     1|
+|14    |RAM16X1S    |     4|
+|15    |RAM32M      |     9|
+|16    |SRL16E      |     2|
+|17    |FDRE        |  1329|
+|18    |FDSE        |    55|
+|19    |IBUF        |     9|
+|20    |OBUF        |     4|
+|21    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+------------------------+---------------------------------+------+
+|      |Instance                |Module                           |Cells |
++------+------------------------+---------------------------------+------+
+|1     |top                     |                                 |  3646|
+|2     |  svo_enc               |svo_enc                          |   340|
+|3     |  svo_pong              |svo_pong                         |  2631|
+|4     |    svo_pong_control    |svo_pong_control                 |   943|
+|5     |    svo_pong_video      |svo_pong_video                   |  1646|
+|6     |      compose_1         |svo_dim                          |    88|
+|7     |        svo_axis_pipe   |svo_axis_pipe_27                 |    68|
+|8     |      compose_2         |svo_rect                         |   124|
+|9     |      compose_3         |svo_overlay                      |   182|
+|10    |        svo_buf_in      |svo_buf_21                       |    83|
+|11    |          svo_axis_pipe |svo_axis_pipe_26                 |    63|
+|12    |        svo_buf_out     |svo_buf_22                       |    81|
+|13    |          svo_axis_pipe |svo_axis_pipe_25                 |    61|
+|14    |        svo_buf_over    |svo_buf__parameterized0_23       |    18|
+|15    |          svo_axis_pipe |svo_axis_pipe__parameterized0_24 |    14|
+|16    |      compose_4         |svo_rect_2                       |   123|
+|17    |      compose_5         |svo_overlay_3                    |   182|
+|18    |        svo_buf_in      |svo_buf_15                       |    83|
+|19    |          svo_axis_pipe |svo_axis_pipe_20                 |    63|
+|20    |        svo_buf_out     |svo_buf_16                       |    81|
+|21    |          svo_axis_pipe |svo_axis_pipe_19                 |    61|
+|22    |        svo_buf_over    |svo_buf__parameterized0_17       |    18|
+|23    |          svo_axis_pipe |svo_axis_pipe__parameterized0_18 |    14|
+|24    |      compose_6         |svo_pong_scores                  |   355|
+|25    |      compose_7         |svo_overlay_4                    |   184|
+|26    |        svo_buf_in      |svo_buf_9                        |    83|
+|27    |          svo_axis_pipe |svo_axis_pipe_14                 |    63|
+|28    |        svo_buf_out     |svo_buf_10                       |    81|
+|29    |          svo_axis_pipe |svo_axis_pipe_13                 |    61|
+|30    |        svo_buf_over    |svo_buf__parameterized0_11       |    20|
+|31    |          svo_axis_pipe |svo_axis_pipe__parameterized0_12 |    16|
+|32    |      compose_8         |svo_rect_5                       |   120|
+|33    |      compose_9         |svo_overlay_6                    |   188|
+|34    |        svo_buf_in      |svo_buf                          |    83|
+|35    |          svo_axis_pipe |svo_axis_pipe_8                  |    63|
+|36    |        svo_buf_out     |svo_buf_7                        |    87|
+|37    |          svo_axis_pipe |svo_axis_pipe                    |    67|
+|38    |        svo_buf_over    |svo_buf__parameterized0          |    18|
+|39    |          svo_axis_pipe |svo_axis_pipe__parameterized0    |    14|
+|40    |  svo_tcard             |svo_tcard                        |   397|
+|41    |  svo_tmds_0            |svo_tmds                         |    69|
+|42    |  svo_tmds_1            |svo_tmds_0                       |    69|
+|43    |  svo_tmds_2            |svo_tmds_1                       |    69|
++------+------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1757.707 ; gain = 52.273 ; free physical = 893 ; free virtual = 6344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.715 ; gain = 408.672 ; free physical = 893 ; free virtual = 6344
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 256 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1757.715 ; gain = 0.000 ; free physical = 836 ; free virtual = 6290
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 4 instances
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+  RAM16X1S => RAM32X1S (RAMS32): 4 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 9 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+239 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1757.715 ; gain = 408.938 ; free physical = 894 ; free virtual = 6348
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1757.715 ; gain = 0.000 ; free physical = 894 ; free virtual = 6348
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1/system.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 18 16:40:38 2021...
