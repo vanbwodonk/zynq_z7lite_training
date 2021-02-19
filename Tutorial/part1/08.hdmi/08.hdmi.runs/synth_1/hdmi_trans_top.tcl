@@ -24,24 +24,24 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/wt [current_project]
-set_property parent.project_path /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.xpr [current_project]
+set_property webtalk.parent_dir /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/wt [current_project]
+set_property parent.project_path /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/ip [current_project]
+set_property ip_output_repo /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v
-  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans.v
-  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/parallel_to_serial.v
-  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/vga_shift.v
-  /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans_top.v
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/encode.v
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans.v
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/parallel_to_serial.v
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/vga_shift.v
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/new/hdmi_trans_top.v
 }
-read_ip -quiet /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock.xci
-set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock_board.xdc]
-set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock.xdc]
-set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock_ooc.xdc]
+read_ip -quiet /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock.xci
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock_board.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -51,8 +51,8 @@ set_property used_in_implementation false [get_files -all /home/arif/Documents/1
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc
-set_property used_in_implementation false [get_files /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc]
+read_xdc /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc
+set_property used_in_implementation false [get_files /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

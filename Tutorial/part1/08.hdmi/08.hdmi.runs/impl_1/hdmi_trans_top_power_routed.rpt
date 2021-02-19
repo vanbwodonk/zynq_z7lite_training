@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Sat Feb 13 00:13:24 2021
-| Host             : manjaro running 64-bit Manjaro Linux
+| Date             : Fri Feb 19 14:35:08 2021
+| Host             : tekPC running 64-bit Manjaro Linux
 | Command          : report_power -file hdmi_trans_top_power_routed.rpt -pb hdmi_trans_top_power_summary_routed.pb -rpx hdmi_trans_top_power_routed.rpx
 | Design           : hdmi_trans_top
 | Device           : xc7z020clg400-2
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.351        |
+| Total On-Chip Power (W)  | 0.384        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.241        |
+| Dynamic (W)              | 0.274        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 81.0         |
-| Junction Temperature (C) | 29.0         |
+| Max Ambient (C)          | 80.6         |
+| Junction Temperature (C) | 29.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.003 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      486 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      208 |     53200 |            0.39 |
-|   CARRY4       |    <0.001 |       31 |     13300 |            0.23 |
+| Clocks         |     0.002 |       10 |       --- |             --- |
+| Slice Logic    |    <0.001 |      479 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      204 |     53200 |            0.38 |
+|   CARRY4       |    <0.001 |       32 |     13300 |            0.24 |
 |   Register     |    <0.001 |      132 |    106400 |            0.12 |
 |   Others       |     0.000 |       26 |       --- |             --- |
 | Signals        |    <0.001 |      307 |       --- |             --- |
-| MMCM           |     0.105 |        1 |         4 |           25.00 |
-| I/O            |     0.133 |       10 |       125 |            8.00 |
+| PLL            |     0.141 |        1 |         4 |           25.00 |
+| I/O            |     0.131 |       10 |       125 |            8.00 |
 | Static Power   |     0.110 |          |           |                 |
-| Total          |     0.351 |          |           |                 |
+| Total          |     0.384 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +72,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.015 |       0.006 |      0.008 |
-| Vccaux    |       1.800 |     0.069 |       0.058 |      0.011 |
+| Vccint    |       1.000 |     0.025 |       0.017 |      0.008 |
+| Vccaux    |       1.800 |     0.081 |       0.070 |      0.011 |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -132,14 +132,18 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+----------------+--------------------------------+-----------------+
-| Clock          | Domain                         | Constraint (ns) |
-+----------------+--------------------------------+-----------------+
-| clk            | clk                            |            20.0 |
-| clk_out1_clock | inst_clock/inst/clk_out1_clock |            13.5 |
-| clk_out2_clock | inst_clock/inst/clk_out2_clock |             2.7 |
-| clkfbout_clock | inst_clock/inst/clkfbout_clock |            80.0 |
-+----------------+--------------------------------+-----------------+
++------------------+--------------------------------+-----------------+
+| Clock            | Domain                         | Constraint (ns) |
++------------------+--------------------------------+-----------------+
+| clk              | clk                            |            20.0 |
+| clk_out1_clock   | inst_clock/inst/clk_out1_clock |            28.1 |
+| clk_out1_clock_1 | inst_clock/inst/clk_out1_clock |            28.1 |
+| clk_out2_clock   | inst_clock/inst/clk_out2_clock |             5.6 |
+| clk_out2_clock_1 | inst_clock/inst/clk_out2_clock |             5.6 |
+| clkfbout_clock   | inst_clock/inst/clkfbout_clock |            20.0 |
+| clkfbout_clock_1 | inst_clock/inst/clkfbout_clock |            20.0 |
+| sys_clk_pin      | clk                            |            20.0 |
++------------------+--------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -151,14 +155,14 @@ Table of Contents
 +-----------------------------------+-----------+
 | Name                              | Power (W) |
 +-----------------------------------+-----------+
-| hdmi_trans_top                    |     0.241 |
-|   inst_clock                      |     0.105 |
-|     inst                          |     0.105 |
-|   inst_hdmi_trans                 |     0.135 |
-|     inst_parallel_to_serial_chn_b |     0.034 |
-|     inst_parallel_to_serial_chn_g |     0.034 |
-|     inst_parallel_to_serial_chn_r |     0.034 |
-|     inst_parallel_to_serial_clk   |     0.034 |
+| hdmi_trans_top                    |     0.274 |
+|   inst_clock                      |     0.141 |
+|     inst                          |     0.141 |
+|   inst_hdmi_trans                 |     0.133 |
+|     inst_parallel_to_serial_chn_b |     0.033 |
+|     inst_parallel_to_serial_chn_g |     0.033 |
+|     inst_parallel_to_serial_chn_r |     0.033 |
+|     inst_parallel_to_serial_clk   |     0.033 |
 +-----------------------------------+-----------+
 
 

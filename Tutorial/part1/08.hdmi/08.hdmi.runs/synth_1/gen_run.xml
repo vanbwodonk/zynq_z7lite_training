@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1613149938">
-  <File Type="PA-TCL" Name="hdmi_trans_top.tcl"/>
-  <File Type="REPORTS-TCL" Name="hdmi_trans_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="hdmi_trans_top.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1613720032">
+  <File Type="VDS-TIMING-PB" Name="hdmi_trans_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hdmi_trans_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="hdmi_trans_top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="hdmi_trans_top_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="hdmi_trans_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="hdmi_trans_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="hdmi_trans_top.vds"/>
+  <File Type="REPORTS-TCL" Name="hdmi_trans_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="hdmi_trans_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/encode.v">
@@ -38,6 +41,22 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/hdmi_trans_top.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rgb2dvi.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/svo_tmds.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

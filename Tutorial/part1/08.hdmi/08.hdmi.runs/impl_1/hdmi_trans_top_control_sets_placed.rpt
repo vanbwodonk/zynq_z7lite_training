@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Feb 13 00:13:08 2021
-| Host         : manjaro running 64-bit Manjaro Linux
+| Date         : Fri Feb 19 14:34:48 2021
+| Host         : tekPC running 64-bit Manjaro Linux
 | Command      : report_control_sets -verbose -file hdmi_trans_top_control_sets_placed.rpt
 | Design       : hdmi_trans_top
 | Device       : xc7z020
@@ -45,8 +45,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              47 |           14 |
-| No           | No                    | Yes                    |              29 |           15 |
+| No           | No                    | No                     |              47 |           15 |
+| No           | No                    | Yes                    |              29 |           14 |
 | No           | Yes                   | No                     |              19 |            9 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -62,8 +62,8 @@ Table of Contents
 +---------------------------+-----------------------------+---------------------------------+------------------+----------------+
 |  inst_clock/inst/clk_out1 | inst_vga_shift/cnt_v        | inst_vga_shift/cnt_v[0]_i_1_n_0 |                4 |             13 |
 |  inst_clock/inst/clk_out1 | inst_vga_shift/y[0]_i_1_n_0 | inst_vga_shift/rst              |                6 |             24 |
-|  inst_clock/inst/clk_out1 |                             |                                 |               14 |             47 |
-|  inst_clock/inst/clk_out1 |                             | inst_vga_shift/rst              |               24 |             48 |
+|  inst_clock/inst/clk_out1 |                             |                                 |               15 |             47 |
+|  inst_clock/inst/clk_out1 |                             | inst_vga_shift/rst              |               23 |             48 |
 +---------------------------+-----------------------------+---------------------------------+------------------+----------------+
 
 

@@ -61,13 +61,101 @@ proc step_failed { step } {
 }
 
 
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
+  create_project -in_memory -part xc7z020clg400-2
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/wt [current_project]
+  set_property parent.project_path /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.xpr [current_project]
+  set_property ip_output_repo /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  add_files -quiet /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.runs/synth_1/hdmi_trans_top.dcp
+  read_ip -quiet /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/sources_1/ip/clock/clock.xci
+  read_xdc /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.srcs/constrs_1/new/top_pin.xdc
+  link_design -top hdmi_trans_top -part xc7z020clg400-2
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force hdmi_trans_top_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file hdmi_trans_top_drc_opted.rpt -pb hdmi_trans_top_drc_opted.pb -rpx hdmi_trans_top_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force hdmi_trans_top_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file hdmi_trans_top_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file hdmi_trans_top_utilization_placed.rpt -pb hdmi_trans_top_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file hdmi_trans_top_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force hdmi_trans_top_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file hdmi_trans_top_drc_routed.rpt -pb hdmi_trans_top_drc_routed.pb -rpx hdmi_trans_top_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file hdmi_trans_top_methodology_drc_routed.rpt -pb hdmi_trans_top_methodology_drc_routed.pb -rpx hdmi_trans_top_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file hdmi_trans_top_power_routed.rpt -pb hdmi_trans_top_power_summary_routed.pb -rpx hdmi_trans_top_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file hdmi_trans_top_route_status.rpt -pb hdmi_trans_top_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file hdmi_trans_top_timing_summary_routed.rpt -pb hdmi_trans_top_timing_summary_routed.pb -rpx hdmi_trans_top_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file hdmi_trans_top_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file hdmi_trans_top_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file hdmi_trans_top_bus_skew_routed.rpt -pb hdmi_trans_top_bus_skew_routed.pb -rpx hdmi_trans_top_bus_skew_routed.rpx"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force hdmi_trans_top_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
-  open_checkpoint hdmi_trans_top_routed.dcp
-  set_property webtalk.parent_dir /home/arif/Documents/1.GIT/3.Github/zynq_z7lite_training/Tutorial/part1/08.hdmi/08.hdmi.cache/wt [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force hdmi_trans_top.mmi }
   write_bitstream -force hdmi_trans_top.bit 

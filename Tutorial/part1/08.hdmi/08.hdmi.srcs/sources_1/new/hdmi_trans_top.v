@@ -45,14 +45,10 @@
 module hdmi_trans_top(
 	input	wire 			clk 		,
 	input 	wire			rst_n 		,
-	output 	wire 			hdmi_tx_clk_n	,
-	output 	wire 			hdmi_tx_clk_p	,
-	output 	wire 			hdmi_tx_chn_r_n	,
-	output 	wire 			hdmi_tx_chn_r_p	,
-	output 	wire 			hdmi_tx_chn_g_n	,
-	output 	wire 			hdmi_tx_chn_g_p	,
-	output 	wire 			hdmi_tx_chn_b_n	,
-	output 	wire 			hdmi_tx_chn_b_p	
+	output tmds_clk_n,
+	output tmds_clk_p,
+	output [2:0] tmds_d_n,
+	output [2:0] tmds_d_p
     );
 
 parameter  	CNT_MAX 	= 	1000;
@@ -128,16 +124,34 @@ end
 			.vsync           (vpg_vs),
 			.hsync           (vpg_hs),
 			.de              (vpg_de),
-			.hdmi_tx_clk_n   (hdmi_tx_clk_n),
-			.hdmi_tx_clk_p   (hdmi_tx_clk_p),
-			.hdmi_tx_chn_r_n (hdmi_tx_chn_r_n),
-			.hdmi_tx_chn_r_p (hdmi_tx_chn_r_p),
-			.hdmi_tx_chn_g_n (hdmi_tx_chn_g_n),
-			.hdmi_tx_chn_g_p (hdmi_tx_chn_g_p),
-			.hdmi_tx_chn_b_n (hdmi_tx_chn_b_n),
-			.hdmi_tx_chn_b_p (hdmi_tx_chn_b_p)
+			.hdmi_tx_clk_n   (tmds_clk_n),
+			.hdmi_tx_clk_p   (tmds_clk_p),
+			.hdmi_tx_chn_r_n (tmds_d_n[0]),
+			.hdmi_tx_chn_r_p (tmds_d_p[0]),
+			.hdmi_tx_chn_g_n (tmds_d_n[1]),
+			.hdmi_tx_chn_g_p (tmds_d_p[1]),
+			.hdmi_tx_chn_b_n (tmds_d_n[2]),
+			.hdmi_tx_chn_b_p (tmds_d_p[2])
 		);
-
+		
+    /*rgb2dvi rgb2dvi (
+        //clock : tmds clock = 5x pixel clock
+        .pixel_clk(clk1x),
+        .tmds_clk(clk5x),
+        .resetn(rst),
+        //data pixel rgb
+	    .data_r(rgb_r),
+	    .data_g(rgb_g),
+	    .data_b(rgb_b),
+	    .data_hs(vpg_hs),
+	    .data_vs(vpg_vs),
+	    .data_de(!vpg_de),
+        //dvi output
+	    .tmds_clk_n(tmds_clk_n),
+	    .tmds_clk_p(tmds_clk_p),
+	    .tmds_d_n(tmds_d_n),
+	    .tmds_d_p(tmds_d_p)
+    );*/
 
 
 endmodule
