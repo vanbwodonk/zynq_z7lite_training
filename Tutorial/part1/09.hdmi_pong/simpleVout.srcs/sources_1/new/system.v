@@ -20,10 +20,11 @@
 `timescale 1ns / 1ps
 `include "svo_defines.vh"
 
-`define MODE_640_480_60
+// `define MODE_640_480_60
 // `define MODE_800_480_75
-// `define MODE_1024_768_60
-// `define MODE_1920_1080_60
+`define MODE_800_600_60
+//`define MODE_1024_768_60
+//`define MODE_1920_1080_60
 `define SINGLE_ENDED_LDI
 
 module system (
@@ -69,6 +70,16 @@ module system (
 `ifdef MODE_800_480_75
 	parameter SVO_MODE             =   "800x480R";
 	parameter SVO_FRAMERATE        =   75;
+	parameter SVO_BITS_PER_PIXEL   =   18;
+	parameter SVO_BITS_PER_RED     =    6;
+	parameter SVO_BITS_PER_GREEN   =    6;
+	parameter SVO_BITS_PER_BLUE    =    6;
+	parameter SVO_BITS_PER_ALPHA   =    0;
+`endif
+
+`ifdef MODE_800_600_60
+	parameter SVO_MODE             =   "800x600R";
+	parameter SVO_FRAMERATE        =   60;
 	parameter SVO_BITS_PER_PIXEL   =   18;
 	parameter SVO_BITS_PER_RED     =    6;
 	parameter SVO_BITS_PER_GREEN   =    6;
@@ -232,24 +243,22 @@ module system (
 	assign resetn_unbuf = pll_locked_1 && pll_locked_2;
 `endif
 
-`ifdef MODE_1024_768_60
+`ifdef MODE_800_600_60
 	wire pll_locked_1;
 	wire pll_feedback_1;
 
-	wire pll_locked_2;
-	wire pll_feedback_2;
-
-	wire pll_locked_3;
-	wire pll_feedback_3;
-
 	PLLE2_BASE #(
-		.CLKFBOUT_MULT(9),
-		.CLKOUT0_DIVIDE(20),
+		.CLKFBOUT_MULT(32),
+		.CLKOUT0_DIVIDE(45),
 		.CLKOUT0_DUTY_CYCLE(0.5),
-		.CLKOUT0_PHASE(0.0)
+		.CLKOUT0_PHASE(0.0),
+		.CLKOUT1_DIVIDE(9),
+		.CLKOUT1_DUTY_CYCLE(0.5),
+		.CLKOUT1_PHASE(0.0)
 	) PLL_1 (
 		.CLKIN1(clk),
 		.CLKOUT0(pixel_clk_unbuf),
+		.CLKOUT1(tmds_clk_unbuf),
 		.CLKFBOUT(pll_feedback_1),
 		.CLKFBIN(pll_feedback_1),
 		.PWRDWN(1'b0),
@@ -257,37 +266,37 @@ module system (
 		.RST(1'b0)
 	);
 
-	MMCME2_BASE #(
-		.CLKFBOUT_MULT_F(20),
-		.CLKOUT1_DIVIDE(4),
+	assign resetn_unbuf = pll_locked_1;
+`endif
+
+`ifdef MODE_1024_768_60
+	wire pll_locked_1;
+	wire pll_feedback_1;
+
+	PLLE2_BASE #(
+		.CLKFBOUT_MULT(28),
+		.CLKOUT0_DIVIDE(25),
+		.CLKOUT0_DUTY_CYCLE(0.5),
+		.CLKOUT0_PHASE(0.0),
+		.CLKOUT1_DIVIDE(5),
 		.CLKOUT1_DUTY_CYCLE(0.5),
 		.CLKOUT1_PHASE(0.0)
-	) PLL_2 (
-		.CLKIN1(pixel_clk_unbuf),
+		//.CLKOUT2_DIVIDE(4),
+		//.CLKOUT2_DUTY_CYCLE(0.5),
+		//.CLKOUT2_PHASE(0.0)
+	) PLL_1 (
+		.CLKIN1(clk),
+		.CLKOUT0(pixel_clk_unbuf),
 		.CLKOUT1(tmds_clk_unbuf),
-		.CLKFBOUT(pll_feedback_2),
-		.CLKFBIN(pll_feedback_2),
+		//.CLKOUT2(openldi_clk_unbuf),
+		.CLKFBOUT(pll_feedback_1),
+		.CLKFBIN(pll_feedback_1),
 		.PWRDWN(1'b0),
-		.LOCKED(pll_locked_2),
-		.RST(!pll_locked_1)
+		.LOCKED(pll_locked_1),
+		.RST(1'b0)
 	);
 
-	MMCME2_BASE #(
-		.CLKFBOUT_MULT_F(21),
-		.CLKOUT1_DIVIDE(3),
-		.CLKOUT1_DUTY_CYCLE(0.5),
-		.CLKOUT1_PHASE(0.0)
-	) PLL_3 (
-		.CLKIN1(pixel_clk_unbuf),
-		.CLKOUT1(openldi_clk_unbuf),
-		.CLKFBOUT(pll_feedback_3),
-		.CLKFBIN(pll_feedback_3),
-		.PWRDWN(1'b0),
-		.LOCKED(pll_locked_3),
-		.RST(!pll_locked_1)
-	);
-
-	assign resetn_unbuf = pll_locked_1 && pll_locked_2 && pll_locked_3;
+	assign resetn_unbuf = pll_locked_1;
 `endif
 
 `ifdef MODE_1920_1080_60
@@ -298,7 +307,8 @@ module system (
 	wire pll_feedback_2;
 
 	MMCME2_BASE #(
-		.CLKFBOUT_MULT_F(11.08),
+		.CLKFBOUT_MULT_F(55.37),
+		.DIVCLK_DIVIDE(2),
 		.CLKOUT1_DIVIDE(10),
 		.CLKOUT1_DUTY_CYCLE(0.5),
 		.CLKOUT1_PHASE(0.0),
@@ -429,258 +439,58 @@ module system (
 	// VGA output signals (via R-2R network)
 	// --------------------------------------------------------------------
 
-//	assign vga_r = video_enc_tdata[5:1];
-//	assign vga_g = video_enc_tdata[11:6];
-//	assign vga_b = video_enc_tdata[17:13];
-//	assign vga_hs = video_enc_tuser[1];
-//	assign vga_vs = video_enc_tuser[2];
-
+/*    assign vga_r = video_enc_tdata[5:1];
+    assign vga_g = video_enc_tdata[11:6];
+    assign vga_b = video_enc_tdata[17:13];
+    assign vga_hs = video_enc_tuser[1];
+    assign vga_vs = video_enc_tuser[2];
+*/
 
 	// --------------------------------------------------------------------
 	// TMDS (DVI/HDMI) output signals
 	// --------------------------------------------------------------------
-
-	wire [2:0] tmds_d;
-	wire [2:0] tmds_serdes_shift1;
-	wire [2:0] tmds_serdes_shift2;
-	wire [2:0] tmds_d0, tmds_d1, tmds_d2, tmds_d3, tmds_d4;
-	wire [2:0] tmds_d5, tmds_d6, tmds_d7, tmds_d8, tmds_d9;
-
-	OBUFDS tmds_bufds [3:0] (
-		.I({pixel_clk, tmds_d}),
-		.O({tmds_clk_p, tmds_d_p}),
-		.OB({tmds_clk_n, tmds_d_n})
-	);
-
-	OSERDESE2 #(
-		.DATA_RATE_OQ("DDR"),
-		.DATA_RATE_TQ("SDR"),
-		.DATA_WIDTH(10),
-		.INIT_OQ(1'b0),
-		.INIT_TQ(1'b0),
-		.SERDES_MODE("MASTER"),
-		.SRVAL_OQ(1'b0),
-		.SRVAL_TQ(1'b0),
-		.TBYTE_CTL("FALSE"),
-		.TBYTE_SRC("FALSE"),
-		.TRISTATE_WIDTH(1)
-	) tmds_serdes_lo [2:0] (
-		.OFB(),
-		.OQ(tmds_d),
-		.SHIFTOUT1(),
-		.SHIFTOUT2(),
-		.TBYTEOUT(),
-		.TFB(),
-		.TQ(),
-		.CLK(tmds_clk),
-		.CLKDIV(pixel_clk),
-		.D1(tmds_d0),
-		.D2(tmds_d1),
-		.D3(tmds_d2),
-		.D4(tmds_d3),
-		.D5(tmds_d4),
-		.D6(tmds_d5),
-		.D7(tmds_d6),
-		.D8(tmds_d7),
-		.OCE(1'b1),
-		.RST(~resetn),
-		.SHIFTIN1(tmds_serdes_shift1),
-		.SHIFTIN2(tmds_serdes_shift2),
-		.T1(1'b0),
-		.T2(1'b0),
-		.T3(1'b0),
-		.T4(1'b0),
-		.TBYTEIN(1'b0),
-		.TCE(1'b0)
-	);
-
-	OSERDESE2 #(
-		.DATA_RATE_OQ("DDR"),
-		.DATA_RATE_TQ("SDR"),
-		.DATA_WIDTH(10),
-		.INIT_OQ(1'b0),
-		.INIT_TQ(1'b0),
-		.SERDES_MODE("SLAVE"),
-		.SRVAL_OQ(1'b0),
-		.SRVAL_TQ(1'b0),
-		.TBYTE_CTL("FALSE"),
-		.TBYTE_SRC("FALSE"),
-		.TRISTATE_WIDTH(1)
-	) tmds_serdes_hi [2:0] (
-		.OFB(),
-		.OQ(),
-		.SHIFTOUT1(tmds_serdes_shift1),
-		.SHIFTOUT2(tmds_serdes_shift2),
-		.TBYTEOUT(),
-		.TFB(),
-		.TQ(),
-		.CLK(tmds_clk),
-		.CLKDIV(pixel_clk),
-		.D1(1'b0),
-		.D2(1'b0),
-		.D3(tmds_d8),
-		.D4(tmds_d9),
-		.D5(1'b0),
-		.D6(1'b0),
-		.D7(1'b0),
-		.D8(1'b0),
-		.OCE(1'b1),
-		.RST(~resetn),
-		.SHIFTIN1(1'b0),
-		.SHIFTIN2(1'b0),
-		.T1(1'b0),
-		.T2(1'b0),
-		.T3(1'b0),
-		.T4(1'b0),
-		.TBYTEIN(1'b0),
-		.TCE(1'b0)
-	);
-
-	svo_tmds svo_tmds_0 (
-		.clk(pixel_clk),
-		.resetn(resetn),
-		.de(!video_enc_tuser[3]),
-		.ctrl(video_enc_tuser[2:1]),
-		.din({video_enc_tdata[17:12], 2'b0}),
-		.dout({tmds_d9[0], tmds_d8[0], tmds_d7[0], tmds_d6[0], tmds_d5[0],
-		       tmds_d4[0], tmds_d3[0], tmds_d2[0], tmds_d1[0], tmds_d0[0]})
-	);
-
-	svo_tmds svo_tmds_1 (
-		.clk(pixel_clk),
-		.resetn(resetn),
-		.de(!video_enc_tuser[3]),
-		.ctrl(2'b0),
-		.din({video_enc_tdata[11:6], 2'b0}),
-		.dout({tmds_d9[1], tmds_d8[1], tmds_d7[1], tmds_d6[1], tmds_d5[1],
-		       tmds_d4[1], tmds_d3[1], tmds_d2[1], tmds_d1[1], tmds_d0[1]})
-	);
-
-	svo_tmds svo_tmds_2 (
-		.clk(pixel_clk),
-		.resetn(resetn),
-		.de(!video_enc_tuser[3]),
-		.ctrl(2'b0),
-		.din({video_enc_tdata[5:0], 2'b0}),
-		.dout({tmds_d9[2], tmds_d8[2], tmds_d7[2], tmds_d6[2], tmds_d5[2],
-		       tmds_d4[2], tmds_d3[2], tmds_d2[2], tmds_d1[2], tmds_d0[2]})
-	);
-
+	
+    rgb2dvi rgb2dvi (
+        //clock : tmds clock = 5x pixel clock
+        .pixel_clk(pixel_clk),
+        .tmds_clk(tmds_clk),
+        .resetn(resetn),
+        //data pixel rgb
+	    .data_r({video_enc_tdata[5:0], 2'b0}),
+	    .data_g({video_enc_tdata[11:6], 2'b0}),
+	    .data_b({video_enc_tdata[17:12], 2'b0}),
+	    .data_hs(video_enc_tuser[1]),
+	    .data_vs(video_enc_tuser[2]),
+	    .data_de(!video_enc_tuser[3]),
+        //dvi output
+	    .tmds_clk_n(tmds_clk_n),
+	    .tmds_clk_p(tmds_clk_p),
+	    .tmds_d_n(tmds_d_n),
+	    .tmds_d_p(tmds_d_p)
+    );
 
 	// --------------------------------------------------------------------
 	// OpenLDI (LVDS Display Interface) output signals
 	// --------------------------------------------------------------------
 
-//	wire [2:0] openldi_a0, openldi_a1, openldi_a2, openldi_a3, openldi_a4, openldi_a5, openldi_a6;
-
-//`ifdef SINGLE_ENDED_LDI
-//	OSERDESE2 #(
-//		.DATA_RATE_OQ("SDR"),
-//		.DATA_RATE_TQ("SDR"),
-//		.DATA_WIDTH(7),
-//		.INIT_OQ(1'b0),
-//		.INIT_TQ(1'b0),
-//		.SERDES_MODE("MASTER"),
-//		.SRVAL_OQ(1'b0),
-//		.SRVAL_TQ(1'b0),
-//		.TBYTE_CTL("FALSE"),
-//		.TBYTE_SRC("FALSE"),
-//		.TRISTATE_WIDTH(1)
-//	) openldi_serdes_array[7:0] (
-//		.OFB(),
-//		.OQ({openldi_clk_p, openldi_clk_n, openldi_a_p, openldi_a_n}),
-//		.SHIFTOUT1(),
-//		.SHIFTOUT2(),
-//		.TBYTEOUT(),
-//		.TFB(),
-//		.TQ(),
-//		.CLK(openldi_clk),
-//		.CLKDIV(pixel_clk),
-//		.D1({2'b10, openldi_a0, ~openldi_a0}),
-//		.D2({2'b10, openldi_a1, ~openldi_a1}),
-//		.D3({2'b01, openldi_a2, ~openldi_a2}),
-//		.D4({2'b01, openldi_a3, ~openldi_a3}),
-//		.D5({2'b01, openldi_a4, ~openldi_a4}),
-//		.D6({2'b10, openldi_a5, ~openldi_a5}),
-//		.D7({2'b10, openldi_a6, ~openldi_a6}),
-//		.D8(),
-//		.OCE(1'b1),
-//		.RST(~resetn),
-//		.SHIFTIN1(1'b0),
-//		.SHIFTIN2(1'b0),
-//		.T1(1'b0),
-//		.T2(1'b0),
-//		.T3(1'b0),
-//		.T4(1'b0),
-//		.TBYTEIN(1'b0),
-//		.TCE(1'b0)
-//	);
-//`else
-//	wire openldi_c;
-//	wire [2:0] openldi_a;
-
-//	OBUFDS openldi_bufds [3:0] (
-//		.I({openldi_c, openldi_a}),
-//		.O({openldi_clk_p, openldi_a_p}),
-//		.OB({openldi_clk_n, openldi_a_n})
-//	);
-
-//	OSERDESE2 #(
-//		.DATA_RATE_OQ("SDR"),
-//		.DATA_RATE_TQ("SDR"),
-//		.DATA_WIDTH(7),
-//		.INIT_OQ(1'b0),
-//		.INIT_TQ(1'b0),
-//		.SERDES_MODE("MASTER"),
-//		.SRVAL_OQ(1'b0),
-//		.SRVAL_TQ(1'b0),
-//		.TBYTE_CTL("FALSE"),
-//		.TBYTE_SRC("FALSE"),
-//		.TRISTATE_WIDTH(1)
-//	) openldi_serdes [3:0] (
-//		.OFB(),
-//		.OQ({openldi_c, openldi_a}),
-//		.SHIFTOUT1(),
-//		.SHIFTOUT2(),
-//		.TBYTEOUT(),
-//		.TFB(),
-//		.TQ(),
-//		.CLK(openldi_clk),
-//		.CLKDIV(pixel_clk),
-//		.D1({1'b1, openldi_a0}),
-//		.D2({1'b1, openldi_a1}),
-//		.D3({1'b0, openldi_a2}),
-//		.D4({1'b0, openldi_a3}),
-//		.D5({1'b0, openldi_a4}),
-//		.D6({1'b1, openldi_a5}),
-//		.D7({1'b1, openldi_a6}),
-//		.D8(),
-//		.OCE(1'b1),
-//		.RST(~resetn),
-//		.SHIFTIN1(1'b0),
-//		.SHIFTIN2(1'b0),
-//		.T1(1'b0),
-//		.T2(1'b0),
-//		.T3(1'b0),
-//		.T4(1'b0),
-//		.TBYTEIN(1'b0),
-//		.TCE(1'b0)
-//	);
-//`endif
-
-//	svo_openldi svo_openldi (
-//		.clk(pixel_clk),
-//		.resetn(resetn),
-//		.hs(video_enc_tuser[1]),
-//		.vs(video_enc_tuser[2]),
-//		.de(!video_enc_tuser[3]),
-//		.r(video_enc_tdata[5:0]),
-//		.g(video_enc_tdata[11:6]),
-//		.b(video_enc_tdata[17:12]),
-//		.a0({openldi_a0[0], openldi_a1[0], openldi_a2[0], openldi_a3[0], openldi_a4[0], openldi_a5[0], openldi_a6[0]}),
-//		.a1({openldi_a0[1], openldi_a1[1], openldi_a2[1], openldi_a3[1], openldi_a4[1], openldi_a5[1], openldi_a6[1]}),
-//		.a2({openldi_a0[2], openldi_a1[2], openldi_a2[2], openldi_a3[2], openldi_a4[2], openldi_a5[2], openldi_a6[2]})
-//	);
+    /*rgb2ldi rgb2ldi (
+        //clock : openldi/lvds clock = 7x pixel clock
+        .pixel_clk(pixel_clk),
+        .tmds_clk(openldi_clk),
+        .resetn(resetn),
+        //data pixel rgb
+	    .data_r(video_enc_tdata[5:0]),
+	    .data_g(video_enc_tdata[11:6]),
+	    .data_b(video_enc_tdata[17:12]),
+	    .data_hs(video_enc_tuser[1]),
+	    .data_vs(video_enc_tuser[2]),
+	    .data_de(!video_enc_tuser[3]),
+        //dvi output
+	    .openldi_clk_n(openldi_clk_n),
+	    .openldi_clk_p(openldi_clk_p),
+	    .openldi_a_n(openldi_a_n),
+	    .openldi_a_p(openldi_a_p)
+    );*/
 
 
 	// --------------------------------------------------------------------

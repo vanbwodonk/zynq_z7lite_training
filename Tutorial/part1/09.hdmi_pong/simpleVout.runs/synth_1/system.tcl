@@ -17,25 +17,27 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7z020clg400-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/arif/Xilinx/Projects/simpleVout/simpleVout.cache/wt [current_project]
-set_property parent.project_path /home/arif/Xilinx/Projects/simpleVout/simpleVout.xpr [current_project]
+set_property webtalk.parent_dir /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.cache/wt [current_project]
+set_property parent.project_path /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/arif/Xilinx/Projects/simpleVout/simpleVout.cache/ip [current_project]
+set_property ip_output_repo /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog /home/arif/Downloads/SimpleVOut/svosrc/svo_defines.vh
 read_verilog -library xil_defaultlib {
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/rgb2dvi.v
   /home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v
   /home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v
   /home/arif/Downloads/SimpleVOut/svosrc/svo_tcard.v
   /home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v
   /home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v
-  /home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v
+  /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/system.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

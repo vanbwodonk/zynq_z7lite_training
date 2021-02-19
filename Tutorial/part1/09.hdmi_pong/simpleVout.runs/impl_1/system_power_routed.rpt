@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu Feb 18 16:41:45 2021
+| Date             : Fri Feb 19 13:07:41 2021
 | Host             : tekPC running 64-bit Manjaro Linux
 | Command          : report_power -file system_power_routed.rpt -pb system_power_summary_routed.pb -rpx system_power_routed.rpx
 | Design           : system
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.383        |
+| Total On-Chip Power (W)  | 0.388        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.273        |
+| Dynamic (W)              | 0.278        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.6         |
-| Junction Temperature (C) | 29.4         |
+| Max Ambient (C)          | 80.5         |
+| Junction Temperature (C) | 29.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.002 |        6 |       --- |             --- |
+| Clocks                   |     0.003 |        6 |       --- |             --- |
 | Slice Logic              |    <0.001 |     3754 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1615 |     53200 |            3.04 |
+|   LUT as Logic           |    <0.001 |     1650 |     53200 |            3.10 |
 |   CARRY4                 |    <0.001 |      219 |     13300 |            1.65 |
 |   Register               |    <0.001 |     1384 |    106400 |            1.30 |
 |   LUT as Distributed RAM |    <0.001 |       40 |     17400 |            0.23 |
 |   LUT as Shift Register  |    <0.001 |        2 |     17400 |            0.01 |
 |   F7/F8 Muxes            |    <0.001 |       15 |     53200 |            0.03 |
-|   Others                 |     0.000 |       82 |       --- |             --- |
+|   Others                 |     0.000 |       83 |       --- |             --- |
 | Signals                  |    <0.001 |     2830 |       --- |             --- |
-| PLL                      |     0.138 |        1 |         4 |           25.00 |
+| PLL                      |     0.141 |        1 |         4 |           25.00 |
 | I/O                      |     0.132 |       21 |       125 |           16.80 |
 | Static Power             |     0.110 |          |           |                 |
-| Total                    |     0.383 |          |           |                 |
+| Total                    |     0.388 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,8 +75,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.023 |       0.015 |      0.008 |
-| Vccaux    |       1.800 |     0.082 |       0.071 |      0.011 |
+| Vccint    |       1.000 |     0.028 |       0.019 |      0.008 |
+| Vccaux    |       1.800 |     0.081 |       0.070 |      0.011 |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -138,10 +138,10 @@ Table of Contents
 +-----------------+-----------------+-----------------+
 | Clock           | Domain          | Constraint (ns) |
 +-----------------+-----------------+-----------------+
-| pixel_clk_unbuf | pixel_clk_unbuf |            42.4 |
+| pixel_clk_unbuf | pixel_clk_unbuf |            28.1 |
 | pll_feedback_1  | pll_feedback_1  |            20.0 |
 | sys_clk_pin     | clk             |            20.0 |
-| tmds_clk_unbuf  | tmds_clk_unbuf  |             8.5 |
+| tmds_clk_unbuf  | tmds_clk_unbuf  |             5.6 |
 +-----------------+-----------------+-----------------+
 
 
@@ -154,9 +154,10 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| system             |     0.273 |
+| system             |     0.278 |
+|   rgb2dvi          |     0.133 |
 |   svo_pong         |     0.002 |
-|     svo_pong_video |     0.001 |
+|     svo_pong_video |     0.002 |
 +--------------------+-----------+
 
 

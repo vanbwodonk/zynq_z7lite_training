@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Feb 18 16:40:38 2021
+| Date         : Fri Feb 19 13:06:45 2021
 | Host         : tekPC running 64-bit Manjaro Linux
 | Command      : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
 | Design       : system
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1674 |     0 |     53200 |  3.15 |
-|   LUT as Logic             | 1632 |     0 |     53200 |  3.07 |
+| Slice LUTs*                | 1703 |     0 |     53200 |  3.20 |
+|   LUT as Logic             | 1661 |     0 |     53200 |  3.12 |
 |   LUT as Memory            |   42 |     0 |     17400 |  0.24 |
 |     LUT as Distributed RAM |   40 |     0 |           |       |
 |     LUT as Shift Register  |    2 |     0 |           |       |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 55    |          Yes |         Set |            - |
-| 1329  |          Yes |       Reset |            - |
+| 57    |          Yes |         Set |            - |
+| 1327  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,15 +149,15 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 1329 |        Flop & Latch |
-| LUT6      |  500 |                 LUT |
-| LUT2      |  456 |                 LUT |
-| LUT4      |  294 |                 LUT |
-| LUT5      |  290 |                 LUT |
-| LUT3      |  266 |                 LUT |
+| FDRE      | 1327 |        Flop & Latch |
+| LUT6      |  515 |                 LUT |
+| LUT2      |  445 |                 LUT |
+| LUT5      |  299 |                 LUT |
+| LUT4      |  292 |                 LUT |
+| LUT3      |  254 |                 LUT |
 | CARRY4    |  223 |          CarryLogic |
-| LUT1      |  176 |                 LUT |
-| FDSE      |   55 |        Flop & Latch |
+| LUT1      |  177 |                 LUT |
+| FDSE      |   57 |        Flop & Latch |
 | RAMD32    |   54 |  Distributed Memory |
 | RAMS32    |   22 |  Distributed Memory |
 | MUXF7     |   12 |               MuxFx |

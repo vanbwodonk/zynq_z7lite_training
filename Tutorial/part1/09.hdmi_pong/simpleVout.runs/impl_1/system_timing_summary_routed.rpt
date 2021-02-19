@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Feb 18 16:41:46 2021
+| Date         : Fri Feb 19 13:07:41 2021
 | Host         : tekPC running 64-bit Manjaro Linux
 | Command      : report_timing_summary -max_paths 10 -file system_timing_summary_routed.rpt -pb system_timing_summary_routed.pb -rpx system_timing_summary_routed.rpx -warn_on_violation
 | Design       : system
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     35.163        0.000                      0                 3231        0.108        0.000                      0                 3231        1.000        0.000                       0                  1481  
+     20.183        0.000                      0                 3221        0.074        0.000                      0                 3221        1.000        0.000                       0                  1481  
 
 
 All user specified timing constraints are met.
@@ -140,9 +140,9 @@ All user specified timing constraints are met.
 Clock              Waveform(ns)         Period(ns)      Frequency(MHz)
 -----              ------------         ----------      --------------
 sys_clk_pin        {0.000 4.000}        20.000          50.000          
-  pixel_clk_unbuf  {0.000 21.212}       42.424          23.571          
+  pixel_clk_unbuf  {0.000 14.063}       28.125          35.556          
   pll_feedback_1   {0.000 10.000}       20.000          50.000          
-  tmds_clk_unbuf   {0.000 4.242}        8.485           117.857         
+  tmds_clk_unbuf   {0.000 2.813}        5.625           177.778         
 
 
 ------------------------------------------------------------------------------------------------
@@ -153,9 +153,9 @@ sys_clk_pin        {0.000 4.000}        20.000          50.000
 Clock                  WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                  -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 sys_clk_pin                                                                                                                                                          1.000        0.000                       0                     1  
-  pixel_clk_unbuf       35.163        0.000                      0                 3231        0.108        0.000                      0                 3231       20.082        0.000                       0                  1470  
+  pixel_clk_unbuf       20.183        0.000                      0                 3221        0.074        0.000                      0                 3221       12.932        0.000                       0                  1470  
   pll_feedback_1                                                                                                                                                    18.751        0.000                       0                     2  
-  tmds_clk_unbuf                                                                                                                                                     6.892        0.000                       0                     8  
+  tmds_clk_unbuf                                                                                                                                                     4.033        0.000                       0                     8  
 
 
 ------------------------------------------------------------------------------------------------
@@ -213,176 +213,28 @@ High Pulse Width  Fast    PLLE2_ADV/CLKIN1  n/a            3.000         4.000  
 From Clock:  pixel_clk_unbuf
   To Clock:  pixel_clk_unbuf
 
-Setup :            0  Failing Endpoints,  Worst Slack       35.163ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.108ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack       20.082ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       20.183ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.074ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       12.932ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             35.163ns  (required time - arrival time)
-  Source:                 svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_video/compose_8/out_axis_tdata_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Path Group:             pixel_clk_unbuf
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        7.120ns  (logic 1.934ns (27.162%)  route 5.186ns (72.838%))
-  Logic Levels:           6  (CARRY4=2 LUT2=1 LUT6=3)
-  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.284ns = ( 47.708 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.837ns
-    Clock Pessimism Removal (CPR):    0.423ns
-  Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Discrete Jitter          (DJ):    0.042ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock pixel_clk_unbuf rise edge)
-                                                      0.000     0.000 r  
-    N18                                               0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.126     2.518    clk_IBUF
-    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.077     2.595 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.563     5.837    svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/pixel_clk
-    SLICE_X111Y79        FDRE                                         r  svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y79        FDRE (Prop_fdre_C_Q)         0.348     6.185 f  svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/Q
-                         net (fo=29, routed)          2.239     8.424    svo_pong/svo_pong_video/compose_8/x_reg[0]_0
-    SLICE_X99Y69         LUT6 (Prop_lut6_I0_O)        0.239     8.663 r  svo_pong/svo_pong_video/compose_8/y[13]_i_2__1/O
-                         net (fo=27, routed)          1.348    10.012    svo_pong/svo_pong_video/compose_8/y[13]_i_2__1_n_0
-    SLICE_X95Y71         LUT2 (Prop_lut2_I1_O)        0.115    10.127 r  svo_pong/svo_pong_video/compose_8/y[0]_i_1__1/O
-                         net (fo=3, routed)           0.677    10.804    svo_pong/svo_pong_video/compose_8/y[0]
-    SLICE_X97Y71         LUT6 (Prop_lut6_I0_O)        0.267    11.071 r  svo_pong/svo_pong_video/compose_8/in_y1_carry_i_4__1/O
-                         net (fo=1, routed)           0.000    11.071    svo_pong/svo_pong_video/compose_8/in_y1_carry_i_4__1_n_0
-    SLICE_X97Y71         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.440    11.511 r  svo_pong/svo_pong_video/compose_8/in_y1_carry/CO[3]
-                         net (fo=1, routed)           0.000    11.511    svo_pong/svo_pong_video/compose_8/in_y1_carry_n_0
-    SLICE_X97Y72         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.216    11.727 f  svo_pong/svo_pong_video/compose_8/in_y1_carry__0/CO[0]
-                         net (fo=2, routed)           0.921    12.649    svo_pong/svo_pong_video/compose_8/in_y1
-    SLICE_X105Y72        LUT6 (Prop_lut6_I2_O)        0.309    12.958 r  svo_pong/svo_pong_video/compose_8/out_axis_tdata[1]_i_1__1/O
-                         net (fo=1, routed)           0.000    12.958    svo_pong/svo_pong_video/compose_8/out_axis_tdata0
-    SLICE_X105Y72        FDRE                                         r  svo_pong/svo_pong_video/compose_8/out_axis_tdata_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
-    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.337    47.708    svo_pong/svo_pong_video/compose_8/pixel_clk
-    SLICE_X105Y72        FDRE                                         r  svo_pong/svo_pong_video/compose_8/out_axis_tdata_reg[1]/C
-                         clock pessimism              0.423    48.131    
-                         clock uncertainty           -0.041    48.090    
-    SLICE_X105Y72        FDRE (Setup_fdre_C_D)        0.030    48.120    svo_pong/svo_pong_video/compose_8/out_axis_tdata_reg[1]
-  -------------------------------------------------------------------
-                         required time                         48.120    
-                         arrival time                         -12.958    
-  -------------------------------------------------------------------
-                         slack                                 35.163    
-
-Slack (MET) :             35.254ns  (required time - arrival time)
-  Source:                 svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_video/compose_8/in_y_reg/D
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Path Group:             pixel_clk_unbuf
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        7.031ns  (logic 1.934ns (27.506%)  route 5.097ns (72.494%))
-  Logic Levels:           6  (CARRY4=2 LUT2=1 LUT5=1 LUT6=2)
-  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.284ns = ( 47.708 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.837ns
-    Clock Pessimism Removal (CPR):    0.423ns
-  Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Discrete Jitter          (DJ):    0.042ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock pixel_clk_unbuf rise edge)
-                                                      0.000     0.000 r  
-    N18                                               0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.126     2.518    clk_IBUF
-    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.077     2.595 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.563     5.837    svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/pixel_clk
-    SLICE_X111Y79        FDRE                                         r  svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y79        FDRE (Prop_fdre_C_Q)         0.348     6.185 f  svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/Q
-                         net (fo=29, routed)          2.239     8.424    svo_pong/svo_pong_video/compose_8/x_reg[0]_0
-    SLICE_X99Y69         LUT6 (Prop_lut6_I0_O)        0.239     8.663 r  svo_pong/svo_pong_video/compose_8/y[13]_i_2__1/O
-                         net (fo=27, routed)          1.348    10.012    svo_pong/svo_pong_video/compose_8/y[13]_i_2__1_n_0
-    SLICE_X95Y71         LUT2 (Prop_lut2_I1_O)        0.115    10.127 r  svo_pong/svo_pong_video/compose_8/y[0]_i_1__1/O
-                         net (fo=3, routed)           0.677    10.804    svo_pong/svo_pong_video/compose_8/y[0]
-    SLICE_X97Y71         LUT6 (Prop_lut6_I0_O)        0.267    11.071 r  svo_pong/svo_pong_video/compose_8/in_y1_carry_i_4__1/O
-                         net (fo=1, routed)           0.000    11.071    svo_pong/svo_pong_video/compose_8/in_y1_carry_i_4__1_n_0
-    SLICE_X97Y71         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.440    11.511 r  svo_pong/svo_pong_video/compose_8/in_y1_carry/CO[3]
-                         net (fo=1, routed)           0.000    11.511    svo_pong/svo_pong_video/compose_8/in_y1_carry_n_0
-    SLICE_X97Y72         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.216    11.727 f  svo_pong/svo_pong_video/compose_8/in_y1_carry__0/CO[0]
-                         net (fo=2, routed)           0.832    12.560    svo_pong/svo_pong_video/compose_8/in_y1
-    SLICE_X105Y71        LUT5 (Prop_lut5_I1_O)        0.309    12.869 r  svo_pong/svo_pong_video/compose_8/in_y_i_1__1/O
-                         net (fo=1, routed)           0.000    12.869    svo_pong/svo_pong_video/compose_8/in_y_i_1__1_n_0
-    SLICE_X105Y71        FDRE                                         r  svo_pong/svo_pong_video/compose_8/in_y_reg/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
-    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.337    47.708    svo_pong/svo_pong_video/compose_8/pixel_clk
-    SLICE_X105Y71        FDRE                                         r  svo_pong/svo_pong_video/compose_8/in_y_reg/C
-                         clock pessimism              0.423    48.131    
-                         clock uncertainty           -0.041    48.090    
-    SLICE_X105Y71        FDRE (Setup_fdre_C_D)        0.032    48.122    svo_pong/svo_pong_video/compose_8/in_y_reg
-  -------------------------------------------------------------------
-                         required time                         48.122    
-                         arrival time                         -12.869    
-  -------------------------------------------------------------------
-                         slack                                 35.254    
-
-Slack (MET) :             35.668ns  (required time - arrival time)
+Slack (MET) :             20.183ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[11]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[0]/S
+                            (rising edge-triggered cell FDSE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.226ns  (logic 1.019ns (16.366%)  route 5.207ns (83.634%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.066ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.350ns = ( 47.774 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
-    Clock Pessimism Removal (CPR):    0.423ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.626ns  (logic 0.735ns (9.638%)  route 6.891ns (90.362%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.517ns = ( 33.642 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
+    Clock Pessimism Removal (CPR):    0.340ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.042ns
@@ -400,55 +252,53 @@ Slack (MET) :             35.668ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.474    12.065    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X108Y79        FDRE                                         r  svo_pong/svo_pong_control/px_reg[11]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 r  resetn_reg/Q
+                         net (fo=69, routed)          3.842    10.019    svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/resetn
+    SLICE_X111Y92        LUT3 (Prop_lut3_I0_O)        0.232    10.251 r  svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_digit[1]_i_1/O
+                         net (fo=74, routed)          2.494    12.745    svo_pong/svo_pong_video/compose_6/p3_y_reg[0]_0
+    SLICE_X112Y102       LUT6 (Prop_lut6_I0_O)        0.105    12.850 r  svo_pong/svo_pong_video/compose_6/p4_addr_right_up[1]_i_1/O
+                         net (fo=2, routed)           0.555    13.405    svo_pong/svo_pong_video/compose_6/p4_addr_right_up
+    SLICE_X111Y101       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[0]/S
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.403    47.774    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X108Y79        FDRE                                         r  svo_pong/svo_pong_control/px_reg[11]/C
-                         clock pessimism              0.423    48.197    
-                         clock uncertainty           -0.041    48.156    
-    SLICE_X108Y79        FDRE (Setup_fdre_C_R)       -0.423    47.733    svo_pong/svo_pong_control/px_reg[11]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.570    33.642    svo_pong/svo_pong_video/compose_6/pixel_clk
+    SLICE_X111Y101       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[0]/C
+                         clock pessimism              0.340    33.981    
+                         clock uncertainty           -0.041    33.940    
+    SLICE_X111Y101       FDSE (Setup_fdse_C_S)       -0.352    33.588    svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[0]
   -------------------------------------------------------------------
-                         required time                         47.733    
-                         arrival time                         -12.065    
+                         required time                         33.588    
+                         arrival time                         -13.405    
   -------------------------------------------------------------------
-                         slack                                 35.668    
+                         slack                                 20.183    
 
-Slack (MET) :             35.669ns  (required time - arrival time)
+Slack (MET) :             20.183ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[0]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[1]/S
+                            (rising edge-triggered cell FDSE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.294ns  (logic 1.019ns (16.191%)  route 5.275ns (83.809%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.348ns = ( 47.772 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
-    Clock Pessimism Removal (CPR):    0.423ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.626ns  (logic 0.735ns (9.638%)  route 6.891ns (90.362%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.517ns = ( 33.642 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
+    Clock Pessimism Removal (CPR):    0.340ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.042ns
@@ -466,54 +316,52 @@ Slack (MET) :             35.669ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.541    12.133    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X107Y78        FDRE                                         r  svo_pong/svo_pong_control/px_reg[0]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 r  resetn_reg/Q
+                         net (fo=69, routed)          3.842    10.019    svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/resetn
+    SLICE_X111Y92        LUT3 (Prop_lut3_I0_O)        0.232    10.251 r  svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_digit[1]_i_1/O
+                         net (fo=74, routed)          2.494    12.745    svo_pong/svo_pong_video/compose_6/p3_y_reg[0]_0
+    SLICE_X112Y102       LUT6 (Prop_lut6_I0_O)        0.105    12.850 r  svo_pong/svo_pong_video/compose_6/p4_addr_right_up[1]_i_1/O
+                         net (fo=2, routed)           0.555    13.405    svo_pong/svo_pong_video/compose_6/p4_addr_right_up
+    SLICE_X111Y101       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[1]/S
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.401    47.772    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X107Y78        FDRE                                         r  svo_pong/svo_pong_control/px_reg[0]/C
-                         clock pessimism              0.423    48.195    
-                         clock uncertainty           -0.041    48.154    
-    SLICE_X107Y78        FDRE (Setup_fdre_C_R)       -0.352    47.802    svo_pong/svo_pong_control/px_reg[0]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.570    33.642    svo_pong/svo_pong_video/compose_6/pixel_clk
+    SLICE_X111Y101       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[1]/C
+                         clock pessimism              0.340    33.981    
+                         clock uncertainty           -0.041    33.940    
+    SLICE_X111Y101       FDSE (Setup_fdse_C_S)       -0.352    33.588    svo_pong/svo_pong_video/compose_6/p4_addr_right_up_reg[1]
   -------------------------------------------------------------------
-                         required time                         47.802    
-                         arrival time                         -12.133    
+                         required time                         33.588    
+                         arrival time                         -13.405    
   -------------------------------------------------------------------
-                         slack                                 35.669    
+                         slack                                 20.183    
 
-Slack (MET) :             35.669ns  (required time - arrival time)
+Slack (MET) :             20.585ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[9]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_2/x_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.294ns  (logic 1.019ns (16.191%)  route 5.275ns (83.809%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.348ns = ( 47.772 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.083ns  (logic 0.630ns (8.895%)  route 6.453ns (91.105%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.292ns = ( 33.417 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
     Clock Pessimism Removal (CPR):    0.423ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -532,54 +380,50 @@ Slack (MET) :             35.669ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.541    12.133    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X107Y78        FDRE                                         r  svo_pong/svo_pong_control/px_reg[9]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 f  resetn_reg/Q
+                         net (fo=69, routed)          3.483     9.660    svo_pong/svo_pong_video/compose_6/resetn
+    SLICE_X108Y81        LUT1 (Prop_lut1_I0_O)        0.232     9.892 r  svo_pong/svo_pong_video/compose_6/out_axis_tvalid_i_1/O
+                         net (fo=305, routed)         2.970    12.862    svo_pong/svo_pong_video/compose_2/SR[0]
+    SLICE_X91Y93         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[2]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.401    47.772    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X107Y78        FDRE                                         r  svo_pong/svo_pong_control/px_reg[9]/C
-                         clock pessimism              0.423    48.195    
-                         clock uncertainty           -0.041    48.154    
-    SLICE_X107Y78        FDRE (Setup_fdre_C_R)       -0.352    47.802    svo_pong/svo_pong_control/px_reg[9]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.345    33.417    svo_pong/svo_pong_video/compose_2/pixel_clk
+    SLICE_X91Y93         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[2]/C
+                         clock pessimism              0.423    33.840    
+                         clock uncertainty           -0.041    33.799    
+    SLICE_X91Y93         FDRE (Setup_fdre_C_R)       -0.352    33.447    svo_pong/svo_pong_video/compose_2/x_reg[2]
   -------------------------------------------------------------------
-                         required time                         47.802    
-                         arrival time                         -12.133    
+                         required time                         33.447    
+                         arrival time                         -12.862    
   -------------------------------------------------------------------
-                         slack                                 35.669    
+                         slack                                 20.585    
 
-Slack (MET) :             35.674ns  (required time - arrival time)
+Slack (MET) :             20.606ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[2]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_2/x_reg[7]/R
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.289ns  (logic 1.019ns (16.202%)  route 5.270ns (83.798%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.348ns = ( 47.772 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.062ns  (logic 0.630ns (8.922%)  route 6.432ns (91.078%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.292ns = ( 33.417 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
     Clock Pessimism Removal (CPR):    0.423ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -598,54 +442,50 @@ Slack (MET) :             35.674ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.537    12.128    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X106Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[2]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 f  resetn_reg/Q
+                         net (fo=69, routed)          3.483     9.660    svo_pong/svo_pong_video/compose_6/resetn
+    SLICE_X108Y81        LUT1 (Prop_lut1_I0_O)        0.232     9.892 r  svo_pong/svo_pong_video/compose_6/out_axis_tvalid_i_1/O
+                         net (fo=305, routed)         2.949    12.841    svo_pong/svo_pong_video/compose_2/SR[0]
+    SLICE_X91Y94         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[7]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.401    47.772    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X106Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[2]/C
-                         clock pessimism              0.423    48.195    
-                         clock uncertainty           -0.041    48.154    
-    SLICE_X106Y77        FDRE (Setup_fdre_C_R)       -0.352    47.802    svo_pong/svo_pong_control/px_reg[2]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.345    33.417    svo_pong/svo_pong_video/compose_2/pixel_clk
+    SLICE_X91Y94         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[7]/C
+                         clock pessimism              0.423    33.840    
+                         clock uncertainty           -0.041    33.799    
+    SLICE_X91Y94         FDRE (Setup_fdre_C_R)       -0.352    33.447    svo_pong/svo_pong_video/compose_2/x_reg[7]
   -------------------------------------------------------------------
-                         required time                         47.802    
-                         arrival time                         -12.128    
+                         required time                         33.447    
+                         arrival time                         -12.841    
   -------------------------------------------------------------------
-                         slack                                 35.674    
+                         slack                                 20.606    
 
-Slack (MET) :             35.674ns  (required time - arrival time)
+Slack (MET) :             20.606ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[4]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_2/x_reg[8]/R
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.289ns  (logic 1.019ns (16.202%)  route 5.270ns (83.798%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.348ns = ( 47.772 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.062ns  (logic 0.630ns (8.922%)  route 6.432ns (91.078%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.292ns = ( 33.417 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
     Clock Pessimism Removal (CPR):    0.423ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -664,55 +504,51 @@ Slack (MET) :             35.674ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.537    12.128    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X106Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[4]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 f  resetn_reg/Q
+                         net (fo=69, routed)          3.483     9.660    svo_pong/svo_pong_video/compose_6/resetn
+    SLICE_X108Y81        LUT1 (Prop_lut1_I0_O)        0.232     9.892 r  svo_pong/svo_pong_video/compose_6/out_axis_tvalid_i_1/O
+                         net (fo=305, routed)         2.949    12.841    svo_pong/svo_pong_video/compose_2/SR[0]
+    SLICE_X91Y94         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[8]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.401    47.772    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X106Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[4]/C
-                         clock pessimism              0.423    48.195    
-                         clock uncertainty           -0.041    48.154    
-    SLICE_X106Y77        FDRE (Setup_fdre_C_R)       -0.352    47.802    svo_pong/svo_pong_control/px_reg[4]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.345    33.417    svo_pong/svo_pong_video/compose_2/pixel_clk
+    SLICE_X91Y94         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[8]/C
+                         clock pessimism              0.423    33.840    
+                         clock uncertainty           -0.041    33.799    
+    SLICE_X91Y94         FDRE (Setup_fdre_C_R)       -0.352    33.447    svo_pong/svo_pong_video/compose_2/x_reg[8]
   -------------------------------------------------------------------
-                         required time                         47.802    
-                         arrival time                         -12.128    
+                         required time                         33.447    
+                         arrival time                         -12.841    
   -------------------------------------------------------------------
-                         slack                                 35.674    
+                         slack                                 20.606    
 
-Slack (MET) :             35.674ns  (required time - arrival time)
+Slack (MET) :             20.778ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[5]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[0]/S
+                            (rising edge-triggered cell FDSE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.289ns  (logic 1.019ns (16.202%)  route 5.270ns (83.798%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.348ns = ( 47.772 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
-    Clock Pessimism Removal (CPR):    0.423ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.031ns  (logic 0.735ns (10.454%)  route 6.296ns (89.546%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.517ns = ( 33.642 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
+    Clock Pessimism Removal (CPR):    0.340ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.042ns
@@ -730,55 +566,53 @@ Slack (MET) :             35.674ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.537    12.128    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X106Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[5]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 r  resetn_reg/Q
+                         net (fo=69, routed)          3.842    10.019    svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/resetn
+    SLICE_X111Y92        LUT3 (Prop_lut3_I0_O)        0.232    10.251 r  svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_digit[1]_i_1/O
+                         net (fo=74, routed)          2.054    12.305    svo_pong/svo_pong_video/compose_6/p3_y_reg[0]_0
+    SLICE_X113Y102       LUT6 (Prop_lut6_I0_O)        0.105    12.410 r  svo_pong/svo_pong_video/compose_6/p4_addr_left_up[1]_i_1/O
+                         net (fo=2, routed)           0.400    12.810    svo_pong/svo_pong_video/compose_6/p4_addr_left_up
+    SLICE_X111Y102       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[0]/S
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.401    47.772    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X106Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[5]/C
-                         clock pessimism              0.423    48.195    
-                         clock uncertainty           -0.041    48.154    
-    SLICE_X106Y77        FDRE (Setup_fdre_C_R)       -0.352    47.802    svo_pong/svo_pong_control/px_reg[5]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.570    33.642    svo_pong/svo_pong_video/compose_6/pixel_clk
+    SLICE_X111Y102       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[0]/C
+                         clock pessimism              0.340    33.981    
+                         clock uncertainty           -0.041    33.940    
+    SLICE_X111Y102       FDSE (Setup_fdse_C_S)       -0.352    33.588    svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[0]
   -------------------------------------------------------------------
-                         required time                         47.802    
-                         arrival time                         -12.128    
+                         required time                         33.588    
+                         arrival time                         -12.810    
   -------------------------------------------------------------------
-                         slack                                 35.674    
+                         slack                                 20.778    
 
-Slack (MET) :             35.695ns  (required time - arrival time)
+Slack (MET) :             20.778ns  (required time - arrival time)
   Source:                 resetn_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_control/px_reg[7]/R
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[1]/S
+                            (rising edge-triggered cell FDSE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.307ns  (logic 1.019ns (16.157%)  route 5.288ns (83.843%))
-  Logic Levels:           3  (LUT3=2 LUT6=1)
-  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.350ns = ( 47.774 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.839ns
-    Clock Pessimism Removal (CPR):    0.460ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        7.031ns  (logic 0.735ns (10.454%)  route 6.296ns (89.546%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.517ns = ( 33.642 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
+    Clock Pessimism Removal (CPR):    0.340ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.042ns
@@ -796,54 +630,52 @@ Slack (MET) :             35.695ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.565     5.839    pixel_clk
-    SLICE_X112Y81        FDRE                                         r  resetn_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y81        FDRE (Prop_fdre_C_Q)         0.398     6.237 f  resetn_reg/Q
-                         net (fo=62, routed)          3.623     9.860    svo_pong/svo_pong_control/resetn
-    SLICE_X104Y76        LUT3 (Prop_lut3_I2_O)        0.252    10.112 r  svo_pong/svo_pong_control/px[11]_i_7/O
-                         net (fo=1, routed)           0.544    10.656    svo_pong/svo_pong_control/px[11]_i_7_n_0
-    SLICE_X105Y76        LUT6 (Prop_lut6_I5_O)        0.264    10.920 r  svo_pong/svo_pong_control/px[11]_i_2/O
-                         net (fo=13, routed)          0.567    11.487    svo_pong/svo_pong_control/px[11]_i_2_n_0
-    SLICE_X107Y75        LUT3 (Prop_lut3_I0_O)        0.105    11.592 r  svo_pong/svo_pong_control/px[11]_i_1/O
-                         net (fo=10, routed)          0.555    12.146    svo_pong/svo_pong_control/px[11]_i_1_n_0
-    SLICE_X110Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[7]/R
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 r  resetn_reg/Q
+                         net (fo=69, routed)          3.842    10.019    svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/resetn
+    SLICE_X111Y92        LUT3 (Prop_lut3_I0_O)        0.232    10.251 r  svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_digit[1]_i_1/O
+                         net (fo=74, routed)          2.054    12.305    svo_pong/svo_pong_video/compose_6/p3_y_reg[0]_0
+    SLICE_X113Y102       LUT6 (Prop_lut6_I0_O)        0.105    12.410 r  svo_pong/svo_pong_video/compose_6/p4_addr_left_up[1]_i_1/O
+                         net (fo=2, routed)           0.400    12.810    svo_pong/svo_pong_video/compose_6/p4_addr_left_up
+    SLICE_X111Y102       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[1]/S
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.403    47.774    svo_pong/svo_pong_control/pixel_clk
-    SLICE_X110Y77        FDRE                                         r  svo_pong/svo_pong_control/px_reg[7]/C
-                         clock pessimism              0.460    48.234    
-                         clock uncertainty           -0.041    48.193    
-    SLICE_X110Y77        FDRE (Setup_fdre_C_R)       -0.352    47.841    svo_pong/svo_pong_control/px_reg[7]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.570    33.642    svo_pong/svo_pong_video/compose_6/pixel_clk
+    SLICE_X111Y102       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[1]/C
+                         clock pessimism              0.340    33.981    
+                         clock uncertainty           -0.041    33.940    
+    SLICE_X111Y102       FDSE (Setup_fdse_C_S)       -0.352    33.588    svo_pong/svo_pong_video/compose_6/p4_addr_left_up_reg[1]
   -------------------------------------------------------------------
-                         required time                         47.841    
-                         arrival time                         -12.146    
+                         required time                         33.588    
+                         arrival time                         -12.810    
   -------------------------------------------------------------------
-                         slack                                 35.695    
+                         slack                                 20.778    
 
-Slack (MET) :             35.709ns  (required time - arrival time)
-  Source:                 svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_pong/svo_pong_video/compose_8/out_axis_tuser_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             20.781ns  (required time - arrival time)
+  Source:                 resetn_reg/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_2/x_reg[12]/R
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            42.424ns  (pixel_clk_unbuf rise@42.424ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        6.576ns  (logic 1.654ns (25.153%)  route 4.922ns (74.847%))
-  Logic Levels:           6  (CARRY4=2 LUT4=2 LUT6=2)
-  Clock Path Skew:        -0.130ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.284ns = ( 47.708 - 42.424 ) 
-    Source Clock Delay      (SCD):    5.837ns
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        6.816ns  (logic 0.630ns (9.243%)  route 6.186ns (90.757%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.292ns = ( 33.417 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
     Clock Pessimism Removal (CPR):    0.423ns
   Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -862,48 +694,162 @@ Slack (MET) :             35.709ns  (required time - arrival time)
                                                       0.077     2.595 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.563     5.837    svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/pixel_clk
-    SLICE_X111Y79        FDRE                                         r  svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/C
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X111Y79        FDRE (Prop_fdre_C_Q)         0.348     6.185 f  svo_pong/svo_pong_video/compose_9/svo_buf_over/svo_axis_pipe/tvalid_q1_reg/Q
-                         net (fo=29, routed)          2.239     8.424    svo_pong/svo_pong_video/compose_8/x_reg[0]_0
-    SLICE_X99Y69         LUT6 (Prop_lut6_I0_O)        0.239     8.663 r  svo_pong/svo_pong_video/compose_8/y[13]_i_2__1/O
-                         net (fo=27, routed)          1.374    10.037    svo_pong/svo_pong_video/compose_8/y[13]_i_2__1_n_0
-    SLICE_X95Y72         LUT4 (Prop_lut4_I2_O)        0.105    10.142 r  svo_pong/svo_pong_video/compose_8/y[9]_i_1__0/O
-                         net (fo=4, routed)           0.928    11.071    svo_pong/svo_pong_video/compose_8/y[9]
-    SLICE_X99Y71         LUT6 (Prop_lut6_I0_O)        0.105    11.176 r  svo_pong/svo_pong_video/compose_8/i__carry_i_1/O
-                         net (fo=1, routed)           0.000    11.176    svo_pong/svo_pong_video/compose_8/i__carry_i_1_n_0
-    SLICE_X99Y71         CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.332    11.508 r  svo_pong/svo_pong_video/compose_8/in_y1_inferred__0/i__carry/CO[3]
-                         net (fo=1, routed)           0.000    11.508    svo_pong/svo_pong_video/compose_8/in_y1_inferred__0/i__carry_n_0
-    SLICE_X99Y72         CARRY4 (Prop_carry4_CI_CO[0])
-                                                      0.216    11.724 r  svo_pong/svo_pong_video/compose_8/in_y1_inferred__0/i__carry__0/CO[0]
-                         net (fo=3, routed)           0.380    12.104    svo_pong/svo_pong_video/compose_8/in_y10_out
-    SLICE_X105Y72        LUT4 (Prop_lut4_I0_O)        0.309    12.413 r  svo_pong/svo_pong_video/compose_8/out_axis_tuser[1]_i_1__1/O
-                         net (fo=1, routed)           0.000    12.413    svo_pong/svo_pong_video/compose_8/p_2_in
-    SLICE_X105Y72        FDRE                                         r  svo_pong/svo_pong_video/compose_8/out_axis_tuser_reg[1]/D
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 f  resetn_reg/Q
+                         net (fo=69, routed)          3.483     9.660    svo_pong/svo_pong_video/compose_6/resetn
+    SLICE_X108Y81        LUT1 (Prop_lut1_I0_O)        0.232     9.892 r  svo_pong/svo_pong_video/compose_6/out_axis_tvalid_i_1/O
+                         net (fo=305, routed)         2.703    12.595    svo_pong/svo_pong_video/compose_2/SR[0]
+    SLICE_X90Y96         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[12]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
-                                                     42.424    42.424 r  
-    N18                                               0.000    42.424 r  clk (IN)
-                         net (fo=0)                   0.000    42.424    clk
-    N18                  IBUF (Prop_ibuf_I_O)         1.327    43.751 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           1.019    44.769    clk_IBUF
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
     PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
-                                                      0.073    44.842 r  PLL_1/CLKOUT0
-                         net (fo=1, routed)           1.451    46.294    pixel_clk_unbuf
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    46.371 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        1.337    47.708    svo_pong/svo_pong_video/compose_8/pixel_clk
-    SLICE_X105Y72        FDRE                                         r  svo_pong/svo_pong_video/compose_8/out_axis_tuser_reg[1]/C
-                         clock pessimism              0.423    48.131    
-                         clock uncertainty           -0.041    48.090    
-    SLICE_X105Y72        FDRE (Setup_fdre_C_D)        0.032    48.122    svo_pong/svo_pong_video/compose_8/out_axis_tuser_reg[1]
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.345    33.417    svo_pong/svo_pong_video/compose_2/pixel_clk
+    SLICE_X90Y96         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[12]/C
+                         clock pessimism              0.423    33.840    
+                         clock uncertainty           -0.041    33.799    
+    SLICE_X90Y96         FDRE (Setup_fdre_C_R)       -0.423    33.376    svo_pong/svo_pong_video/compose_2/x_reg[12]
   -------------------------------------------------------------------
-                         required time                         48.122    
-                         arrival time                         -12.413    
+                         required time                         33.376    
+                         arrival time                         -12.595    
   -------------------------------------------------------------------
-                         slack                                 35.709    
+                         slack                                 20.781    
+
+Slack (MET) :             20.781ns  (required time - arrival time)
+  Source:                 resetn_reg/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_2/x_reg[13]/R
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Path Group:             pixel_clk_unbuf
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        6.816ns  (logic 0.630ns (9.243%)  route 6.186ns (90.757%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.292ns = ( 33.417 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
+    Clock Pessimism Removal (CPR):    0.423ns
+  Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.042ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk_unbuf rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.126     2.518    clk_IBUF
+    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.077     2.595 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 f  resetn_reg/Q
+                         net (fo=69, routed)          3.483     9.660    svo_pong/svo_pong_video/compose_6/resetn
+    SLICE_X108Y81        LUT1 (Prop_lut1_I0_O)        0.232     9.892 r  svo_pong/svo_pong_video/compose_6/out_axis_tvalid_i_1/O
+                         net (fo=305, routed)         2.703    12.595    svo_pong/svo_pong_video/compose_2/SR[0]
+    SLICE_X90Y96         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[13]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk_unbuf rise edge)
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
+    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.345    33.417    svo_pong/svo_pong_video/compose_2/pixel_clk
+    SLICE_X90Y96         FDRE                                         r  svo_pong/svo_pong_video/compose_2/x_reg[13]/C
+                         clock pessimism              0.423    33.840    
+                         clock uncertainty           -0.041    33.799    
+    SLICE_X90Y96         FDRE (Setup_fdre_C_R)       -0.423    33.376    svo_pong/svo_pong_video/compose_2/x_reg[13]
+  -------------------------------------------------------------------
+                         required time                         33.376    
+                         arrival time                         -12.595    
+  -------------------------------------------------------------------
+                         slack                                 20.781    
+
+Slack (MET) :             20.789ns  (required time - arrival time)
+  Source:                 resetn_reg/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_6/p4_addr_left_down_reg[1]/S
+                            (rising edge-triggered cell FDSE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Path Group:             pixel_clk_unbuf
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            28.125ns  (pixel_clk_unbuf rise@28.125ns - pixel_clk_unbuf rise@0.000ns)
+  Data Path Delay:        6.947ns  (logic 0.735ns (10.580%)  route 6.212ns (89.420%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.075ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.515ns = ( 33.640 - 28.125 ) 
+    Source Clock Delay      (SCD):    5.779ns
+    Clock Pessimism Removal (CPR):    0.340ns
+  Clock Uncertainty:      0.041ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.042ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk_unbuf rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.126     2.518    clk_IBUF
+    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.077     2.595 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.594     4.189    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.274 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.505     5.779    pixel_clk
+    SLICE_X92Y99         FDRE                                         r  resetn_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X92Y99         FDRE (Prop_fdre_C_Q)         0.398     6.177 r  resetn_reg/Q
+                         net (fo=69, routed)          3.842    10.019    svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/resetn
+    SLICE_X111Y92        LUT3 (Prop_lut3_I0_O)        0.232    10.251 r  svo_pong/svo_pong_video/compose_7/svo_buf_over/svo_axis_pipe/p2_digit[1]_i_1/O
+                         net (fo=74, routed)          1.921    12.172    svo_pong/svo_pong_video/compose_6/p3_y_reg[0]_0
+    SLICE_X109Y103       LUT6 (Prop_lut6_I0_O)        0.105    12.277 r  svo_pong/svo_pong_video/compose_6/p4_addr_left_down[2]_i_1/O
+                         net (fo=3, routed)           0.449    12.726    svo_pong/svo_pong_video/compose_6/p4_addr_left_down
+    SLICE_X108Y102       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_left_down_reg[1]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk_unbuf rise edge)
+                                                     28.125    28.125 r  
+    N18                                               0.000    28.125 r  clk (IN)
+                         net (fo=0)                   0.000    28.125    clk
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    29.452 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.019    30.470    clk_IBUF
+    PLLE2_ADV_X1Y1       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.073    30.543 r  PLL_1/CLKOUT0
+                         net (fo=1, routed)           1.451    31.995    pixel_clk_unbuf
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    32.072 r  pixel_clk_buf/O
+                         net (fo=1469, routed)        1.568    33.640    svo_pong/svo_pong_video/compose_6/pixel_clk
+    SLICE_X108Y102       FDSE                                         r  svo_pong/svo_pong_video/compose_6/p4_addr_left_down_reg[1]/C
+                         clock pessimism              0.340    33.979    
+                         clock uncertainty           -0.041    33.938    
+    SLICE_X108Y102       FDSE (Setup_fdse_C_S)       -0.423    33.515    svo_pong/svo_pong_video/compose_6/p4_addr_left_down_reg[1]
+  -------------------------------------------------------------------
+                         required time                         33.515    
+                         arrival time                         -12.726    
+  -------------------------------------------------------------------
+                         slack                                 20.789    
 
 
 
@@ -911,20 +857,20 @@ Slack (MET) :             35.709ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMA/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.074ns  (arrival time - required time)
+  Source:                 svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.318ns  (logic 0.141ns (44.352%)  route 0.177ns (55.648%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.184ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.452ns
+    Source Clock Delay      (SCD):    1.980ns
+    Clock Pessimism Removal (CPR):    0.288ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -938,12 +884,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.691     1.980    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/pixel_clk
+    SLICE_X105Y101       FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMA/WADR0
+    SLICE_X105Y101       FDRE (Prop_fdre_C_Q)         0.141     2.121 r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[15]/Q
+                         net (fo=2, routed)           0.177     2.298    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0[15]
+    SLICE_X104Y98        FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[15]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -956,31 +902,30 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMA/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMA
+                         net (fo=1469, routed)        0.880     2.452    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/pixel_clk
+    SLICE_X104Y98        FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[15]/C
+                         clock pessimism             -0.288     2.164    
+    SLICE_X104Y98        FDRE (Hold_fdre_C_D)         0.060     2.224    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[15]
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.224    
+                         arrival time                           2.298    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.074    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMA_D1/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.076ns  (arrival time - required time)
+  Source:                 svo_pong/svo_pong_video/compose_1/pipe_out_tdata_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.335ns  (logic 0.164ns (48.982%)  route 0.171ns (51.018%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.184ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.452ns
+    Source Clock Delay      (SCD):    1.980ns
+    Clock Pessimism Removal (CPR):    0.288ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -994,12 +939,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.691     1.980    svo_pong/svo_pong_video/compose_1/pixel_clk
+    SLICE_X104Y101       FDRE                                         r  svo_pong/svo_pong_video/compose_1/pipe_out_tdata_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMA_D1/WADR0
+    SLICE_X104Y101       FDRE (Prop_fdre_C_Q)         0.164     2.144 r  svo_pong/svo_pong_video/compose_1/pipe_out_tdata_reg[10]/Q
+                         net (fo=1, routed)           0.171     2.315    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/Q[10]
+    SLICE_X104Y98        FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1012,31 +957,30 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMA_D1/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMA_D1
+                         net (fo=1469, routed)        0.880     2.452    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/pixel_clk
+    SLICE_X104Y98        FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[10]/C
+                         clock pessimism             -0.288     2.164    
+    SLICE_X104Y98        FDRE (Hold_fdre_C_D)         0.075     2.239    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[10]
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.239    
+                         arrival time                           2.315    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.076    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMB/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.318ns  (logic 0.141ns (44.379%)  route 0.177ns (55.621%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.184ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.452ns
+    Source Clock Delay      (SCD):    1.980ns
+    Clock Pessimism Removal (CPR):    0.288ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1050,12 +994,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.691     1.980    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/pixel_clk
+    SLICE_X105Y101       FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[16]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMB/WADR0
+    SLICE_X105Y101       FDRE (Prop_fdre_C_Q)         0.141     2.121 r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0_reg[16]/Q
+                         net (fo=2, routed)           0.177     2.298    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q0[16]
+    SLICE_X104Y98        FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1068,31 +1012,30 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMB/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMB
+                         net (fo=1469, routed)        0.880     2.452    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/pixel_clk
+    SLICE_X104Y98        FDRE                                         r  svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[16]/C
+                         clock pessimism             -0.288     2.164    
+    SLICE_X104Y98        FDRE (Hold_fdre_C_D)         0.053     2.217    svo_pong/svo_pong_video/compose_1/svo_axis_pipe/tdata_q1_reg[16]
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.217    
+                         arrival time                           2.298    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.081    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMB_D1/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMA/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1106,12 +1049,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMB_D1/WADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMA/WADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1124,31 +1067,31 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMB_D1/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMB_D1
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMA/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMA
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.091    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMC/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMA_D1/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1162,12 +1105,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMC/WADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMA_D1/WADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1180,31 +1123,31 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMC/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMC
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMA_D1/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMA_D1
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.091    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMC_D1/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMB/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1218,12 +1161,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMC_D1/WADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMB/WADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1236,31 +1179,31 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMC_D1/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMC_D1
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMB/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMB
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.091    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMD/ADR0
-                            (rising edge-triggered cell RAMS32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMB_D1/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1274,12 +1217,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMS32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMD/ADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMB_D1/WADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1292,31 +1235,31 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMS32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMD/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMS32 (Hold_rams32_CLK_ADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMD
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMB_D1/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMB_D1
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.091    
 
-Slack (MET) :             0.108ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_0_5/RAMD_D1/ADR0
-                            (rising edge-triggered cell RAMS32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMC/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.452ns  (logic 0.164ns (36.291%)  route 0.288ns (63.709%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.442ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1330,12 +1273,12 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.288     2.343    svo_enc/out_fifo_reg_0_3_0_5/ADDRD0
-    SLICE_X104Y68        RAMS32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMD_D1/ADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMC/WADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1348,31 +1291,31 @@ Slack (MET) :             0.108ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.870     2.442    svo_enc/out_fifo_reg_0_3_0_5/WCLK
-    SLICE_X104Y68        RAMS32                                       r  svo_enc/out_fifo_reg_0_3_0_5/RAMD_D1/CLK
-                         clock pessimism             -0.517     1.925    
-    SLICE_X104Y68        RAMS32 (Hold_rams32_CLK_ADR0)
-                                                      0.310     2.235    svo_enc/out_fifo_reg_0_3_0_5/RAMD_D1
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMC/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMC
   -------------------------------------------------------------------
-                         required time                         -2.235    
-                         arrival time                           2.343    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.108    
+                         slack                                  0.091    
 
-Slack (MET) :             0.114ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_12_17/RAMA/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMC_D1/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.460ns  (logic 0.164ns (35.650%)  route 0.296ns (64.350%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.444ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1386,12 +1329,12 @@ Slack (MET) :             0.114ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.296     2.351    svo_enc/out_fifo_reg_0_3_12_17/ADDRD0
-    SLICE_X104Y66        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_12_17/RAMA/WADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMC_D1/WADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1404,31 +1347,31 @@ Slack (MET) :             0.114ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.872     2.444    svo_enc/out_fifo_reg_0_3_12_17/WCLK
-    SLICE_X104Y66        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_12_17/RAMA/CLK
-                         clock pessimism             -0.517     1.927    
-    SLICE_X104Y66        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.237    svo_enc/out_fifo_reg_0_3_12_17/RAMA
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMD32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMC_D1/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMC_D1
   -------------------------------------------------------------------
-                         required time                         -2.237    
-                         arrival time                           2.351    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.114    
+                         slack                                  0.091    
 
-Slack (MET) :             0.114ns  (arrival time - required time)
-  Source:                 svo_enc/out_fifo_wraddr_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
-  Destination:            svo_enc/out_fifo_reg_0_3_12_17/RAMA_D1/WADR0
-                            (rising edge-triggered cell RAMD32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@21.212ns period=42.424ns})
+Slack (MET) :             0.091ns  (arrival time - required time)
+  Source:                 svo_enc/pixel_fifo_wraddr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
+  Destination:            svo_enc/pixel_fifo_reg_0_7_0_5/RAMD/ADR1
+                            (rising edge-triggered cell RAMS32 clocked by pixel_clk_unbuf  {rise@0.000ns fall@14.063ns period=28.125ns})
   Path Group:             pixel_clk_unbuf
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pixel_clk_unbuf rise@0.000ns - pixel_clk_unbuf rise@0.000ns)
-  Data Path Delay:        0.460ns  (logic 0.164ns (35.650%)  route 0.296ns (64.350%))
+  Data Path Delay:        0.359ns  (logic 0.128ns (35.618%)  route 0.231ns (64.382%))
   Logic Levels:           0  
-  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.444ns
-    Source Clock Delay      (SCD):    1.891ns
-    Clock Pessimism Removal (CPR):    0.517ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.464ns
+    Source Clock Delay      (SCD):    1.914ns
+    Clock Pessimism Removal (CPR):    0.537ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1442,12 +1385,12 @@ Slack (MET) :             0.114ns  (arrival time - required time)
                                                       0.050     0.719 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.544     1.263    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.289 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.602     1.891    svo_enc/pixel_clk
-    SLICE_X102Y67        FDRE                                         r  svo_enc/out_fifo_wraddr_reg[0]/C
+                         net (fo=1469, routed)        0.625     1.914    svo_enc/pixel_clk
+    SLICE_X109Y77        FDRE                                         r  svo_enc/pixel_fifo_wraddr_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X102Y67        FDRE (Prop_fdre_C_Q)         0.164     2.055 r  svo_enc/out_fifo_wraddr_reg[0]/Q
-                         net (fo=41, routed)          0.296     2.351    svo_enc/out_fifo_reg_0_3_12_17/ADDRD0
-    SLICE_X104Y66        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_12_17/RAMA_D1/WADR0
+    SLICE_X109Y77        FDRE (Prop_fdre_C_Q)         0.128     2.042 r  svo_enc/pixel_fifo_wraddr_reg[1]/Q
+                         net (fo=36, routed)          0.231     2.273    svo_enc/pixel_fifo_reg_0_7_0_5/ADDRD1
+    SLICE_X108Y77        RAMS32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMD/ADR1
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk_unbuf rise edge)
@@ -1460,16 +1403,16 @@ Slack (MET) :             0.114ns  (arrival time - required time)
                                                       0.053     0.951 r  PLL_1/CLKOUT0
                          net (fo=1, routed)           0.592     1.543    pixel_clk_unbuf
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.572 r  pixel_clk_buf/O
-                         net (fo=1469, routed)        0.872     2.444    svo_enc/out_fifo_reg_0_3_12_17/WCLK
-    SLICE_X104Y66        RAMD32                                       r  svo_enc/out_fifo_reg_0_3_12_17/RAMA_D1/CLK
-                         clock pessimism             -0.517     1.927    
-    SLICE_X104Y66        RAMD32 (Hold_ramd32_CLK_WADR0)
-                                                      0.310     2.237    svo_enc/out_fifo_reg_0_3_12_17/RAMA_D1
+                         net (fo=1469, routed)        0.892     2.464    svo_enc/pixel_fifo_reg_0_7_0_5/WCLK
+    SLICE_X108Y77        RAMS32                                       r  svo_enc/pixel_fifo_reg_0_7_0_5/RAMD/CLK
+                         clock pessimism             -0.537     1.927    
+    SLICE_X108Y77        RAMS32 (Hold_rams32_CLK_ADR1)
+                                                      0.255     2.182    svo_enc/pixel_fifo_reg_0_7_0_5/RAMD
   -------------------------------------------------------------------
-                         required time                         -2.237    
-                         arrival time                           2.351    
+                         required time                         -2.182    
+                         arrival time                           2.273    
   -------------------------------------------------------------------
-                         slack                                  0.114    
+                         slack                                  0.091    
 
 
 
@@ -1478,42 +1421,42 @@ Slack (MET) :             0.114ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         pixel_clk_unbuf
-Waveform(ns):       { 0.000 21.212 }
-Period(ns):         42.424
+Waveform(ns):       { 0.000 14.063 }
+Period(ns):         28.125
 Sources:            { PLL_1/CLKOUT0 }
 
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
-Min Period        n/a     BUFG/I             n/a            1.592         42.424      40.832     BUFGCTRL_X0Y16  pixel_clk_buf/I
-Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         42.424      40.953     OLOGIC_X1Y67    tmds_serdes_hi[0]/CLKDIV
-Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         42.424      40.953     OLOGIC_X1Y69    tmds_serdes_hi[1]/CLKDIV
-Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         42.424      40.953     OLOGIC_X1Y71    tmds_serdes_hi[2]/CLKDIV
-Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         42.424      40.953     OLOGIC_X1Y68    tmds_serdes_lo[0]/CLKDIV
-Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         42.424      40.953     OLOGIC_X1Y70    tmds_serdes_lo[1]/CLKDIV
-Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         42.424      40.953     OLOGIC_X1Y72    tmds_serdes_lo[2]/CLKDIV
-Min Period        n/a     PLLE2_ADV/CLKOUT0  n/a            1.249         42.424      41.175     PLLE2_ADV_X1Y1  PLL_1/CLKOUT0
-Min Period        n/a     FDRE/C             n/a            1.000         42.424      41.424     SLICE_X100Y65   svo_enc/vcursor_reg[9]/C
-Min Period        n/a     FDRE/C             n/a            1.000         42.424      41.424     SLICE_X101Y66   svo_enc/wait_for_fifos_reg[0]/C
-Max Period        n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       42.424      117.576    PLLE2_ADV_X1Y1  PLL_1/CLKOUT0
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMA/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMA_D1/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMB/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMB_D1/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMC/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMC_D1/CLK
-Low Pulse Width   Fast    RAMS32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMD/CLK
-Low Pulse Width   Fast    RAMS32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y70   svo_enc/pixel_fifo_reg_0_7_12_17/RAMD_D1/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y65   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMA/CLK
-Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y65   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMA_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMA/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMA_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMB/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMB_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMC/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMC_D1/CLK
-High Pulse Width  Slow    RAMS32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMD/CLK
-High Pulse Width  Slow    RAMS32/CLK         n/a            1.130         21.212      20.082     SLICE_X102Y69   svo_enc/pixel_fifo_reg_0_7_18_18/RAMD_D1/CLK
-High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y68   svo_enc/out_fifo_reg_0_3_0_5/RAMB/CLK
-High Pulse Width  Fast    RAMD32/CLK         n/a            1.130         21.212      20.082     SLICE_X104Y68   svo_enc/out_fifo_reg_0_3_0_5/RAMB/CLK
+Min Period        n/a     BUFG/I             n/a            1.592         28.125      26.533     BUFGCTRL_X0Y16  pixel_clk_buf/I
+Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         28.125      26.654     OLOGIC_X1Y67    rgb2dvi/tmds_serdes_hi[0]/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         28.125      26.654     OLOGIC_X1Y69    rgb2dvi/tmds_serdes_hi[1]/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         28.125      26.654     OLOGIC_X1Y71    rgb2dvi/tmds_serdes_hi[2]/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         28.125      26.654     OLOGIC_X1Y68    rgb2dvi/tmds_serdes_lo[0]/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         28.125      26.654     OLOGIC_X1Y70    rgb2dvi/tmds_serdes_lo[1]/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV   n/a            1.471         28.125      26.654     OLOGIC_X1Y72    rgb2dvi/tmds_serdes_lo[2]/CLKDIV
+Min Period        n/a     PLLE2_ADV/CLKOUT0  n/a            1.249         28.125      26.876     PLLE2_ADV_X1Y1  PLL_1/CLKOUT0
+Min Period        n/a     FDRE/C             n/a            1.000         28.125      27.125     SLICE_X111Y71   rgb2dvi/svo_tmds_1/q_out_reg[4]/C
+Min Period        n/a     FDRE/C             n/a            1.000         28.125      27.125     SLICE_X109Y71   rgb2dvi/svo_tmds_1/q_out_reg[5]/C
+Max Period        n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       28.125      131.875    PLLE2_ADV_X1Y1  PLL_1/CLKOUT0
+Low Pulse Width   Fast    RAMS32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y97   svo_pong/svo_pong_video/compose_6/per_digit_y_reg_0_3_0_0/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y97   svo_pong/svo_pong_video/compose_6/per_digit_y_reg_0_3_1_1/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y97   svo_pong/svo_pong_video/compose_6/per_digit_y_reg_0_3_2_2/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y97   svo_pong/svo_pong_video/compose_6/per_digit_y_reg_0_3_3_3/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y73   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMA/CLK
+Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y73   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMA/CLK
+Low Pulse Width   Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y73   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMA_D1/CLK
+Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y73   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMA_D1/CLK
+Low Pulse Width   Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y73   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMB/CLK
+Low Pulse Width   Fast    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y73   svo_enc/ctrl_fifo_reg_0_3_0_3/RAMB/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMB/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMB_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMC/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMC_D1/CLK
+High Pulse Width  Slow    RAMS32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMD/CLK
+High Pulse Width  Slow    RAMS32/CLK         n/a            1.130         14.062      12.932     SLICE_X104Y77   svo_enc/pixel_fifo_reg_0_7_18_18/RAMD_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X108Y75   svo_enc/out_fifo_reg_0_3_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK         n/a            1.130         14.062      12.932     SLICE_X108Y75   svo_enc/out_fifo_reg_0_3_0_5/RAMA_D1/CLK
 
 
 
@@ -1548,27 +1491,27 @@ From Clock:  tmds_clk_unbuf
 
 Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
 Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-PW    :            0  Failing Endpoints,  Worst Slack        6.892ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.033ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         tmds_clk_unbuf
-Waveform(ns):       { 0.000 4.242 }
-Period(ns):         8.485
+Waveform(ns):       { 0.000 2.812 }
+Period(ns):         5.625
 Sources:            { PLL_1/CLKOUT1 }
 
 Check Type  Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
-Min Period  n/a     BUFG/I             n/a            1.592         8.485       6.892      BUFGCTRL_X0Y17  tmds_clk_buf/I
-Min Period  n/a     OSERDESE2/CLK      n/a            1.471         8.485       7.014      OLOGIC_X1Y67    tmds_serdes_hi[0]/CLK
-Min Period  n/a     OSERDESE2/CLK      n/a            1.471         8.485       7.014      OLOGIC_X1Y69    tmds_serdes_hi[1]/CLK
-Min Period  n/a     OSERDESE2/CLK      n/a            1.471         8.485       7.014      OLOGIC_X1Y71    tmds_serdes_hi[2]/CLK
-Min Period  n/a     OSERDESE2/CLK      n/a            1.471         8.485       7.014      OLOGIC_X1Y68    tmds_serdes_lo[0]/CLK
-Min Period  n/a     OSERDESE2/CLK      n/a            1.471         8.485       7.014      OLOGIC_X1Y70    tmds_serdes_lo[1]/CLK
-Min Period  n/a     OSERDESE2/CLK      n/a            1.471         8.485       7.014      OLOGIC_X1Y72    tmds_serdes_lo[2]/CLK
-Min Period  n/a     PLLE2_ADV/CLKOUT1  n/a            1.249         8.485       7.236      PLLE2_ADV_X1Y1  PLL_1/CLKOUT1
-Max Period  n/a     PLLE2_ADV/CLKOUT1  n/a            160.000       8.485       151.515    PLLE2_ADV_X1Y1  PLL_1/CLKOUT1
+Min Period  n/a     BUFG/I             n/a            1.592         5.625       4.033      BUFGCTRL_X0Y17  tmds_clk_buf/I
+Min Period  n/a     OSERDESE2/CLK      n/a            1.471         5.625       4.154      OLOGIC_X1Y67    rgb2dvi/tmds_serdes_hi[0]/CLK
+Min Period  n/a     OSERDESE2/CLK      n/a            1.471         5.625       4.154      OLOGIC_X1Y69    rgb2dvi/tmds_serdes_hi[1]/CLK
+Min Period  n/a     OSERDESE2/CLK      n/a            1.471         5.625       4.154      OLOGIC_X1Y71    rgb2dvi/tmds_serdes_hi[2]/CLK
+Min Period  n/a     OSERDESE2/CLK      n/a            1.471         5.625       4.154      OLOGIC_X1Y68    rgb2dvi/tmds_serdes_lo[0]/CLK
+Min Period  n/a     OSERDESE2/CLK      n/a            1.471         5.625       4.154      OLOGIC_X1Y70    rgb2dvi/tmds_serdes_lo[1]/CLK
+Min Period  n/a     OSERDESE2/CLK      n/a            1.471         5.625       4.154      OLOGIC_X1Y72    rgb2dvi/tmds_serdes_lo[2]/CLK
+Min Period  n/a     PLLE2_ADV/CLKOUT1  n/a            1.249         5.625       4.376      PLLE2_ADV_X1Y1  PLL_1/CLKOUT1
+Max Period  n/a     PLLE2_ADV/CLKOUT1  n/a            160.000       5.625       154.375    PLLE2_ADV_X1Y1  PLL_1/CLKOUT1
 
 
 

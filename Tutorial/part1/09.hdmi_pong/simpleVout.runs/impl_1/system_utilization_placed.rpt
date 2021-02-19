@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Feb 18 16:41:22 2021
+| Date         : Fri Feb 19 13:07:17 2021
 | Host         : tekPC running 64-bit Manjaro Linux
 | Command      : report_utilization -file system_utilization_placed.rpt -pb system_utilization_placed.pb
 | Design       : system
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 1657 |     0 |     53200 |  3.11 |
-|   LUT as Logic             | 1615 |     0 |     53200 |  3.04 |
+| Slice LUTs                 | 1692 |     0 |     53200 |  3.18 |
+|   LUT as Logic             | 1650 |     0 |     53200 |  3.10 |
 |   LUT as Memory            |   42 |     0 |     17400 |  0.24 |
 |     LUT as Distributed RAM |   40 |     0 |           |       |
 |     LUT as Shift Register  |    2 |     0 |           |       |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 55    |          Yes |         Set |            - |
-| 1329  |          Yes |       Reset |            - |
+| 57    |          Yes |         Set |            - |
+| 1327  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -70,12 +70,12 @@ Table of Contents
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
 | Slice                                      |  659 |     0 |     13300 |  4.95 |
-|   SLICEL                                   |  397 |     0 |           |       |
-|   SLICEM                                   |  262 |     0 |           |       |
-| LUT as Logic                               | 1615 |     0 |     53200 |  3.04 |
-|   using O5 output only                     |   24 |       |           |       |
-|   using O6 output only                     | 1230 |       |           |       |
-|   using O5 and O6                          |  361 |       |           |       |
+|   SLICEL                                   |  385 |     0 |           |       |
+|   SLICEM                                   |  274 |     0 |           |       |
+| LUT as Logic                               | 1650 |     0 |     53200 |  3.10 |
+|   using O5 output only                     |   19 |       |           |       |
+|   using O6 output only                     | 1306 |       |           |       |
+|   using O5 and O6                          |  325 |       |           |       |
 | LUT as Memory                              |   42 |     0 |     17400 |  0.24 |
 |   LUT as Distributed RAM                   |   40 |     0 |           |       |
 |     using O5 output only                   |    0 |       |           |       |
@@ -86,11 +86,11 @@ Table of Contents
 |     using O6 output only                   |    0 |       |           |       |
 |     using O5 and O6                        |    0 |       |           |       |
 | Slice Registers                            | 1384 |     0 |    106400 |  1.30 |
-|   Register driven from within the Slice    |  874 |       |           |       |
-|   Register driven from outside the Slice   |  510 |       |           |       |
-|     LUT in front of the register is unused |  361 |       |           |       |
-|     LUT in front of the register is used   |  149 |       |           |       |
-| Unique Control Sets                        |   60 |       |     13300 |  0.45 |
+|   Register driven from within the Slice    |  873 |       |           |       |
+|   Register driven from outside the Slice   |  511 |       |           |       |
+|     LUT in front of the register is unused |  374 |       |           |       |
+|     LUT in front of the register is used   |  137 |       |           |       |
+| Unique Control Sets                        |   57 |       |     13300 |  0.43 |
 +--------------------------------------------+------+-------+-----------+-------+
 * Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
 
@@ -183,15 +183,15 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 1329 |        Flop & Latch |
-| LUT6      |  500 |                 LUT |
-| LUT2      |  452 |                 LUT |
-| LUT4      |  294 |                 LUT |
-| LUT5      |  290 |                 LUT |
-| LUT3      |  266 |                 LUT |
+| FDRE      | 1327 |        Flop & Latch |
+| LUT6      |  515 |                 LUT |
+| LUT2      |  441 |                 LUT |
+| LUT5      |  299 |                 LUT |
+| LUT4      |  292 |                 LUT |
+| LUT3      |  254 |                 LUT |
 | CARRY4    |  219 |          CarryLogic |
 | LUT1      |  174 |                 LUT |
-| FDSE      |   55 |        Flop & Latch |
+| FDSE      |   57 |        Flop & Latch |
 | RAMD32    |   54 |  Distributed Memory |
 | RAMS32    |   22 |  Distributed Memory |
 | MUXF7     |   12 |               MuxFx |

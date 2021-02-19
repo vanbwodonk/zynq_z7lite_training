@@ -2,12 +2,12 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Feb 18 16:39:57 2021
-# Process ID: 42488
-# Current directory: /home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1
+# Start of session at: Fri Feb 19 13:06:00 2021
+# Process ID: 44963
+# Current directory: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.runs/synth_1
 # Command line: vivado -log system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
-# Log file: /home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1/system.vds
-# Journal file: /home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1/vivado.jou
+# Log file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.runs/synth_1/system.vds
+# Journal file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source system.tcl -notrace
 Command: synth_design -top system -part xc7z020clg400-2
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 42503 
+INFO: Helper process launched with PID 44977 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1349.035 ; gain = 0.000 ; free physical = 1203 ; free virtual = 6650
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1321.773 ; gain = 0.000 ; free physical = 139 ; free virtual = 7154
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'system' [/home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v:29]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+INFO: [Synth 8-6157] synthesizing module 'system' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/system.v:30]
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
@@ -29,16 +29,16 @@ INFO: [Synth 8-6157] synthesizing module 'system' [/home/arif/Xilinx/Projects/si
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'PLLE2_BASE' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41124]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 33 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 32 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE bound to: 70 - type: integer 
+	Parameter CLKOUT0_DIVIDE bound to: 45 - type: integer 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT1_DIVIDE bound to: 14 - type: integer 
+	Parameter CLKOUT1_DIVIDE bound to: 9 - type: integer 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT2_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
@@ -54,206 +54,206 @@ INFO: [Synth 8-6157] synthesizing module 'PLLE2_BASE' [/opt/Xilinx/Vivado/2018.3
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'PLLE2_BASE' (1#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41124]
-WARNING: [Synth 8-350] instance 'PLL_1' of module 'PLLE2_BASE' requires 12 connections, but only 9 given [/home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v:142]
+WARNING: [Synth 8-350] instance 'PLL_1' of module 'PLLE2_BASE' requires 12 connections, but only 8 given [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/system.v:258]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6157] synthesizing module 'svo_tcard' [/home/arif/Downloads/SimpleVOut/svosrc/svo_tcard.v:23]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 	Parameter HOFFSET bound to: 0 - type: integer 
-	Parameter VOFFSET bound to: 0 - type: integer 
-	Parameter HOR_CELLS bound to: 20 - type: integer 
-	Parameter VER_CELLS bound to: 15 - type: integer 
-	Parameter BAR_W bound to: 6 - type: integer 
+	Parameter VOFFSET bound to: 4 - type: integer 
+	Parameter HOR_CELLS bound to: 25 - type: integer 
+	Parameter VER_CELLS bound to: 19 - type: integer 
+	Parameter BAR_W bound to: 8 - type: integer 
 	Parameter X1 bound to: 2 - type: integer 
-	Parameter X2 bound to: 8 - type: integer 
-	Parameter X3 bound to: 10 - type: integer 
-	Parameter X4 bound to: 16 - type: integer 
+	Parameter X2 bound to: 10 - type: integer 
+	Parameter X3 bound to: 13 - type: integer 
+	Parameter X4 bound to: 21 - type: integer 
 	Parameter Y_BLK bound to: 3 - type: integer 
-	Parameter Y_GAP bound to: 1 - type: integer 
-	Parameter Y_OFF bound to: 1 - type: integer 
-	Parameter Y1 bound to: 1 - type: integer 
-	Parameter Y2 bound to: 4 - type: integer 
-	Parameter Y3 bound to: 5 - type: integer 
-	Parameter Y4 bound to: 8 - type: integer 
-	Parameter Y5 bound to: 9 - type: integer 
-	Parameter Y6 bound to: 12 - type: integer 
+	Parameter Y_GAP bound to: 2 - type: integer 
+	Parameter Y_OFF bound to: 2 - type: integer 
+	Parameter Y1 bound to: 2 - type: integer 
+	Parameter Y2 bound to: 5 - type: integer 
+	Parameter Y3 bound to: 7 - type: integer 
+	Parameter Y4 bound to: 10 - type: integer 
+	Parameter Y5 bound to: 12 - type: integer 
+	Parameter Y6 bound to: 15 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'svo_tcard' (3#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_tcard.v:23]
 INFO: [Synth 8-6157] synthesizing module 'svo_pong' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:33]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'svo_pong_control' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:109]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 	Parameter max_vx bound to: 15 - type: integer 
 	Parameter max_vy bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'svo_pong_control' (4#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:109]
 INFO: [Synth 8-6157] synthesizing module 'svo_pong_video' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:350]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 	Parameter s_maxidx bound to: 9 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'svo_dim' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:178]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'svo_axis_pipe' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
 	Parameter TDATA_WIDTH bound to: 18 - type: integer 
 	Parameter TUSER_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'svo_axis_pipe' (5#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'svo_dim' (6#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:178]
 INFO: [Synth 8-6157] synthesizing module 'svo_rect' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:359]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 WARNING: [Synth 8-6014] Unused sequential element on_x_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:399]
 WARNING: [Synth 8-6014] Unused sequential element on_y_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:400]
 WARNING: [Synth 8-6014] Unused sequential element border_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:401]
 INFO: [Synth 8-6155] done synthesizing module 'svo_rect' (7#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:359]
 INFO: [Synth 8-6157] synthesizing module 'svo_overlay' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:250]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'svo_buf' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
 	Parameter TUSER_WIDTH bound to: 1 - type: integer 
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'svo_buf' (8#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
 INFO: [Synth 8-6157] synthesizing module 'svo_buf__parameterized0' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
 	Parameter TUSER_WIDTH bound to: 2 - type: integer 
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'svo_axis_pipe__parameterized0' [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:31]
 	Parameter TDATA_WIDTH bound to: 18 - type: integer 
 	Parameter TUSER_WIDTH bound to: 2 - type: integer 
@@ -261,27 +261,27 @@ INFO: [Synth 8-6155] done synthesizing module 'svo_axis_pipe__parameterized0' (8
 INFO: [Synth 8-6155] done synthesizing module 'svo_buf__parameterized0' (8#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:101]
 INFO: [Synth 8-6155] done synthesizing module 'svo_overlay' (9#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_utils.v:250]
 INFO: [Synth 8-6157] synthesizing module 'svo_pong_scores' [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:486]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 	Parameter digit0_xoff bound to: 80 - type: integer 
 	Parameter digit1_xoff bound to: 180 - type: integer 
-	Parameter digit2_xoff bound to: 370 - type: integer 
-	Parameter digit3_xoff bound to: 470 - type: integer 
+	Parameter digit2_xoff bound to: 530 - type: integer 
+	Parameter digit3_xoff bound to: 630 - type: integer 
 	Parameter digit0_yoff bound to: 15 - type: integer 
 	Parameter digit1_yoff bound to: 15 - type: integer 
 	Parameter digit2_yoff bound to: 15 - type: integer 
@@ -299,33 +299,43 @@ INFO: [Synth 8-6155] done synthesizing module 'svo_pong_scores' (10#1) [/home/ar
 INFO: [Synth 8-6155] done synthesizing module 'svo_pong_video' (11#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:350]
 INFO: [Synth 8-6155] done synthesizing module 'svo_pong' (12#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_pong.v:33]
 INFO: [Synth 8-6157] synthesizing module 'svo_enc' [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:23]
-	Parameter SVO_MODE bound to: 640x480R - type: string 
+	Parameter SVO_MODE bound to: 800x600R - type: string 
 	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
 	Parameter SVO_BITS_PER_PIXEL bound to: 18 - type: integer 
 	Parameter SVO_BITS_PER_RED bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_GREEN bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_BLUE bound to: 6 - type: integer 
 	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
-	Parameter SVO_HOR_PIXELS bound to: 640 - type: integer 
-	Parameter SVO_VER_PIXELS bound to: 480 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 800 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 600 - type: integer 
 	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
 	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
 	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
 	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
 	Parameter SVO_VER_SYNC bound to: 4 - type: integer 
-	Parameter SVO_VER_BACK_PORCH bound to: 7 - type: integer 
-	Parameter SVO_HOR_TOTAL bound to: 800 - type: integer 
-	Parameter SVO_VER_TOTAL bound to: 494 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 11 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 960 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 618 - type: integer 
 WARNING: [Synth 8-6014] Unused sequential element is_blank_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:69]
 WARNING: [Synth 8-6014] Unused sequential element is_hsync_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:70]
 WARNING: [Synth 8-6014] Unused sequential element is_vsync_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:71]
 WARNING: [Synth 8-6014] Unused sequential element next_out_fifo_rdaddr_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:157]
 INFO: [Synth 8-6155] done synthesizing module 'svo_enc' (13#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_enc.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rgb2dvi' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/rgb2dvi.v:5]
+INFO: [Synth 8-6157] synthesizing module 'svo_tmds' [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:23]
+WARNING: [Synth 8-6014] Unused sequential element N0_q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:99]
+WARNING: [Synth 8-6014] Unused sequential element N1_q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:100]
+WARNING: [Synth 8-6014] Unused sequential element cnt_next_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:107]
+WARNING: [Synth 8-6014] Unused sequential element cnt_tmp_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:115]
+WARNING: [Synth 8-6014] Unused sequential element q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:77]
+WARNING: [Synth 8-6014] Unused sequential element q_out_next_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'svo_tmds' (14#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:23]
+WARNING: [Synth 8-689] width (3) of port connection 'ctrl' does not match port width (2) of module 'svo_tmds' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/rgb2dvi.v:35]
 INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (14#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (15#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
 INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
 	Parameter DATA_RATE_OQ bound to: DDR - type: string 
 	Parameter DATA_RATE_TQ bound to: SDR - type: string 
@@ -352,7 +362,7 @@ INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/opt/Xilinx/Vivado/2018.3/
 	Parameter TBYTE_CTL bound to: FALSE - type: string 
 	Parameter TBYTE_SRC bound to: FALSE - type: string 
 	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (15#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (16#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
 INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
 	Parameter DATA_RATE_OQ bound to: DDR - type: string 
 	Parameter DATA_RATE_TQ bound to: SDR - type: string 
@@ -379,18 +389,12 @@ INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/opt/Xilin
 	Parameter TBYTE_CTL bound to: FALSE - type: string 
 	Parameter TBYTE_SRC bound to: FALSE - type: string 
 	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (15#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
-INFO: [Synth 8-6157] synthesizing module 'svo_tmds' [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:23]
-WARNING: [Synth 8-6014] Unused sequential element N0_q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:99]
-WARNING: [Synth 8-6014] Unused sequential element N1_q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:100]
-WARNING: [Synth 8-6014] Unused sequential element cnt_next_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:107]
-WARNING: [Synth 8-6014] Unused sequential element cnt_tmp_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:115]
-WARNING: [Synth 8-6014] Unused sequential element q_m_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:77]
-WARNING: [Synth 8-6014] Unused sequential element q_out_next_reg was removed.  [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'svo_tmds' (16#1) [/home/arif/Downloads/SimpleVOut/svosrc/svo_tmds.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system' (17#1) [/home/arif/Xilinx/Projects/simpleVout/simpleVout.srcs/sources_1/new/system.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (16#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi' (17#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/rgb2dvi.v:5]
+WARNING: [Synth 8-3848] Net openldi_clk_unbuf in module/entity system does not have driver. [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/system.v:132]
+INFO: [Synth 8-6155] done synthesizing module 'system' (18#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/sources_1/new/system.v:30]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.277 ; gain = 28.242 ; free physical = 1217 ; free virtual = 6661
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.266 ; gain = 55.492 ; free physical = 189 ; free virtual = 7157
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -403,10 +407,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.277 ; gain = 28.242 ; free physical = 1220 ; free virtual = 6664
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.266 ; gain = 55.492 ; free physical = 196 ; free virtual = 7164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.277 ; gain = 28.242 ; free physical = 1220 ; free virtual = 6664
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1377.266 ; gain = 55.492 ; free physical = 196 ; free virtual = 7164
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -420,32 +424,32 @@ Finished Parsing XDC File [/home/arif/Downloads/SimpleVOut/zybo_vl/system.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/arif/Downloads/SimpleVOut/zybo_vl/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.648 ; gain = 0.000 ; free physical = 136 ; free virtual = 6877
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.648 ; gain = 0.000 ; free physical = 136 ; free virtual = 6877
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   OBUFDS => OBUFDS: 4 instances
   PLLE2_BASE => PLLE2_ADV: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1733.676 ; gain = 0.000 ; free physical = 930 ; free virtual = 6374
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1733.648 ; gain = 0.000 ; free physical = 136 ; free virtual = 6877
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1733.648 ; gain = 0.000 ; free physical = 136 ; free virtual = 6877
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1016 ; free virtual = 6463
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1733.648 ; gain = 411.875 ; free physical = 217 ; free virtual = 6958
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1016 ; free virtual = 6463
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1733.648 ; gain = 411.875 ; free physical = 217 ; free virtual = 6958
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1018 ; free virtual = 6465
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1733.648 ; gain = 411.875 ; free physical = 217 ; free virtual = 6958
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "y" won't be mapped to RAM because it is too sparse
@@ -475,7 +479,7 @@ INFO: [Synth 8-5546] ROM "ok_status" won't be mapped to RAM because it is too sp
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'svo_pong_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 1007 ; free virtual = 6455
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1733.648 ; gain = 411.875 ; free physical = 207 ; free virtual = 6948
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -814,7 +818,7 @@ INFO: [Synth 8-5546] ROM "y" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "pvy0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "p1_y" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "vcursor" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "p_3_out0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "svo_tmds_0/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "ok_status" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[16]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
 INFO: [Synth 8-3886] merging instance 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[17]' (FDE) to 'svo_pong/svo_pong_video/compose_2/out_axis_tdata_reg[0]'
@@ -949,27 +953,27 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[3] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[4] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[5] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[8] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[9] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[10] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x2_reg[11] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[4] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[5] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[8] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[9] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[10] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect2_x1_reg[11] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\svo_pong/svo_pong_video /\compose_8/out_axis_tvalid_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_control /\puck_x_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_control /\puck_x_reg[11] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video /\rect3_x2_reg[11] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 974 ; free virtual = 6427
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1733.648 ; gain = 411.875 ; free physical = 258 ; free virtual = 6938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -999,16 +1003,16 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1733.676 ; gain = 384.641 ; free physical = 850 ; free virtual = 6303
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1733.648 ; gain = 411.875 ; free physical = 131 ; free virtual = 6812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (svo_tmds_0/\cnt_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (svo_tmds_1/\cnt_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (svo_tmds_2/\cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (rgb2dvi/\svo_tmds_0/cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (rgb2dvi/\svo_tmds_1/cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (rgb2dvi/\svo_tmds_2/cnt_reg[0] )
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1738.676 ; gain = 389.641 ; free physical = 840 ; free virtual = 6293
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1758.664 ; gain = 436.891 ; free physical = 149 ; free virtual = 6781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1041,7 +1045,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video/rect1_y1_reg[11] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\svo_pong/svo_pong_video/rect2_y1_reg[11] )
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 834 ; free virtual = 6288
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 169 ; free virtual = 6775
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1065,7 +1069,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1078,7 +1082,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1090,25 +1094,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1141,12 +1145,12 @@ Report Cell Usage:
 +------+------------+------+
 |1     |BUFG        |     3|
 |2     |CARRY4      |   223|
-|3     |LUT1        |   176|
-|4     |LUT2        |   456|
-|5     |LUT3        |   266|
-|6     |LUT4        |   294|
-|7     |LUT5        |   290|
-|8     |LUT6        |   500|
+|3     |LUT1        |   177|
+|4     |LUT2        |   445|
+|5     |LUT3        |   254|
+|6     |LUT4        |   292|
+|7     |LUT5        |   299|
+|8     |LUT6        |   515|
 |9     |MUXF7       |    12|
 |10    |MUXF8       |     3|
 |11    |OSERDESE2   |     3|
@@ -1155,8 +1159,8 @@ Report Cell Usage:
 |14    |RAM16X1S    |     4|
 |15    |RAM32M      |     9|
 |16    |SRL16E      |     2|
-|17    |FDRE        |  1329|
-|18    |FDSE        |    55|
+|17    |FDRE        |  1327|
+|18    |FDSE        |    57|
 |19    |IBUF        |     9|
 |20    |OBUF        |     4|
 |21    |OBUFDS      |     4|
@@ -1167,61 +1171,62 @@ Report Instance Areas:
 |      |Instance                |Module                           |Cells |
 +------+------------------------+---------------------------------+------+
 |1     |top                     |                                 |  3646|
-|2     |  svo_enc               |svo_enc                          |   340|
-|3     |  svo_pong              |svo_pong                         |  2631|
-|4     |    svo_pong_control    |svo_pong_control                 |   943|
-|5     |    svo_pong_video      |svo_pong_video                   |  1646|
-|6     |      compose_1         |svo_dim                          |    88|
-|7     |        svo_axis_pipe   |svo_axis_pipe_27                 |    68|
-|8     |      compose_2         |svo_rect                         |   124|
-|9     |      compose_3         |svo_overlay                      |   182|
-|10    |        svo_buf_in      |svo_buf_21                       |    83|
-|11    |          svo_axis_pipe |svo_axis_pipe_26                 |    63|
-|12    |        svo_buf_out     |svo_buf_22                       |    81|
-|13    |          svo_axis_pipe |svo_axis_pipe_25                 |    61|
-|14    |        svo_buf_over    |svo_buf__parameterized0_23       |    18|
-|15    |          svo_axis_pipe |svo_axis_pipe__parameterized0_24 |    14|
-|16    |      compose_4         |svo_rect_2                       |   123|
-|17    |      compose_5         |svo_overlay_3                    |   182|
-|18    |        svo_buf_in      |svo_buf_15                       |    83|
-|19    |          svo_axis_pipe |svo_axis_pipe_20                 |    63|
-|20    |        svo_buf_out     |svo_buf_16                       |    81|
-|21    |          svo_axis_pipe |svo_axis_pipe_19                 |    61|
-|22    |        svo_buf_over    |svo_buf__parameterized0_17       |    18|
-|23    |          svo_axis_pipe |svo_axis_pipe__parameterized0_18 |    14|
-|24    |      compose_6         |svo_pong_scores                  |   355|
-|25    |      compose_7         |svo_overlay_4                    |   184|
-|26    |        svo_buf_in      |svo_buf_9                        |    83|
-|27    |          svo_axis_pipe |svo_axis_pipe_14                 |    63|
-|28    |        svo_buf_out     |svo_buf_10                       |    81|
-|29    |          svo_axis_pipe |svo_axis_pipe_13                 |    61|
-|30    |        svo_buf_over    |svo_buf__parameterized0_11       |    20|
-|31    |          svo_axis_pipe |svo_axis_pipe__parameterized0_12 |    16|
-|32    |      compose_8         |svo_rect_5                       |   120|
-|33    |      compose_9         |svo_overlay_6                    |   188|
-|34    |        svo_buf_in      |svo_buf                          |    83|
-|35    |          svo_axis_pipe |svo_axis_pipe_8                  |    63|
-|36    |        svo_buf_out     |svo_buf_7                        |    87|
-|37    |          svo_axis_pipe |svo_axis_pipe                    |    67|
-|38    |        svo_buf_over    |svo_buf__parameterized0          |    18|
-|39    |          svo_axis_pipe |svo_axis_pipe__parameterized0    |    14|
-|40    |  svo_tcard             |svo_tcard                        |   397|
-|41    |  svo_tmds_0            |svo_tmds                         |    69|
-|42    |  svo_tmds_1            |svo_tmds_0                       |    69|
-|43    |  svo_tmds_2            |svo_tmds_1                       |    69|
+|2     |  rgb2dvi               |rgb2dvi                          |   256|
+|3     |    svo_tmds_0          |svo_tmds                         |    82|
+|4     |    svo_tmds_1          |svo_tmds_26                      |    82|
+|5     |    svo_tmds_2          |svo_tmds_27                      |    82|
+|6     |  svo_enc               |svo_enc                          |   312|
+|7     |  svo_pong              |svo_pong                         |  2618|
+|8     |    svo_pong_control    |svo_pong_control                 |   944|
+|9     |    svo_pong_video      |svo_pong_video                   |  1632|
+|10    |      compose_1         |svo_dim                          |    87|
+|11    |        svo_axis_pipe   |svo_axis_pipe_25                 |    67|
+|12    |      compose_2         |svo_rect                         |   122|
+|13    |      compose_3         |svo_overlay                      |   182|
+|14    |        svo_buf_in      |svo_buf_19                       |    83|
+|15    |          svo_axis_pipe |svo_axis_pipe_24                 |    63|
+|16    |        svo_buf_out     |svo_buf_20                       |    81|
+|17    |          svo_axis_pipe |svo_axis_pipe_23                 |    61|
+|18    |        svo_buf_over    |svo_buf__parameterized0_21       |    18|
+|19    |          svo_axis_pipe |svo_axis_pipe__parameterized0_22 |    14|
+|20    |      compose_4         |svo_rect_0                       |   124|
+|21    |      compose_5         |svo_overlay_1                    |   182|
+|22    |        svo_buf_in      |svo_buf_13                       |    83|
+|23    |          svo_axis_pipe |svo_axis_pipe_18                 |    63|
+|24    |        svo_buf_out     |svo_buf_14                       |    81|
+|25    |          svo_axis_pipe |svo_axis_pipe_17                 |    61|
+|26    |        svo_buf_over    |svo_buf__parameterized0_15       |    18|
+|27    |          svo_axis_pipe |svo_axis_pipe__parameterized0_16 |    14|
+|28    |      compose_6         |svo_pong_scores                  |   344|
+|29    |      compose_7         |svo_overlay_2                    |   184|
+|30    |        svo_buf_in      |svo_buf_7                        |    83|
+|31    |          svo_axis_pipe |svo_axis_pipe_12                 |    63|
+|32    |        svo_buf_out     |svo_buf_8                        |    81|
+|33    |          svo_axis_pipe |svo_axis_pipe_11                 |    61|
+|34    |        svo_buf_over    |svo_buf__parameterized0_9        |    20|
+|35    |          svo_axis_pipe |svo_axis_pipe__parameterized0_10 |    16|
+|36    |      compose_8         |svo_rect_3                       |   119|
+|37    |      compose_9         |svo_overlay_4                    |   188|
+|38    |        svo_buf_in      |svo_buf                          |    83|
+|39    |          svo_axis_pipe |svo_axis_pipe_6                  |    63|
+|40    |        svo_buf_out     |svo_buf_5                        |    87|
+|41    |          svo_axis_pipe |svo_axis_pipe                    |    67|
+|42    |        svo_buf_over    |svo_buf__parameterized0          |    18|
+|43    |          svo_axis_pipe |svo_axis_pipe__parameterized0    |    14|
+|44    |  svo_tcard             |svo_tcard                        |   400|
 +------+------------------------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.707 ; gain = 408.672 ; free physical = 837 ; free virtual = 6287
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.680 ; gain = 452.906 ; free physical = 165 ; free virtual = 6771
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1757.707 ; gain = 52.273 ; free physical = 893 ; free virtual = 6344
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1757.715 ; gain = 408.672 ; free physical = 893 ; free virtual = 6344
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1774.680 ; gain = 96.523 ; free physical = 220 ; free virtual = 6826
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.688 ; gain = 452.906 ; free physical = 220 ; free virtual = 6826
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 256 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1757.715 ; gain = 0.000 ; free physical = 836 ; free virtual = 6290
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1774.688 ; gain = 0.000 ; free physical = 163 ; free virtual = 6770
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 18 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 4 instances
@@ -1230,12 +1235,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 9 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-239 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+241 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1757.715 ; gain = 408.938 ; free physical = 894 ; free virtual = 6348
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1757.715 ; gain = 0.000 ; free physical = 894 ; free virtual = 6348
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1774.688 ; gain = 453.172 ; free physical = 235 ; free virtual = 6842
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1774.688 ; gain = 0.000 ; free physical = 234 ; free virtual = 6841
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/arif/Xilinx/Projects/simpleVout/simpleVout.runs/synth_1/system.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.runs/synth_1/system.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 18 16:40:38 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 19 13:06:45 2021...
