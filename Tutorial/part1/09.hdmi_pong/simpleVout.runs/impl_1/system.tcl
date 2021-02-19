@@ -65,7 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -74,7 +73,7 @@ set rc [catch {
   set_property ip_output_repo /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.runs/synth_1/system.dcp
-  read_xdc /home/arif/Downloads/SimpleVOut/zybo_vl/system.xdc
+  read_xdc /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/09.hdmi_pong/simpleVout.srcs/constrs_1/new/system.xdc
   link_design -top system -part xc7z020clg400-2
   close_msg_db -file init_design.pb
 } RESULT]
