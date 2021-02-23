@@ -1,0 +1,1617 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Feb 23 18:24:59 2021
+| Host         : tekPC running 64-bit Manjaro Linux
+| Command      : report_timing_summary -max_paths 10 -file display_demo_dvi_timing_summary_routed.rpt -pb display_demo_dvi_timing_summary_routed.pb -rpx display_demo_dvi_timing_summary_routed.rpx -warn_on_violation
+| Design       : display_demo_dvi
+| Device       : 7z020-clg400
+| Speed File   : -2  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 4 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      8.820        0.000                      0                  124        0.121        0.000                      0                  124        0.000        0.000                       0                    82  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock         Waveform(ns)         Period(ns)      Frequency(MHz)
+-----         ------------         ----------      --------------
+sys_clk_pin   {0.000 4.000}        20.000          50.000          
+  clk_1x_pre  {0.000 7.812}        15.625          64.000          
+  clk_5x_pre  {0.000 1.562}        3.125           320.000         
+  clk_fb      {0.000 50.000}       100.000         10.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin                                                                                                                                                     1.000        0.000                       0                     1  
+  clk_1x_pre        8.820        0.000                      0                  124        0.121        0.000                      0                  124        7.312        0.000                       0                    69  
+  clk_5x_pre                                                                                                                                                    1.533        0.000                       0                    10  
+  clk_fb                                                                                                                                                        0.000        0.000                       0                     2  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        1.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         20.000
+Sources:            { CLK }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         20.000      18.751     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       20.000      80.000     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            3.000         16.000      13.000     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            3.000         16.000      13.000     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            3.000         4.000       1.000      MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            3.000         4.000       1.000      MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_1x_pre
+  To Clock:  clk_1x_pre
+
+Setup :            0  Failing Endpoints,  Worst Slack        8.820ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.121ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        7.312ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             8.820ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch0/o_tmds_reg[8]/D
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        6.462ns  (logic 1.524ns (23.584%)  route 4.938ns (76.416%))
+  Logic Levels:           6  (LUT5=3 LUT6=3)
+  Clock Path Skew:        -0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.338ns = ( 20.963 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 r  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 f  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 f  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.766     9.158    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I2_O)        0.105     9.263 f  display_timings_inst/bias[4]_i_51/O
+                         net (fo=1, routed)           0.811    10.074    display_timings_inst/bias[4]_i_51_n_0
+    SLICE_X111Y82        LUT5 (Prop_lut5_I0_O)        0.115    10.189 f  display_timings_inst/bias[4]_i_25/O
+                         net (fo=2, routed)           0.343    10.532    display_timings_inst/bias[4]_i_25_n_0
+    SLICE_X112Y82        LUT6 (Prop_lut6_I1_O)        0.267    10.799 f  display_timings_inst/bias[4]_i_5/O
+                         net (fo=5, routed)           0.993    11.792    display_timings_inst/blue[0]
+    SLICE_X112Y74        LUT5 (Prop_lut5_I0_O)        0.118    11.910 r  display_timings_inst/o_tmds[8]_i_1/O
+                         net (fo=1, routed)           0.378    12.288    dvi_out/encode_ch0/o_tmds0_in[2]
+    SLICE_X112Y72        FDSE                                         r  dvi_out/encode_ch0/o_tmds_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.403    20.963    dvi_out/encode_ch0/CLK
+    SLICE_X112Y72        FDSE                                         r  dvi_out/encode_ch0/o_tmds_reg[8]/C
+                         clock pessimism              0.422    21.385    
+                         clock uncertainty           -0.095    21.290    
+    SLICE_X112Y72        FDSE (Setup_fdse_C_D)       -0.182    21.108    dvi_out/encode_ch0/o_tmds_reg[8]
+  -------------------------------------------------------------------
+                         required time                         21.108    
+                         arrival time                         -12.288    
+  -------------------------------------------------------------------
+                         slack                                  8.820    
+
+Slack (MET) :             8.912ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch2/o_tmds_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        6.347ns  (logic 1.360ns (21.428%)  route 4.987ns (78.572%))
+  Logic Levels:           6  (LUT5=2 LUT6=4)
+  Clock Path Skew:        -0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.338ns = ( 20.963 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 r  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.784    10.009    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X108Y81        LUT6 (Prop_lut6_I5_O)        0.105    10.114 r  display_timings_inst/bias[4]_i_4/O
+                         net (fo=1, routed)           0.322    10.436    display_timings_inst/bias[4]_i_4_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I1_O)        0.105    10.541 r  display_timings_inst/bias[4]_i_2__0/O
+                         net (fo=5, routed)           1.128    11.669    display_timings_inst/red[0]
+    SLICE_X112Y73        LUT5 (Prop_lut5_I3_O)        0.126    11.795 r  display_timings_inst/o_tmds[9]_i_1__1/O
+                         net (fo=1, routed)           0.378    12.173    dvi_out/encode_ch2/o_tmds_reg[9]_0
+    SLICE_X112Y71        FDRE                                         r  dvi_out/encode_ch2/o_tmds_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.403    20.963    dvi_out/encode_ch2/CLK
+    SLICE_X112Y71        FDRE                                         r  dvi_out/encode_ch2/o_tmds_reg[9]/C
+                         clock pessimism              0.422    21.385    
+                         clock uncertainty           -0.095    21.290    
+    SLICE_X112Y71        FDRE (Setup_fdre_C_D)       -0.205    21.085    dvi_out/encode_ch2/o_tmds_reg[9]
+  -------------------------------------------------------------------
+                         required time                         21.085    
+                         arrival time                         -12.173    
+  -------------------------------------------------------------------
+                         slack                                  8.912    
+
+Slack (MET) :             8.992ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/o_tmds_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        6.298ns  (logic 1.359ns (21.580%)  route 4.939ns (78.420%))
+  Logic Levels:           6  (LUT5=2 LUT6=4)
+  Clock Path Skew:        -0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.338ns = ( 20.963 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 r  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.507     9.731    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X106Y83        LUT6 (Prop_lut6_I4_O)        0.105     9.836 r  display_timings_inst/bias[4]_i_7/O
+                         net (fo=1, routed)           0.629    10.465    display_timings_inst/bias[4]_i_7_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I5_O)        0.105    10.570 r  display_timings_inst/bias[4]_i_2__1/O
+                         net (fo=5, routed)           1.021    11.591    display_timings_inst/green[0]
+    SLICE_X112Y73        LUT5 (Prop_lut5_I3_O)        0.125    11.716 r  display_timings_inst/o_tmds[9]_i_1__0/O
+                         net (fo=1, routed)           0.408    12.124    dvi_out/encode_ch1/o_tmds_reg[9]_0
+    SLICE_X112Y71        FDRE                                         r  dvi_out/encode_ch1/o_tmds_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.403    20.963    dvi_out/encode_ch1/CLK
+    SLICE_X112Y71        FDRE                                         r  dvi_out/encode_ch1/o_tmds_reg[9]/C
+                         clock pessimism              0.422    21.385    
+                         clock uncertainty           -0.095    21.290    
+    SLICE_X112Y71        FDRE (Setup_fdre_C_D)       -0.174    21.116    dvi_out/encode_ch1/o_tmds_reg[9]
+  -------------------------------------------------------------------
+                         required time                         21.116    
+                         arrival time                         -12.124    
+  -------------------------------------------------------------------
+                         slack                                  8.992    
+
+Slack (MET) :             9.418ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/o_tmds_reg[8]/D
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        6.117ns  (logic 1.339ns (21.889%)  route 4.778ns (78.111%))
+  Logic Levels:           6  (LUT3=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.069ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.335ns = ( 20.960 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 r  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 f  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 f  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 f  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.507     9.731    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X106Y83        LUT6 (Prop_lut6_I4_O)        0.105     9.836 f  display_timings_inst/bias[4]_i_7/O
+                         net (fo=1, routed)           0.629    10.465    display_timings_inst/bias[4]_i_7_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I5_O)        0.105    10.570 f  display_timings_inst/bias[4]_i_2__1/O
+                         net (fo=5, routed)           1.269    11.838    display_timings_inst/green[0]
+    SLICE_X112Y74        LUT3 (Prop_lut3_I2_O)        0.105    11.943 r  display_timings_inst/o_tmds[8]_i_1__1/O
+                         net (fo=1, routed)           0.000    11.943    dvi_out/encode_ch1/o_tmds_reg[8]_1
+    SLICE_X112Y74        FDSE                                         r  dvi_out/encode_ch1/o_tmds_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.400    20.960    dvi_out/encode_ch1/CLK
+    SLICE_X112Y74        FDSE                                         r  dvi_out/encode_ch1/o_tmds_reg[8]/C
+                         clock pessimism              0.422    21.382    
+                         clock uncertainty           -0.095    21.287    
+    SLICE_X112Y74        FDSE (Setup_fdse_C_D)        0.074    21.361    dvi_out/encode_ch1/o_tmds_reg[8]
+  -------------------------------------------------------------------
+                         required time                         21.361    
+                         arrival time                         -11.943    
+  -------------------------------------------------------------------
+                         slack                                  9.418    
+
+Slack (MET) :             9.569ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch0/o_tmds_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        6.002ns  (logic 1.511ns (25.174%)  route 4.491ns (74.826%))
+  Logic Levels:           6  (LUT5=2 LUT6=4)
+  Clock Path Skew:        -0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.336ns = ( 20.961 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.459ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.766     9.158    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I2_O)        0.105     9.263 r  display_timings_inst/bias[4]_i_51/O
+                         net (fo=1, routed)           0.811    10.074    display_timings_inst/bias[4]_i_51_n_0
+    SLICE_X111Y82        LUT5 (Prop_lut5_I0_O)        0.115    10.189 r  display_timings_inst/bias[4]_i_25/O
+                         net (fo=2, routed)           0.920    11.109    display_timings_inst/bias[4]_i_25_n_0
+    SLICE_X112Y78        LUT6 (Prop_lut6_I1_O)        0.267    11.376 r  display_timings_inst/o_tmds[9]_i_2/O
+                         net (fo=1, routed)           0.347    11.723    display_timings_inst/o_tmds[9]_i_2_n_0
+    SLICE_X112Y76        LUT6 (Prop_lut6_I0_O)        0.105    11.828 r  display_timings_inst/o_tmds[9]_i_1/O
+                         net (fo=1, routed)           0.000    11.828    dvi_out/encode_ch0/o_tmds_reg[9]_0
+    SLICE_X112Y76        FDRE                                         r  dvi_out/encode_ch0/o_tmds_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.401    20.961    dvi_out/encode_ch0/CLK
+    SLICE_X112Y76        FDRE                                         r  dvi_out/encode_ch0/o_tmds_reg[9]/C
+                         clock pessimism              0.459    21.420    
+                         clock uncertainty           -0.095    21.325    
+    SLICE_X112Y76        FDRE (Setup_fdre_C_D)        0.072    21.397    dvi_out/encode_ch0/o_tmds_reg[9]
+  -------------------------------------------------------------------
+                         required time                         21.397    
+                         arrival time                         -11.828    
+  -------------------------------------------------------------------
+                         slack                                  9.569    
+
+Slack (MET) :             9.590ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch2/o_tmds_reg[8]/D
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        5.948ns  (logic 1.339ns (22.512%)  route 4.609ns (77.488%))
+  Logic Levels:           6  (LUT3=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.336ns = ( 20.961 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 r  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 f  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 f  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 f  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.784    10.009    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X108Y81        LUT6 (Prop_lut6_I5_O)        0.105    10.114 f  display_timings_inst/bias[4]_i_4/O
+                         net (fo=1, routed)           0.322    10.436    display_timings_inst/bias[4]_i_4_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I1_O)        0.105    10.541 f  display_timings_inst/bias[4]_i_2__0/O
+                         net (fo=5, routed)           1.128    11.669    display_timings_inst/red[0]
+    SLICE_X112Y73        LUT3 (Prop_lut3_I2_O)        0.105    11.774 r  display_timings_inst/o_tmds[8]_i_1__0/O
+                         net (fo=1, routed)           0.000    11.774    dvi_out/encode_ch2/o_tmds_reg[8]_0
+    SLICE_X112Y73        FDSE                                         r  dvi_out/encode_ch2/o_tmds_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.401    20.961    dvi_out/encode_ch2/CLK
+    SLICE_X112Y73        FDSE                                         r  dvi_out/encode_ch2/o_tmds_reg[8]/C
+                         clock pessimism              0.422    21.383    
+                         clock uncertainty           -0.095    21.288    
+    SLICE_X112Y73        FDSE (Setup_fdse_C_D)        0.076    21.364    dvi_out/encode_ch2/o_tmds_reg[8]
+  -------------------------------------------------------------------
+                         required time                         21.364    
+                         arrival time                         -11.774    
+  -------------------------------------------------------------------
+                         slack                                  9.590    
+
+Slack (MET) :             9.813ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/bias_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        5.681ns  (logic 1.339ns (23.572%)  route 4.342ns (76.428%))
+  Logic Levels:           6  (LUT5=2 LUT6=4)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.336ns = ( 20.961 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 r  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.507     9.731    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X106Y83        LUT6 (Prop_lut6_I4_O)        0.105     9.836 r  display_timings_inst/bias[4]_i_7/O
+                         net (fo=1, routed)           0.629    10.465    display_timings_inst/bias[4]_i_7_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I5_O)        0.105    10.570 r  display_timings_inst/bias[4]_i_2__1/O
+                         net (fo=5, routed)           0.832    11.402    dvi_out/encode_ch1/green[0]
+    SLICE_X110Y73        LUT5 (Prop_lut5_I1_O)        0.105    11.507 r  dvi_out/encode_ch1/bias[3]_i_1__1/O
+                         net (fo=1, routed)           0.000    11.507    dvi_out/encode_ch1/bias[3]_i_1__1_n_0
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.401    20.961    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[3]/C
+                         clock pessimism              0.422    21.383    
+                         clock uncertainty           -0.095    21.288    
+    SLICE_X110Y73        FDRE (Setup_fdre_C_D)        0.032    21.320    dvi_out/encode_ch1/bias_reg[3]
+  -------------------------------------------------------------------
+                         required time                         21.320    
+                         arrival time                         -11.507    
+  -------------------------------------------------------------------
+                         slack                                  9.813    
+
+Slack (MET) :             9.822ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/bias_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        5.709ns  (logic 1.360ns (23.821%)  route 4.349ns (76.179%))
+  Logic Levels:           6  (LUT4=1 LUT5=1 LUT6=4)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.336ns = ( 20.961 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 r  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.507     9.731    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X106Y83        LUT6 (Prop_lut6_I4_O)        0.105     9.836 r  display_timings_inst/bias[4]_i_7/O
+                         net (fo=1, routed)           0.629    10.465    display_timings_inst/bias[4]_i_7_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I5_O)        0.105    10.570 r  display_timings_inst/bias[4]_i_2__1/O
+                         net (fo=5, routed)           0.840    11.409    dvi_out/encode_ch1/green[0]
+    SLICE_X110Y73        LUT4 (Prop_lut4_I1_O)        0.126    11.535 r  dvi_out/encode_ch1/bias[2]_i_1__1/O
+                         net (fo=1, routed)           0.000    11.535    dvi_out/encode_ch1/bias[2]_i_1__1_n_0
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.401    20.961    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[2]/C
+                         clock pessimism              0.422    21.383    
+                         clock uncertainty           -0.095    21.288    
+    SLICE_X110Y73        FDRE (Setup_fdre_C_D)        0.069    21.357    dvi_out/encode_ch1/bias_reg[2]
+  -------------------------------------------------------------------
+                         required time                         21.357    
+                         arrival time                         -11.535    
+  -------------------------------------------------------------------
+                         slack                                  9.822    
+
+Slack (MET) :             9.829ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch0/bias_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        5.748ns  (logic 1.511ns (26.289%)  route 4.237ns (73.711%))
+  Logic Levels:           6  (LUT5=3 LUT6=3)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.338ns = ( 20.963 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.459ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.766     9.158    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I2_O)        0.105     9.263 r  display_timings_inst/bias[4]_i_51/O
+                         net (fo=1, routed)           0.811    10.074    display_timings_inst/bias[4]_i_51_n_0
+    SLICE_X111Y82        LUT5 (Prop_lut5_I0_O)        0.115    10.189 r  display_timings_inst/bias[4]_i_25/O
+                         net (fo=2, routed)           0.343    10.532    display_timings_inst/bias[4]_i_25_n_0
+    SLICE_X112Y82        LUT6 (Prop_lut6_I1_O)        0.267    10.799 r  display_timings_inst/bias[4]_i_5/O
+                         net (fo=5, routed)           0.670    11.469    dvi_out/encode_ch0/blue[0]
+    SLICE_X112Y77        LUT5 (Prop_lut5_I3_O)        0.105    11.574 r  dvi_out/encode_ch0/bias[3]_i_1/O
+                         net (fo=1, routed)           0.000    11.574    dvi_out/encode_ch0/bias[3]_i_1_n_0
+    SLICE_X112Y77        FDRE                                         r  dvi_out/encode_ch0/bias_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.403    20.963    dvi_out/encode_ch0/CLK
+    SLICE_X112Y77        FDRE                                         r  dvi_out/encode_ch0/bias_reg[3]/C
+                         clock pessimism              0.459    21.422    
+                         clock uncertainty           -0.095    21.327    
+    SLICE_X112Y77        FDRE (Setup_fdre_C_D)        0.076    21.403    dvi_out/encode_ch0/bias_reg[3]
+  -------------------------------------------------------------------
+                         required time                         21.403    
+                         arrival time                         -11.574    
+  -------------------------------------------------------------------
+                         slack                                  9.829    
+
+Slack (MET) :             9.829ns  (required time - arrival time)
+  Source:                 display_timings_inst/o_sx_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/bias_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_1x_pre rise@15.625ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        5.702ns  (logic 1.360ns (23.853%)  route 4.342ns (76.147%))
+  Logic Levels:           6  (LUT5=2 LUT6=4)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.336ns = ( 20.961 - 15.625 ) 
+    Source Clock Delay      (SCD):    5.826ns
+    Clock Pessimism Removal (CPR):    0.422ns
+  Clock Uncertainty:      0.095ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.177ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.392     1.392 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.110     2.502    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.077     2.579 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.597     4.176    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     4.261 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.565     5.826    display_timings_inst/CLK
+    SLICE_X112Y81        FDSE                                         r  display_timings_inst/o_sx_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDSE (Prop_fdse_C_Q)         0.398     6.224 f  display_timings_inst/o_sx_reg[9]/Q
+                         net (fo=23, routed)          1.090     7.314    display_timings_inst/sx[9]
+    SLICE_X106Y80        LUT5 (Prop_lut5_I4_O)        0.254     7.568 r  display_timings_inst/bias[4]_i_24__0/O
+                         net (fo=2, routed)           0.557     8.125    display_timings_inst/bias[4]_i_24__0_n_0
+    SLICE_X107Y80        LUT6 (Prop_lut6_I1_O)        0.267     8.392 r  display_timings_inst/bias[4]_i_19/O
+                         net (fo=5, routed)           0.728     9.120    display_timings_inst/test_card_inst/p_17_in
+    SLICE_X106Y85        LUT6 (Prop_lut6_I1_O)        0.105     9.225 r  display_timings_inst/bias[4]_i_50/O
+                         net (fo=3, routed)           0.507     9.731    display_timings_inst/test_card_inst/lns_4__1
+    SLICE_X106Y83        LUT6 (Prop_lut6_I4_O)        0.105     9.836 r  display_timings_inst/bias[4]_i_7/O
+                         net (fo=1, routed)           0.629    10.465    display_timings_inst/bias[4]_i_7_n_0
+    SLICE_X107Y82        LUT6 (Prop_lut6_I5_O)        0.105    10.570 r  display_timings_inst/bias[4]_i_2__1/O
+                         net (fo=5, routed)           0.832    11.402    dvi_out/encode_ch1/green[0]
+    SLICE_X110Y73        LUT5 (Prop_lut5_I0_O)        0.126    11.528 r  dvi_out/encode_ch1/bias[4]_i_1__0/O
+                         net (fo=1, routed)           0.000    11.528    dvi_out/encode_ch1/bias[4]_i_1__0_n_0
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                     15.625    15.625 r  
+    N18                                               0.000    15.625 r  CLK (IN)
+                         net (fo=0)                   0.000    15.625    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         1.327    16.952 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.004    17.955    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.073    18.028 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           1.454    19.483    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077    19.560 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          1.401    20.961    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[4]/C
+                         clock pessimism              0.422    21.383    
+                         clock uncertainty           -0.095    21.288    
+    SLICE_X110Y73        FDRE (Setup_fdre_C_D)        0.069    21.357    dvi_out/encode_ch1/bias_reg[4]
+  -------------------------------------------------------------------
+                         required time                         21.357    
+                         arrival time                         -11.528    
+  -------------------------------------------------------------------
+                         slack                                  9.829    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.121ns  (arrival time - required time)
+  Source:                 dvi_out/async_reset_instance/rst_shf_reg[0]/C
+                            (rising edge-triggered cell FDPE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/async_reset_instance/rst_shf_reg[1]/D
+                            (rising edge-triggered cell FDPE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.196ns  (logic 0.141ns (71.838%)  route 0.055ns (28.162%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.451ns
+    Source Clock Delay      (SCD):    1.900ns
+    Clock Pessimism Removal (CPR):    0.551ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.626     1.900    dvi_out/async_reset_instance/CLK
+    SLICE_X113Y71        FDPE                                         r  dvi_out/async_reset_instance/rst_shf_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y71        FDPE (Prop_fdpe_C_Q)         0.141     2.041 r  dvi_out/async_reset_instance/rst_shf_reg[0]/Q
+                         net (fo=1, routed)           0.055     2.096    dvi_out/async_reset_instance/rst_shf[0]
+    SLICE_X113Y71        FDPE                                         r  dvi_out/async_reset_instance/rst_shf_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.896     2.451    dvi_out/async_reset_instance/CLK
+    SLICE_X113Y71        FDPE                                         r  dvi_out/async_reset_instance/rst_shf_reg[1]/C
+                         clock pessimism             -0.551     1.900    
+    SLICE_X113Y71        FDPE (Hold_fdpe_C_D)         0.075     1.975    dvi_out/async_reset_instance/rst_shf_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.975    
+                         arrival time                           2.096    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.200ns  (arrival time - required time)
+  Source:                 dvi_out/async_reset_instance/o_rst_reg/C
+                            (rising edge-triggered cell FDPE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/serialize_ch1/master10/RST
+                            (rising edge-triggered cell OSERDESE2 clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.793ns  (logic 0.141ns (17.791%)  route 0.652ns (82.209%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.449ns
+    Source Clock Delay      (SCD):    1.900ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.626     1.900    dvi_out/async_reset_instance/CLK
+    SLICE_X113Y71        FDPE                                         r  dvi_out/async_reset_instance/o_rst_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y71        FDPE (Prop_fdpe_C_Q)         0.141     2.041 r  dvi_out/async_reset_instance/o_rst_reg/Q
+                         net (fo=8, routed)           0.652     2.693    dvi_out/serialize_ch1/i_rst_oserdes
+    OLOGIC_X1Y70         OSERDESE2                                    r  dvi_out/serialize_ch1/master10/RST
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.894     2.449    dvi_out/serialize_ch1/CLK
+    OLOGIC_X1Y70         OSERDESE2                                    r  dvi_out/serialize_ch1/master10/CLKDIV
+                         clock pessimism             -0.515     1.934    
+    OLOGIC_X1Y70         OSERDESE2 (Hold_oserdese2_CLKDIV_RST)
+                                                      0.559     2.493    dvi_out/serialize_ch1/master10
+  -------------------------------------------------------------------
+                         required time                         -2.493    
+                         arrival time                           2.693    
+  -------------------------------------------------------------------
+                         slack                                  0.200    
+
+Slack (MET) :             0.204ns  (arrival time - required time)
+  Source:                 dvi_out/async_reset_instance/o_rst_reg/C
+                            (rising edge-triggered cell FDPE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/serialize_ch2/slave10/RST
+                            (rising edge-triggered cell OSERDESE2 clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.796ns  (logic 0.141ns (17.715%)  route 0.655ns (82.285%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.448ns
+    Source Clock Delay      (SCD):    1.900ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.626     1.900    dvi_out/async_reset_instance/CLK
+    SLICE_X113Y71        FDPE                                         r  dvi_out/async_reset_instance/o_rst_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y71        FDPE (Prop_fdpe_C_Q)         0.141     2.041 r  dvi_out/async_reset_instance/o_rst_reg/Q
+                         net (fo=8, routed)           0.655     2.696    dvi_out/serialize_ch2/i_rst_oserdes
+    OLOGIC_X1Y71         OSERDESE2                                    r  dvi_out/serialize_ch2/slave10/RST
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.893     2.448    dvi_out/serialize_ch2/CLK
+    OLOGIC_X1Y71         OSERDESE2                                    r  dvi_out/serialize_ch2/slave10/CLKDIV
+                         clock pessimism             -0.515     1.933    
+    OLOGIC_X1Y71         OSERDESE2 (Hold_oserdese2_CLKDIV_RST)
+                                                      0.559     2.492    dvi_out/serialize_ch2/slave10
+  -------------------------------------------------------------------
+                         required time                         -2.492    
+                         arrival time                           2.696    
+  -------------------------------------------------------------------
+                         slack                                  0.204    
+
+Slack (MET) :             0.235ns  (arrival time - required time)
+  Source:                 dvi_out/encode_ch1/bias_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/o_tmds_reg[2]/D
+                            (rising edge-triggered cell FDSE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.369ns  (logic 0.226ns (61.319%)  route 0.143ns (38.681%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.448ns
+    Source Clock Delay      (SCD):    1.898ns
+    Clock Pessimism Removal (CPR):    0.537ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.624     1.898    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y73        FDRE (Prop_fdre_C_Q)         0.128     2.026 r  dvi_out/encode_ch1/bias_reg[4]/Q
+                         net (fo=7, routed)           0.143     2.169    dvi_out/encode_ch1/Q[0]
+    SLICE_X112Y73        LUT2 (Prop_lut2_I0_O)        0.098     2.267 r  dvi_out/encode_ch1/o_tmds[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.267    dvi_out/encode_ch1/o_tmds[2]_i_1__0_n_0
+    SLICE_X112Y73        FDSE                                         r  dvi_out/encode_ch1/o_tmds_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.893     2.448    dvi_out/encode_ch1/CLK
+    SLICE_X112Y73        FDSE                                         r  dvi_out/encode_ch1/o_tmds_reg[2]/C
+                         clock pessimism             -0.537     1.911    
+    SLICE_X112Y73        FDSE (Hold_fdse_C_D)         0.121     2.032    dvi_out/encode_ch1/o_tmds_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -2.032    
+                         arrival time                           2.267    
+  -------------------------------------------------------------------
+                         slack                                  0.235    
+
+Slack (MET) :             0.242ns  (arrival time - required time)
+  Source:                 dvi_out/encode_ch2/bias_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch2/bias_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.349ns  (logic 0.183ns (52.477%)  route 0.166ns (47.523%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.448ns
+    Source Clock Delay      (SCD):    1.898ns
+    Clock Pessimism Removal (CPR):    0.550ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.624     1.898    dvi_out/encode_ch2/CLK
+    SLICE_X111Y73        FDRE                                         r  dvi_out/encode_ch2/bias_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y73        FDRE (Prop_fdre_C_Q)         0.141     2.039 r  dvi_out/encode_ch2/bias_reg[1]/Q
+                         net (fo=4, routed)           0.166     2.205    dvi_out/encode_ch2/bias_reg_n_0_[1]
+    SLICE_X111Y73        LUT4 (Prop_lut4_I2_O)        0.042     2.247 r  dvi_out/encode_ch2/bias[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.247    dvi_out/encode_ch2/bias[2]_i_1__0_n_0
+    SLICE_X111Y73        FDRE                                         r  dvi_out/encode_ch2/bias_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.893     2.448    dvi_out/encode_ch2/CLK
+    SLICE_X111Y73        FDRE                                         r  dvi_out/encode_ch2/bias_reg[2]/C
+                         clock pessimism             -0.550     1.898    
+    SLICE_X111Y73        FDRE (Hold_fdre_C_D)         0.107     2.005    dvi_out/encode_ch2/bias_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -2.005    
+                         arrival time                           2.247    
+  -------------------------------------------------------------------
+                         slack                                  0.242    
+
+Slack (MET) :             0.248ns  (arrival time - required time)
+  Source:                 dvi_out/encode_ch1/bias_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/bias_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.355ns  (logic 0.184ns (51.782%)  route 0.171ns (48.218%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.448ns
+    Source Clock Delay      (SCD):    1.898ns
+    Clock Pessimism Removal (CPR):    0.550ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.624     1.898    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y73        FDRE (Prop_fdre_C_Q)         0.141     2.039 f  dvi_out/encode_ch1/bias_reg[1]/Q
+                         net (fo=4, routed)           0.171     2.210    dvi_out/encode_ch1/bias_reg_n_0_[1]
+    SLICE_X110Y73        LUT5 (Prop_lut5_I3_O)        0.043     2.253 r  dvi_out/encode_ch1/bias[4]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.253    dvi_out/encode_ch1/bias[4]_i_1__0_n_0
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.893     2.448    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[4]/C
+                         clock pessimism             -0.550     1.898    
+    SLICE_X110Y73        FDRE (Hold_fdre_C_D)         0.107     2.005    dvi_out/encode_ch1/bias_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -2.005    
+                         arrival time                           2.253    
+  -------------------------------------------------------------------
+                         slack                                  0.248    
+
+Slack (MET) :             0.253ns  (arrival time - required time)
+  Source:                 dvi_out/encode_ch1/bias_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch1/bias_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.360ns  (logic 0.183ns (50.898%)  route 0.177ns (49.102%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.448ns
+    Source Clock Delay      (SCD):    1.898ns
+    Clock Pessimism Removal (CPR):    0.550ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.624     1.898    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y73        FDRE (Prop_fdre_C_Q)         0.141     2.039 r  dvi_out/encode_ch1/bias_reg[1]/Q
+                         net (fo=4, routed)           0.177     2.216    dvi_out/encode_ch1/bias_reg_n_0_[1]
+    SLICE_X110Y73        LUT4 (Prop_lut4_I2_O)        0.042     2.258 r  dvi_out/encode_ch1/bias[2]_i_1__1/O
+                         net (fo=1, routed)           0.000     2.258    dvi_out/encode_ch1/bias[2]_i_1__1_n_0
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.893     2.448    dvi_out/encode_ch1/CLK
+    SLICE_X110Y73        FDRE                                         r  dvi_out/encode_ch1/bias_reg[2]/C
+                         clock pessimism             -0.550     1.898    
+    SLICE_X110Y73        FDRE (Hold_fdre_C_D)         0.107     2.005    dvi_out/encode_ch1/bias_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -2.005    
+                         arrival time                           2.258    
+  -------------------------------------------------------------------
+                         slack                                  0.253    
+
+Slack (MET) :             0.260ns  (arrival time - required time)
+  Source:                 dvi_out/encode_ch0/bias_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch0/bias_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.391ns  (logic 0.207ns (52.877%)  route 0.184ns (47.123%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.450ns
+    Source Clock Delay      (SCD):    1.900ns
+    Clock Pessimism Removal (CPR):    0.550ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.626     1.900    dvi_out/encode_ch0/CLK
+    SLICE_X112Y77        FDRE                                         r  dvi_out/encode_ch0/bias_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y77        FDRE (Prop_fdre_C_Q)         0.164     2.064 f  dvi_out/encode_ch0/bias_reg[2]/Q
+                         net (fo=5, routed)           0.184     2.249    dvi_out/encode_ch0/bias[2]
+    SLICE_X112Y77        LUT5 (Prop_lut5_I1_O)        0.043     2.292 r  dvi_out/encode_ch0/bias[4]_i_2/O
+                         net (fo=1, routed)           0.000     2.292    dvi_out/encode_ch0/bias[4]_i_2_n_0
+    SLICE_X112Y77        FDRE                                         r  dvi_out/encode_ch0/bias_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.895     2.450    dvi_out/encode_ch0/CLK
+    SLICE_X112Y77        FDRE                                         r  dvi_out/encode_ch0/bias_reg[4]/C
+                         clock pessimism             -0.550     1.900    
+    SLICE_X112Y77        FDRE (Hold_fdre_C_D)         0.131     2.031    dvi_out/encode_ch0/bias_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -2.031    
+                         arrival time                           2.292    
+  -------------------------------------------------------------------
+                         slack                                  0.260    
+
+Slack (MET) :             0.261ns  (arrival time - required time)
+  Source:                 dvi_out/encode_ch2/bias_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/encode_ch2/bias_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.352ns  (logic 0.186ns (52.883%)  route 0.166ns (47.117%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.448ns
+    Source Clock Delay      (SCD):    1.898ns
+    Clock Pessimism Removal (CPR):    0.550ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.624     1.898    dvi_out/encode_ch2/CLK
+    SLICE_X111Y73        FDRE                                         r  dvi_out/encode_ch2/bias_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y73        FDRE (Prop_fdre_C_Q)         0.141     2.039 r  dvi_out/encode_ch2/bias_reg[1]/Q
+                         net (fo=4, routed)           0.166     2.205    dvi_out/encode_ch2/bias_reg_n_0_[1]
+    SLICE_X111Y73        LUT2 (Prop_lut2_I1_O)        0.045     2.250 r  dvi_out/encode_ch2/bias[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.250    dvi_out/encode_ch2/bias[1]_i_1__0_n_0
+    SLICE_X111Y73        FDRE                                         r  dvi_out/encode_ch2/bias_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.893     2.448    dvi_out/encode_ch2/CLK
+    SLICE_X111Y73        FDRE                                         r  dvi_out/encode_ch2/bias_reg[1]/C
+                         clock pessimism             -0.550     1.898    
+    SLICE_X111Y73        FDRE (Hold_fdre_C_D)         0.091     1.989    dvi_out/encode_ch2/bias_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.989    
+                         arrival time                           2.250    
+  -------------------------------------------------------------------
+                         slack                                  0.261    
+
+Slack (MET) :             0.261ns  (arrival time - required time)
+  Source:                 dvi_out/async_reset_instance/o_rst_reg/C
+                            (rising edge-triggered cell FDPE clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Destination:            dvi_out/serialize_ch1/slave10/RST
+                            (rising edge-triggered cell OSERDESE2 clocked by clk_1x_pre  {rise@0.000ns fall@7.812ns period=15.625ns})
+  Path Group:             clk_1x_pre
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1x_pre rise@0.000ns - clk_1x_pre rise@0.000ns)
+  Data Path Delay:        0.854ns  (logic 0.141ns (16.506%)  route 0.713ns (83.494%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.449ns
+    Source Clock Delay      (SCD):    1.900ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.229     0.229 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.669    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.050     0.719 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.529     1.248    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.274 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.626     1.900    dvi_out/async_reset_instance/CLK
+    SLICE_X113Y71        FDPE                                         r  dvi_out/async_reset_instance/o_rst_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y71        FDPE (Prop_fdpe_C_Q)         0.141     2.041 r  dvi_out/async_reset_instance/o_rst_reg/Q
+                         net (fo=8, routed)           0.713     2.754    dvi_out/serialize_ch1/i_rst_oserdes
+    OLOGIC_X1Y69         OSERDESE2                                    r  dvi_out/serialize_ch1/slave10/RST
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1x_pre rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    N18                  IBUF (Prop_ibuf_I_O)         0.417     0.417 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.897    display_clocks_inst/i_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                      0.053     0.950 r  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+                         net (fo=1, routed)           0.576     1.526    display_clocks_inst/clk_1x_pre
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.555 r  display_clocks_inst/bufg_clk_pix/O
+                         net (fo=67, routed)          0.894     2.449    dvi_out/serialize_ch1/CLK
+    OLOGIC_X1Y69         OSERDESE2                                    r  dvi_out/serialize_ch1/slave10/CLKDIV
+                         clock pessimism             -0.515     1.934    
+    OLOGIC_X1Y69         OSERDESE2 (Hold_oserdese2_CLKDIV_RST)
+                                                      0.559     2.493    dvi_out/serialize_ch1/slave10
+  -------------------------------------------------------------------
+                         required time                         -2.493    
+                         arrival time                           2.754    
+  -------------------------------------------------------------------
+                         slack                                  0.261    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_1x_pre
+Waveform(ns):       { 0.000 7.812 }
+Period(ns):         15.625
+Sources:            { display_clocks_inst/MMCME2_BASE_inst/CLKOUT1 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            1.592         15.625      14.033     BUFGCTRL_X0Y16   display_clocks_inst/bufg_clk_pix/I
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y68     dvi_out/serialize_ch0/master10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y67     dvi_out/serialize_ch0/slave10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y72     dvi_out/serialize_ch2/master10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y71     dvi_out/serialize_ch2/slave10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y76     dvi_out/serialize_chc/master10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y75     dvi_out/serialize_chc/slave10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y70     dvi_out/serialize_ch1/master10/CLKDIV
+Min Period        n/a     OSERDESE2/CLKDIV    n/a            1.471         15.625      14.154     OLOGIC_X1Y69     dvi_out/serialize_ch1/slave10/CLKDIV
+Min Period        n/a     MMCME2_ADV/CLKOUT1  n/a            1.249         15.625      14.376     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+Max Period        n/a     MMCME2_ADV/CLKOUT1  n/a            213.360       15.625      197.735    MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKOUT1
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X110Y78    display_timings_inst/o_sx_reg[0]/C
+Low Pulse Width   Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[10]/C
+Low Pulse Width   Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[11]/C
+Low Pulse Width   Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[12]/C
+Low Pulse Width   Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[13]/C
+Low Pulse Width   Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[14]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X110Y78    display_timings_inst/o_sx_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X110Y78    display_timings_inst/o_sx_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X110Y78    display_timings_inst/o_sx_reg[3]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X110Y78    display_timings_inst/o_sx_reg[4]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X110Y78    display_timings_inst/o_sx_reg[0]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[10]/C
+High Pulse Width  Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[10]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[11]/C
+High Pulse Width  Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[11]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[12]/C
+High Pulse Width  Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[12]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[13]/C
+High Pulse Width  Fast    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[13]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         7.812       7.312      SLICE_X113Y80    display_timings_inst/o_sx_reg[14]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_5x_pre
+  To Clock:  clk_5x_pre
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        1.533ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_5x_pre
+Waveform(ns):       { 0.000 1.562 }
+Period(ns):         3.125
+Sources:            { display_clocks_inst/MMCME2_BASE_inst/CLKOUT0 }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I              n/a            1.592         3.125       1.533      BUFGCTRL_X0Y17   display_clocks_inst/bufg_clk_pix_5x/I
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y68     dvi_out/serialize_ch0/master10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y67     dvi_out/serialize_ch0/slave10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y72     dvi_out/serialize_ch2/master10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y71     dvi_out/serialize_ch2/slave10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y76     dvi_out/serialize_chc/master10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y75     dvi_out/serialize_chc/slave10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y70     dvi_out/serialize_ch1/master10/CLK
+Min Period  n/a     OSERDESE2/CLK       n/a            1.471         3.125       1.654      OLOGIC_X1Y69     dvi_out/serialize_ch1/slave10/CLK
+Min Period  n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         3.125       1.876      MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKOUT0
+Max Period  n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       3.125       210.235    MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKOUT0
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fb
+  To Clock:  clk_fb
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        0.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fb
+Waveform(ns):       { 0.000 50.000 }
+Period(ns):         100.000
+Sources:            { display_clocks_inst/MMCME2_BASE_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         100.000     98.751     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         100.000     98.751     MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       100.000     0.000      MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       100.000     113.360    MMCME2_ADV_X1Y1  display_clocks_inst/MMCME2_BASE_inst/CLKFBOUT
+
+
+

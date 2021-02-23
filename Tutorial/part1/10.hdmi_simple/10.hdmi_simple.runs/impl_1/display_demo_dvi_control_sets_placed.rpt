@@ -1,0 +1,70 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Feb 23 18:24:38 2021
+| Host         : tekPC running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file display_demo_dvi_control_sets_placed.rpt
+| Design       : display_demo_dvi
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |    13 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            1 |
+|     12 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | Yes                    |               3 |            1 |
+| No           | Yes                   | No                     |              37 |            9 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              16 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+---------------------------------------+----------------------------------------+------------------+----------------+
+|          Clock Signal         |             Enable Signal             |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++-------------------------------+---------------------------------------+----------------------------------------+------------------+----------------+
+|  display_clocks_inst/o_clk_1x |                                       |                                        |                2 |              3 |
+|  display_clocks_inst/o_clk_1x |                                       | display_timings_inst/SR[0]             |                3 |             12 |
+|  display_clocks_inst/o_clk_1x | display_timings_inst/o_sy[15]_i_1_n_0 | display_clocks_inst/MMCME2_BASE_inst_0 |                4 |             16 |
+|  display_clocks_inst/o_clk_1x |                                       | display_clocks_inst/MMCME2_BASE_inst_0 |                7 |             28 |
++-------------------------------+---------------------------------------+----------------------------------------+------------------+----------------+
+
+

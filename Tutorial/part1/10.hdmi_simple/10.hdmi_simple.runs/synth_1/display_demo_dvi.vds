@@ -1,0 +1,525 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 23 18:23:41 2021
+# Process ID: 56243
+# Current directory: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.runs/synth_1
+# Command line: vivado -log display_demo_dvi.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_demo_dvi.tcl
+# Log file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.runs/synth_1/display_demo_dvi.vds
+# Journal file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source display_demo_dvi.tcl -notrace
+Command: synth_design -top display_demo_dvi -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 56257 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1319.520 ; gain = 8.742 ; free physical = 1284 ; free virtual = 7302
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'display_demo_dvi' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_demo_dvi.v:2]
+	Parameter SVO_MODE bound to: 1280x720R - type: string 
+	Parameter SVO_FRAMERATE bound to: 60 - type: integer 
+	Parameter SVO_BITS_PER_PIXEL bound to: 24 - type: integer 
+	Parameter SVO_BITS_PER_RED bound to: 8 - type: integer 
+	Parameter SVO_BITS_PER_GREEN bound to: 8 - type: integer 
+	Parameter SVO_BITS_PER_BLUE bound to: 8 - type: integer 
+	Parameter SVO_BITS_PER_ALPHA bound to: 0 - type: integer 
+	Parameter SVO_HOR_PIXELS bound to: 1280 - type: integer 
+	Parameter SVO_VER_PIXELS bound to: 720 - type: integer 
+	Parameter SVO_HOR_FRONT_PORCH bound to: 48 - type: integer 
+	Parameter SVO_HOR_SYNC bound to: 32 - type: integer 
+	Parameter SVO_HOR_BACK_PORCH bound to: 80 - type: integer 
+	Parameter SVO_VER_FRONT_PORCH bound to: 3 - type: integer 
+	Parameter SVO_VER_SYNC bound to: 5 - type: integer 
+	Parameter SVO_VER_BACK_PORCH bound to: 13 - type: integer 
+	Parameter SVO_HOR_TOTAL bound to: 1440 - type: integer 
+	Parameter SVO_VER_TOTAL bound to: 741 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'display_clocks' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_clock.v:1]
+	Parameter MULT_MASTER bound to: 64 - type: integer 
+	Parameter DIV_MASTER bound to: 5 - type: integer 
+	Parameter DIV_5X bound to: 2.000000 - type: float 
+	Parameter DIV_1X bound to: 10 - type: integer 
+	Parameter IN_PERIOD bound to: 20.000000 - type: float 
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26837]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 64.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 20.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (1#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26837]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'display_clocks' (3#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_clock.v:1]
+INFO: [Synth 8-6157] synthesizing module 'display_timings' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_timings.v:1]
+	Parameter H_RES bound to: 1280 - type: integer 
+	Parameter V_RES bound to: 720 - type: integer 
+	Parameter H_FP bound to: 48 - type: integer 
+	Parameter H_SYNC bound to: 32 - type: integer 
+	Parameter H_BP bound to: 80 - type: integer 
+	Parameter V_FP bound to: 3 - type: integer 
+	Parameter V_SYNC bound to: 5 - type: integer 
+	Parameter V_BP bound to: 13 - type: integer 
+	Parameter H_POL bound to: 1 - type: integer 
+	Parameter V_POL bound to: 1 - type: integer 
+	Parameter H_STA bound to: 32'sb11111111111111111111111101100000 
+	Parameter HS_STA bound to: 32'sb11111111111111111111111110010000 
+	Parameter HS_END bound to: 32'sb11111111111111111111111110110000 
+	Parameter HA_STA bound to: 32'sb00000000000000000000000000000000 
+	Parameter HA_END bound to: 32'sb00000000000000000000010011111111 
+	Parameter V_STA bound to: 32'sb11111111111111111111111111101011 
+	Parameter VS_STA bound to: 32'sb11111111111111111111111111101110 
+	Parameter VS_END bound to: 32'sb11111111111111111111111111110011 
+	Parameter VA_STA bound to: 32'sb00000000000000000000000000000000 
+	Parameter VA_END bound to: 32'sb00000000000000000000001011001111 
+INFO: [Synth 8-6155] done synthesizing module 'display_timings' (4#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_timings.v:1]
+INFO: [Synth 8-6157] synthesizing module 'test_card_squares' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/test_card.v:43]
+	Parameter H_RES bound to: 1280 - type: integer 
+	Parameter V_RES bound to: 720 - type: integer 
+	Parameter HR bound to: 1280 - type: integer 
+	Parameter VR bound to: 720 - type: integer 
+	Parameter BW bound to: 16 - type: integer 
+	Parameter SQ bound to: 45 - type: integer 
+	Parameter SX bound to: 415 - type: integer 
+	Parameter SY bound to: 135 - type: integer 
+	Parameter LS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'test_card_squares' (5#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/test_card.v:43]
+INFO: [Synth 8-6157] synthesizing module 'dvi_generator' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/dvi_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tmds_encoder_dvi' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/tmds_encoder_dvi.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_encoder_dvi' (6#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/tmds_encoder_dvi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'async_reset' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/async_reset.v:1]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/async_reset.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'async_reset' (7#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/async_reset.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serializer_10to1' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/serializer_10to1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (8#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_OQ bound to: 1'b1 
+	Parameter INIT_TQ bound to: 1'b1 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (8#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:32215]
+INFO: [Synth 8-6155] done synthesizing module 'serializer_10to1' (9#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/serializer_10to1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dvi_generator' (10#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/dvi_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (11#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:28244]
+INFO: [Synth 8-6155] done synthesizing module 'display_demo_dvi' (12#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/display_demo_dvi.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1364.270 ; gain = 53.492 ; free physical = 1293 ; free virtual = 7314
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1364.270 ; gain = 53.492 ; free physical = 1293 ; free virtual = 7314
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1364.270 ; gain = 53.492 ; free physical = 1293 ; free virtual = 7314
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_demo_dvi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/display_demo_dvi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1715.676 ; gain = 0.000 ; free physical = 1013 ; free virtual = 7034
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1715.676 ; gain = 0.000 ; free physical = 1013 ; free virtual = 7035
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1715.676 ; gain = 0.000 ; free physical = 1013 ; free virtual = 7035
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1715.676 ; gain = 0.000 ; free physical = 1013 ; free virtual = 7035
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.676 ; gain = 404.898 ; free physical = 1075 ; free virtual = 7101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.676 ; gain = 404.898 ; free physical = 1075 ; free virtual = 7101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.676 ; gain = 404.898 ; free physical = 1077 ; free virtual = 7104
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "o_sy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.srcs/sources_1/new/tmds_encoder_dvi.v:62]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1715.676 ; gain = 404.898 ; free physical = 1069 ; free virtual = 7096
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   8 Input      5 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 3     
+	  10 Input      5 Bit       Adders := 3     
+	  12 Input      5 Bit       Adders := 3     
+	   4 Input      5 Bit       Adders := 6     
+	   8 Input      4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   5 Input     10 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 9     
+	   2 Input      5 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 25    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module display_timings 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module tmds_encoder_dvi 
+Detailed RTL Component Info : 
++---Adders : 
+	   8 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	  10 Input      5 Bit       Adders := 1     
+	  12 Input      5 Bit       Adders := 1     
+	   4 Input      5 Bit       Adders := 2     
+	   8 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 8     
+Module async_reset 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "o_sy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch0/o_tmds_reg[7]' (FDR) to 'dvi_out/encode_ch0/o_tmds_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch0/o_tmds_reg[6]' (FDS) to 'dvi_out/encode_ch0/o_tmds_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch0/o_tmds_reg[5]' (FDR) to 'dvi_out/encode_ch0/o_tmds_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch0/o_tmds_reg[4]' (FDS) to 'dvi_out/encode_ch0/o_tmds_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch0/o_tmds_reg[3]' (FDR) to 'dvi_out/encode_ch0/o_tmds_reg[1]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch0/o_tmds_reg[1]' (FDR) to 'dvi_out/encode_ch0/o_tmds_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch1/o_tmds_reg[7]' (FDR) to 'dvi_out/encode_ch1/o_tmds_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch1/o_tmds_reg[6]' (FDS) to 'dvi_out/encode_ch1/o_tmds_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch1/o_tmds_reg[5]' (FDR) to 'dvi_out/encode_ch1/o_tmds_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch1/o_tmds_reg[4]' (FDS) to 'dvi_out/encode_ch1/o_tmds_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch1/o_tmds_reg[3]' (FDR) to 'dvi_out/encode_ch1/o_tmds_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch1/o_tmds_reg[1]' (FDR) to 'dvi_out/encode_ch1/o_tmds_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch2/o_tmds_reg[7]' (FDR) to 'dvi_out/encode_ch2/o_tmds_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch2/o_tmds_reg[6]' (FDS) to 'dvi_out/encode_ch2/o_tmds_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch2/o_tmds_reg[5]' (FDR) to 'dvi_out/encode_ch2/o_tmds_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch2/o_tmds_reg[4]' (FDS) to 'dvi_out/encode_ch2/o_tmds_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch2/o_tmds_reg[3]' (FDR) to 'dvi_out/encode_ch2/o_tmds_reg[1]'
+INFO: [Synth 8-3886] merging instance 'dvi_out/encode_ch2/o_tmds_reg[1]' (FDR) to 'dvi_out/encode_ch2/o_tmds_reg[0]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1715.676 ; gain = 404.898 ; free physical = 1050 ; free virtual = 7076
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1715.676 ; gain = 404.898 ; free physical = 927 ; free virtual = 6952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 907 ; free virtual = 6933
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |    28|
+|3     |LUT1        |     5|
+|4     |LUT2        |   178|
+|5     |LUT3        |    12|
+|6     |LUT4        |    19|
+|7     |LUT5        |    24|
+|8     |LUT6        |    64|
+|9     |MMCME2_BASE |     1|
+|10    |OSERDESE2   |     4|
+|11    |OSERDESE2_1 |     4|
+|12    |FDPE        |     3|
+|13    |FDRE        |    26|
+|14    |FDSE        |    30|
+|15    |IBUF        |     2|
+|16    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------+------+
+|      |Instance                 |Module             |Cells |
++------+-------------------------+-------------------+------+
+|1     |top                      |                   |   406|
+|2     |  display_clocks_inst    |display_clocks     |     5|
+|3     |  display_timings_inst   |display_timings    |   342|
+|4     |  dvi_out                |dvi_generator      |    53|
+|5     |    async_reset_instance |async_reset        |     3|
+|6     |    encode_ch0           |tmds_encoder_dvi   |    14|
+|7     |    encode_ch1           |tmds_encoder_dvi_0 |    14|
+|8     |    encode_ch2           |tmds_encoder_dvi_1 |    14|
+|9     |    serialize_ch0        |serializer_10to1   |     2|
+|10    |    serialize_ch1        |serializer_10to1_2 |     2|
+|11    |    serialize_ch2        |serializer_10to1_3 |     2|
+|12    |    serialize_chc        |serializer_10to1_4 |     2|
++------+-------------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.684 ; gain = 412.906 ; free physical = 906 ; free virtual = 6932
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1723.684 ; gain = 61.500 ; free physical = 963 ; free virtual = 6989
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1723.691 ; gain = 412.906 ; free physical = 963 ; free virtual = 6989
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1724.684 ; gain = 0.000 ; free physical = 907 ; free virtual = 6932
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1724.684 ; gain = 414.164 ; free physical = 970 ; free virtual = 6995
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1724.684 ; gain = 0.000 ; free physical = 970 ; free virtual = 6995
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part1/10.hdmi_simple/10.hdmi_simple.runs/synth_1/display_demo_dvi.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file display_demo_dvi_utilization_synth.rpt -pb display_demo_dvi_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 23 18:24:10 2021...
