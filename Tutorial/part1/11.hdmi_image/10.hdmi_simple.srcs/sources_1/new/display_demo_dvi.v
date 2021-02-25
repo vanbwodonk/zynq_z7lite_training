@@ -117,7 +117,7 @@ module display_demo_dvi(
      test_card_inst (
          .clk(pix_clk),
          .clk5x(pix_clk_5x),
-         .rst(1'b0),
+         .rst(~RST_BTN),
          .i_x(sx),
          .i_y(sy),
          .o_red(red),
