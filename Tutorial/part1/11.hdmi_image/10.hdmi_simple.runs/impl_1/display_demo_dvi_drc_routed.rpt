@@ -1,0 +1,41 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Feb 25 11:47:15 2021
+| Host         : tekPC running 64-bit Manjaro Linux
+| Command      : report_drc -file display_demo_dvi_drc_routed.rpt -pb display_demo_dvi_drc_routed.pb -rpx display_demo_dvi_drc_routed.rpx
+| Design       : display_demo_dvi
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++--------+----------+--------------------+------------+
+| Rule   | Severity | Description        | Violations |
++--------+----------+--------------------+------------+
+| ZPS7-1 | Warning  | PS7 block required | 1          |
++--------+----------+--------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
