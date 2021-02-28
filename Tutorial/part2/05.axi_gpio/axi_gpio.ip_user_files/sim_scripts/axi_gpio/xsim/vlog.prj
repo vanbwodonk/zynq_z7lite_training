@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "../../../../axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ec67/hdl" --include "../../../../axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/70cf/hdl" --include "../../../../axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0" \
+"../../../bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/sim/axi_gpio_processing_system7_0_0.v" \
+"../../../bd/axi_gpio/ip/axi_gpio_auto_pc_0/sim/axi_gpio_auto_pc_0.v" \
+"../../../bd/axi_gpio/sim/axi_gpio.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

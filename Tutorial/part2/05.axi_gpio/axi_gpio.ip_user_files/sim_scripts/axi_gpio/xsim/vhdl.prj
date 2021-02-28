@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/sim/axi_gpio_axi_gpio_0_0.vhd" \
+"../../../bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/sim/axi_gpio_rst_ps7_0_50M_0.vhd" \
+
+nosort
