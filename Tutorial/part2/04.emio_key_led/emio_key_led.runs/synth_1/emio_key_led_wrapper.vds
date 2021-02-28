@@ -1,0 +1,461 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Feb 28 11:02:23 2021
+# Process ID: 7693
+# Current directory: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1
+# Command line: vivado -log emio_key_led_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source emio_key_led_wrapper.tcl
+# Log file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/emio_key_led_wrapper.vds
+# Journal file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source emio_key_led_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top emio_key_led_wrapper -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7712 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1356.672 ; gain = 15.773 ; free physical = 123 ; free virtual = 20163
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'emio_key_led_wrapper' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/hdl/emio_key_led_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+INFO: [Synth 8-6157] synthesizing module 'emio_key_led' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/synth/emio_key_led.v:13]
+INFO: [Synth 8-6157] synthesizing module 'emio_key_led_processing_system7_0_0' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/synth/emio_key_led_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
+	Parameter C_S_AXI_ACP_ARUSER_VAL bound to: 31 - type: integer 
+	Parameter C_S_AXI_ACP_AWUSER_VAL bound to: 31 - type: integer 
+	Parameter C_M_AXI_GP0_THREAD_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP1_THREAD_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP0_ENABLE_STATIC_REMAP bound to: 0 - type: integer 
+	Parameter C_M_AXI_GP1_ENABLE_STATIC_REMAP bound to: 0 - type: integer 
+	Parameter C_M_AXI_GP0_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXI_GP1_ID_WIDTH bound to: 12 - type: integer 
+	Parameter C_S_AXI_GP0_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_GP1_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP0_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP1_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP2_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_HP3_ID_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_ACP_ID_WIDTH bound to: 3 - type: integer 
+	Parameter C_S_AXI_HP0_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP1_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP2_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_HP3_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_INCLUDE_ACP_TRANS_CHECK bound to: 0 - type: integer 
+	Parameter C_NUM_F2P_INTR_INPUTS bound to: 1 - type: integer 
+	Parameter C_FCLK_CLK0_BUF bound to: FALSE - type: string 
+	Parameter C_FCLK_CLK1_BUF bound to: FALSE - type: string 
+	Parameter C_FCLK_CLK2_BUF bound to: FALSE - type: string 
+	Parameter C_FCLK_CLK3_BUF bound to: FALSE - type: string 
+	Parameter C_EMIO_GPIO_WIDTH bound to: 2 - type: integer 
+	Parameter C_INCLUDE_TRACE_BUFFER bound to: 0 - type: integer 
+	Parameter C_TRACE_BUFFER_FIFO_SIZE bound to: 128 - type: integer 
+	Parameter C_TRACE_BUFFER_CLOCK_DELAY bound to: 12 - type: integer 
+	Parameter USE_TRACE_DATA_EDGE_DETECTOR bound to: 0 - type: integer 
+	Parameter C_TRACE_PIPELINE_WIDTH bound to: 8 - type: integer 
+	Parameter C_PS7_SI_REV bound to: PRODUCTION - type: string 
+	Parameter C_EN_EMIO_ENET0 bound to: 0 - type: integer 
+	Parameter C_EN_EMIO_ENET1 bound to: 0 - type: integer 
+	Parameter C_EN_EMIO_TRACE bound to: 0 - type: integer 
+	Parameter C_DQ_WIDTH bound to: 32 - type: integer 
+	Parameter C_DQS_WIDTH bound to: 4 - type: integer 
+	Parameter C_DM_WIDTH bound to: 4 - type: integer 
+	Parameter C_MIO_PRIMITIVE bound to: 54 - type: integer 
+	Parameter C_PACKAGE_NAME bound to: clg400 - type: string 
+	Parameter C_IRQ_F2P_MODE bound to: DIRECT - type: string 
+	Parameter C_TRACE_INTERNAL_WIDTH bound to: 2 - type: integer 
+	Parameter C_EN_EMIO_PJTAG bound to: 0 - type: integer 
+	Parameter C_USE_AXI_NONSECURE bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP0 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP1 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP2 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_HP3 bound to: 0 - type: integer 
+	Parameter C_USE_M_AXI_GP0 bound to: 0 - type: integer 
+	Parameter C_USE_M_AXI_GP1 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_GP0 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_GP1 bound to: 0 - type: integer 
+	Parameter C_USE_S_AXI_ACP bound to: 0 - type: integer 
+	Parameter C_GP0_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
+	Parameter C_GP1_EN_MODIFIABLE_TXN bound to: 1 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1347]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
+INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (2#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
+INFO: [Synth 8-6157] synthesizing module 'PS7' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (3#1) [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/synth/emio_key_led_processing_system7_0_0.v:195]
+INFO: [Synth 8-6155] done synthesizing module 'emio_key_led_processing_system7_0_0' (5#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/synth/emio_key_led_processing_system7_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'emio_key_led' (6#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/synth/emio_key_led.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'emio_key_led_wrapper' (7#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/hdl/emio_key_led_wrapper.v:12]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_COL
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_CRS
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RX_DV
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RX_ER
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[7]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[6]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[5]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[4]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[3]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[1]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[0]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_COL
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_CRS
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RX_DV
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RX_ER
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[7]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[6]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[5]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[4]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[3]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[1]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[0]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_GP0_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_GP0_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_GP1_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_GP1_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_ACP_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_ACP_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP0_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP0_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP1_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP1_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP2_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP2_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP3_ARSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port S_AXI_HP3_AWSIZE[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG3_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG2_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG1_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FCLK_CLKTRIG0_N
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[31]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[30]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[29]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[28]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[27]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[26]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[25]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[24]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[23]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[22]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[21]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[20]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[19]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[18]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[17]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[16]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[15]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[14]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[13]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[12]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[11]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[10]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[9]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[8]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[7]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[6]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[5]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[4]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[3]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[1]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_DATA[0]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_VALID
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_ATID[3]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_ATID[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_ATID[1]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port FTMD_TRACEIN_ATID[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.422 ; gain = 60.523 ; free physical = 181 ; free virtual = 20174
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.422 ; gain = 60.523 ; free physical = 180 ; free virtual = 20175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1401.422 ; gain = 60.523 ; free physical = 180 ; free virtual = 20175
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/emio_key_led_processing_system7_0_0.xdc] for cell 'emio_key_led_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/emio_key_led_processing_system7_0_0.xdc] for cell 'emio_key_led_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/emio_key_led_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/emio_key_led_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/emio_key_led_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1664.805 ; gain = 0.000 ; free physical = 121 ; free virtual = 19921
+Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/constrs_1/new/emio_key_led.xdc]
+Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/constrs_1/new/emio_key_led.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.srcs/constrs_1/new/emio_key_led.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/emio_key_led_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/emio_key_led_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/emio_key_led_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/emio_key_led_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1664.805 ; gain = 0.000 ; free physical = 121 ; free virtual = 19921
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1664.805 ; gain = 0.000 ; free physical = 122 ; free virtual = 19921
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1664.805 ; gain = 0.000 ; free physical = 122 ; free virtual = 19921
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1664.805 ; gain = 0.000 ; free physical = 122 ; free virtual = 19921
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1664.805 ; gain = 323.906 ; free physical = 189 ; free virtual = 19989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1664.805 ; gain = 323.906 ; free physical = 189 ; free virtual = 19990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for emio_key_led_i/processing_system7_0/inst. (constraint file  /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/dont_touch.xdc, line 13).
+Applied set_property DONT_TOUCH = true for emio_key_led_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for emio_key_led_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1664.805 ; gain = 323.906 ; free physical = 183 ; free virtual = 19984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1664.805 ; gain = 323.906 ; free physical = 184 ; free virtual = 19984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_COL
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_CRS
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RX_DV
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RX_ER
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[7]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[6]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[5]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[4]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[3]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[2]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[1]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET0_GMII_RXD[0]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_COL
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_CRS
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RX_DV
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RX_ER
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[7]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[6]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[5]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[4]
+WARNING: [Synth 8-3331] design processing_system7_v5_5_processing_system7 has unconnected port ENET1_GMII_RXD[3]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1672.812 ; gain = 331.914 ; free physical = 175 ; free virtual = 19976
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1873.812 ; gain = 532.914 ; free physical = 134 ; free virtual = 19714
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1874.812 ; gain = 533.914 ; free physical = 135 ; free virtual = 19714
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 132 ; free virtual = 19711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BIBUF |   130|
+|2     |LUT1  |    50|
+|3     |PS7   |     1|
+|4     |IOBUF |     2|
++------+------+------+
+
+Report Instance Areas: 
++------+-------------------------+-------------------------------------------+------+
+|      |Instance                 |Module                                     |Cells |
++------+-------------------------+-------------------------------------------+------+
+|1     |top                      |                                           |   183|
+|2     |  emio_key_led_i         |emio_key_led                               |   181|
+|3     |    processing_system7_0 |emio_key_led_processing_system7_0_0        |   181|
+|4     |      inst               |processing_system7_v5_5_processing_system7 |   181|
++------+-------------------------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1885.820 ; gain = 544.922 ; free physical = 130 ; free virtual = 19711
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 79 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1885.820 ; gain = 281.539 ; free physical = 186 ; free virtual = 19767
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1885.828 ; gain = 544.922 ; free physical = 191 ; free virtual = 19771
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1892.820 ; gain = 0.000 ; free physical = 124 ; free virtual = 19705
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1892.820 ; gain = 552.148 ; free physical = 317 ; free virtual = 19898
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1892.820 ; gain = 0.000 ; free physical = 317 ; free virtual = 19898
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/emio_key_led_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file emio_key_led_wrapper_utilization_synth.rpt -pb emio_key_led_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 28 11:03:01 2021...

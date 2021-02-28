@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../emio_key_led.srcs/sources_1/bd/emio_key_led/ipshared/ec67/hdl" --include "../../../../emio_key_led.srcs/sources_1/bd/emio_key_led/ipshared/70cf/hdl" --include "../../../../emio_key_led.srcs/sources_1/bd/emio_key_led/ip/emio_key_led_processing_system7_0_0" \
+"../../../bd/emio_key_led/ip/emio_key_led_processing_system7_0_0/sim/emio_key_led_processing_system7_0_0.v" \
+"../../../bd/emio_key_led/sim/emio_key_led.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

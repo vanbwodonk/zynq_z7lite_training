@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Feb 28 11:02:23 2021
+# Process ID: 7693
+# Current directory: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1
+# Command line: vivado -log emio_key_led_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source emio_key_led_wrapper.tcl
+# Log file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/emio_key_led_wrapper.vds
+# Journal file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/emio_key_led.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source emio_key_led_wrapper.tcl -notrace
