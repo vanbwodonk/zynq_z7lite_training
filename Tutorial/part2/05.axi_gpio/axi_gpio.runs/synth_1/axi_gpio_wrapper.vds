@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Feb 28 15:29:58 2021
-# Process ID: 4678
+# Start of session at: Sun Feb 28 22:59:31 2021
+# Process ID: 10471
 # Current directory: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1
 # Command line: vivado -log axi_gpio_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_gpio_wrapper.tcl
 # Log file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1/axi_gpio_wrapper.vds
@@ -18,9 +18,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4699 
+INFO: Helper process launched with PID 10500 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1362.668 ; gain = 12.773 ; free physical = 1058 ; free virtual = 20804
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1362.664 ; gain = 21.773 ; free physical = 786 ; free virtual = 19483
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'axi_gpio_wrapper' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/hdl/axi_gpio_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
@@ -34,7 +34,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio_axi_gpio_0_0' [/home/drw/Docum
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 2 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -51,7 +51,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_gpio_v2_0_20_axi_gpio' [/home/drw/D
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 2 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
 	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
@@ -234,9 +234,9 @@ INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (6#1) [/home/dr
 INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 	Parameter C_DW bound to: 32 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
-	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 2 - type: integer 
 	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
-	Parameter C_MAX_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 2 - type: integer 
 	Parameter C_INTERRUPT_PRESENT bound to: 1 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
 	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
@@ -254,22 +254,35 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/drw/Documents/1.GitSVN
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
 	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
-	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
 	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (7#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd:384]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT0_ND.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd:384]
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (8#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio_v2_0_20_axi_gpio' (9#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/a7c9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio_axi_gpio_0_0' (10#1) [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/synth/axi_gpio_axi_gpio_0_0.vhd:87]
@@ -1305,7 +1318,7 @@ WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has
 WARNING: [Synth 8-3331] design axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm has unconnected port s_arlen[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:37 ; elapsed = 00:00:54 . Memory (MB): peak = 1506.418 ; gain = 156.523 ; free physical = 1048 ; free virtual = 20797
+Finished RTL Elaboration : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 1506.414 ; gain = 165.523 ; free physical = 772 ; free virtual = 19485
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1318,12 +1331,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:54 . Memory (MB): peak = 1506.418 ; gain = 156.523 ; free physical = 1053 ; free virtual = 20801
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:04 . Memory (MB): peak = 1506.414 ; gain = 165.523 ; free physical = 775 ; free virtual = 19488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:54 . Memory (MB): peak = 1506.418 ; gain = 156.523 ; free physical = 1053 ; free virtual = 20801
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:44 ; elapsed = 00:01:04 . Memory (MB): peak = 1506.414 ; gain = 165.523 ; free physical = 775 ; free virtual = 19488
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1342,7 +1355,7 @@ Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tut
 Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0_board.xdc] for cell 'axi_gpio_i/rst_ps7_0_50M/U0'
 Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0.xdc] for cell 'axi_gpio_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0.xdc] for cell 'axi_gpio_i/rst_ps7_0_50M/U0'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.723 ; gain = 0.000 ; free physical = 765 ; free virtual = 20514
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.719 ; gain = 0.000 ; free physical = 495 ; free virtual = 19202
 Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc]
 Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_gpio_wrapper_propImpl.xdc].
@@ -1351,27 +1364,27 @@ Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tut
 Finished Parsing XDC File [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_gpio_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/axi_gpio_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.723 ; gain = 0.000 ; free physical = 765 ; free virtual = 20514
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.719 ; gain = 0.000 ; free physical = 495 ; free virtual = 19202
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.723 ; gain = 0.000 ; free physical = 765 ; free virtual = 20515
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.719 ; gain = 0.000 ; free physical = 496 ; free virtual = 19203
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 20 instances were transformed.
-  FDR => FDRE: 18 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  A total of 27 instances were transformed.
+  FDR => FDRE: 24 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.723 ; gain = 0.000 ; free physical = 765 ; free virtual = 20515
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1760.723 ; gain = 0.000 ; free physical = 765 ; free virtual = 20515
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.719 ; gain = 0.000 ; free physical = 496 ; free virtual = 19203
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1766.719 ; gain = 0.000 ; free physical = 496 ; free virtual = 19203
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:01:05 . Memory (MB): peak = 1760.723 ; gain = 410.828 ; free physical = 857 ; free virtual = 20606
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1766.719 ; gain = 425.828 ; free physical = 588 ; free virtual = 19297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:01:05 . Memory (MB): peak = 1760.723 ; gain = 410.828 ; free physical = 857 ; free virtual = 20606
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1766.719 ; gain = 425.828 ; free physical = 588 ; free virtual = 19297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1386,7 +1399,7 @@ Applied set_property DONT_TOUCH = true for axi_gpio_i/ps7_0_axi_periph. (constra
 Applied set_property DONT_TOUCH = true for axi_gpio_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 1760.723 ; gain = 410.828 ; free physical = 857 ; free virtual = 20606
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:17 . Memory (MB): peak = 1766.719 ; gain = 425.828 ; free physical = 590 ; free virtual = 19300
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -1422,7 +1435,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:01:07 . Memory (MB): peak = 1760.723 ; gain = 410.828 ; free physical = 847 ; free virtual = 20598
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:19 . Memory (MB): peak = 1766.719 ; gain = 425.828 ; free physical = 579 ; free virtual = 19292
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1443,11 +1456,12 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit       Adders := 5     
 	   2 Input      2 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 2     
+	   2 Input      2 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               66 Bit    Registers := 4     
 	               47 Bit    Registers := 2     
-	               32 Bit    Registers := 4     
+	               32 Bit    Registers := 2     
 	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 9     
 	                9 Bit    Registers := 3     
@@ -1456,8 +1470,8 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 4     
 	                4 Bit    Registers := 7     
 	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 11    
-	                1 Bit    Registers := 90    
+	                2 Bit    Registers := 15    
+	                1 Bit    Registers := 86    
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     47 Bit        Muxes := 2     
@@ -1471,9 +1485,9 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 23    
 	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 16    
+	   2 Input      2 Bit        Muxes := 18    
 	   4 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 61    
+	   2 Input      1 Bit        Muxes := 64    
 	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -1591,13 +1605,14 @@ Detailed RTL Component Info :
 Module GPIO_Core 
 Detailed RTL Component Info : 
 +---XORs : 
-	   2 Input      1 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                1 Bit    Registers := 7     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   5 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
 Module interrupt_control 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -1788,7 +1803,6 @@ Warning: Parallel synthesis criteria is not met
 INFO: [Synth 8-4471] merging register 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' into 'bus2ip_reset_reg' [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2493]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
-INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[30]' (FDR) to 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[29]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[29]' (FDR) to 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[28]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[28]' (FDR) to 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[27]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[27]' (FDR) to 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[26]'
@@ -1819,7 +1833,6 @@ INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[2]' (FDR) to 'axi_gpio_i/axi_gpio_0/U0/ip2bus_data_i_D1_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_gpio_i/axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_gpio_i/axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[1] )
-INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[1]' (FDRE) to 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[2]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[2]' (FDRE) to 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]' (FDRE) to 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[4]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[4]' (FDRE) to 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[5]'
@@ -1851,7 +1864,9 @@ INFO: [Synth 8-3886] merging instance 'axi_gpio_i/axi_gpio_0/U0/AXI_LITE_IPIF_I/
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_gpio_i/axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_gpio_i/axi_gpio_0/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[1] )
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio_v2_0_20_axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio_v2_0_20_axi_gpio.
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio_v2_0_20_axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio_v2_0_20_axi_gpio.
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/r.r_pipe/aresetn_d_reg[0]' (FDR) to 'axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aresetn_d_reg[1]' (FDR) to 'axi_gpio_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aresetn_d_reg[1]'
@@ -1865,7 +1880,7 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 1776.730 ; gain = 426.836 ; free physical = 823 ; free virtual = 20580
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:23 . Memory (MB): peak = 1766.719 ; gain = 425.828 ; free physical = 555 ; free virtual = 19272
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1877,13 +1892,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:17 . Memory (MB): peak = 1903.730 ; gain = 553.836 ; free physical = 542 ; free virtual = 20306
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:32 . Memory (MB): peak = 1903.719 ; gain = 562.828 ; free physical = 280 ; free virtual = 18997
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:20 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20264
+Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:35 . Memory (MB): peak = 1967.758 ; gain = 626.867 ; free physical = 238 ; free virtual = 18955
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1895,7 +1910,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:22 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20264
+Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:37 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 236 ; free virtual = 18954
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1920,7 +1935,7 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 235 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1933,7 +1948,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 235 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1945,25 +1960,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 234 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 234 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 234 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 234 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2001,35 +2016,35 @@ Report Cell Usage:
 |1     |BIBUF   |   130|
 |2     |CARRY4  |    18|
 |3     |LUT1    |   126|
-|4     |LUT2    |    34|
-|5     |LUT3    |   261|
-|6     |LUT4    |    65|
-|7     |LUT5    |    81|
-|8     |LUT6    |   142|
+|4     |LUT2    |    37|
+|5     |LUT3    |   258|
+|6     |LUT4    |    62|
+|7     |LUT5    |    84|
+|8     |LUT6    |   147|
 |9     |PS7     |     1|
 |10    |SRL16   |     1|
 |11    |SRL16E  |    18|
 |12    |SRLC32E |    47|
-|13    |FDR     |    12|
-|14    |FDRE    |   650|
-|15    |FDSE    |    23|
-|16    |IOBUF   |     1|
+|13    |FDR     |    16|
+|14    |FDRE    |   657|
+|15    |FDSE    |    24|
+|16    |IOBUF   |     2|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                         |Cells |
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
-|1     |top                                                |                                                               |  1610|
-|2     |  axi_gpio_i                                       |axi_gpio                                                       |  1609|
-|3     |    axi_gpio_0                                     |axi_gpio_axi_gpio_0_0                                          |   171|
-|4     |      U0                                           |axi_gpio_v2_0_20_axi_gpio                                      |   171|
-|5     |        AXI_LITE_IPIF_I                            |axi_lite_ipif                                                  |   128|
-|6     |          I_SLAVE_ATTACHMENT                       |slave_attachment                                               |   128|
+|1     |top                                                |                                                               |  1628|
+|2     |  axi_gpio_i                                       |axi_gpio                                                       |  1626|
+|3     |    axi_gpio_0                                     |axi_gpio_axi_gpio_0_0                                          |   188|
+|4     |      U0                                           |axi_gpio_v2_0_20_axi_gpio                                      |   188|
+|5     |        AXI_LITE_IPIF_I                            |axi_lite_ipif                                                  |   126|
+|6     |          I_SLAVE_ATTACHMENT                       |slave_attachment                                               |   126|
 |7     |            I_DECODER                              |address_decoder                                                |    72|
 |8     |        \INTR_CTRLR_GEN.INTERRUPT_CONTROL_I        |interrupt_control                                              |    13|
-|9     |        gpio_core_1                                |GPIO_Core                                                      |    18|
-|10    |          \Not_Dual.INPUT_DOUBLE_REGS3             |cdc_sync                                                       |     5|
+|9     |        gpio_core_1                                |GPIO_Core                                                      |    36|
+|10    |          \Not_Dual.INPUT_DOUBLE_REGS3             |cdc_sync                                                       |    10|
 |11    |    processing_system7_0                           |axi_gpio_processing_system7_0_0                                |   243|
 |12    |      inst                                         |processing_system7_v5_5_processing_system7                     |   243|
 |13    |    ps7_0_axi_periph                               |axi_gpio_ps7_0_axi_periph_0                                    |  1129|
@@ -2067,30 +2082,30 @@ Report Instance Areas:
 |45    |          SEQ_COUNTER                              |upcnt_n                                                        |    13|
 +------+---------------------------------------------------+---------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.770 ; gain = 618.875 ; free physical = 500 ; free virtual = 20263
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1975.766 ; gain = 634.875 ; free physical = 234 ; free virtual = 18952
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 156 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:16 . Memory (MB): peak = 1968.770 ; gain = 364.570 ; free physical = 558 ; free virtual = 20321
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:24 . Memory (MB): peak = 1968.777 ; gain = 618.875 ; free physical = 568 ; free virtual = 20331
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:31 . Memory (MB): peak = 1975.766 ; gain = 374.570 ; free physical = 292 ; free virtual = 19009
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:40 . Memory (MB): peak = 1975.773 ; gain = 634.875 ; free physical = 292 ; free virtual = 19009
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1968.777 ; gain = 0.000 ; free physical = 499 ; free virtual = 20264
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1975.773 ; gain = 0.000 ; free physical = 235 ; free virtual = 18953
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 14 instances were transformed.
-  FDR => FDRE: 12 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  A total of 19 instances were transformed.
+  FDR => FDRE: 16 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-291 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+297 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:26 . Memory (MB): peak = 1968.777 ; gain = 619.109 ; free physical = 717 ; free virtual = 20482
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1968.777 ; gain = 0.000 ; free physical = 717 ; free virtual = 20482
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:41 . Memory (MB): peak = 1975.773 ; gain = 635.109 ; free physical = 452 ; free virtual = 19170
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1975.773 ; gain = 0.000 ; free physical = 452 ; free virtual = 19170
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1/axi_gpio_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file axi_gpio_wrapper_utilization_synth.rpt -pb axi_gpio_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Feb 28 15:31:35 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 28 23:01:25 2021...

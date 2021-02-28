@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1614500996">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1614527968">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="axi_gpio_wrapper.drc"/>
   <File Type="BG-BGN" Name="axi_gpio_wrapper.bgn"/>
@@ -31,44 +31,44 @@
   <File Type="ROUTE-STATUS-PB" Name="axi_gpio_wrapper_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="axi_gpio_wrapper_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="axi_gpio_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="axi_gpio_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="axi_gpio_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="axi_gpio_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="axi_gpio_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="axi_gpio_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="axi_gpio_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="axi_gpio_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="axi_gpio_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="axi_gpio_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="axi_gpio_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="axi_gpio_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="axi_gpio_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="axi_gpio_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="axi_gpio_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="axi_gpio_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="axi_gpio_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="axi_gpio_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="axi_gpio_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="axi_gpio_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="axi_gpio_wrapper_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="axi_gpio_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-UTIL" Name="axi_gpio_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-CLK" Name="axi_gpio_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="axi_gpio_wrapper_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="axi_gpio_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="axi_gpio_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="axi_gpio_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="axi_gpio_wrapper_pwropt.dcp"/>
   <File Type="OPT-TIMING" Name="axi_gpio_wrapper_timing_summary_opted.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="axi_gpio_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="OPT-HWDEF" Name="axi_gpio_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="axi_gpio_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="axi_gpio_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="axi_gpio_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="axi_gpio_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="axi_gpio_wrapper_bus_skew_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="axi_gpio_wrapper_reports.tcl"/>
-  <File Type="PWROPT-DRC" Name="axi_gpio_wrapper_drc_pwropted.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="axi_gpio_wrapper_bus_skew_routed.pb"/>
   <File Type="PA-TCL" Name="axi_gpio_wrapper.tcl"/>
-  <File Type="INIT-TIMING" Name="axi_gpio_wrapper_timing_summary_init.rpt"/>
-  <File Type="PLACE-CTRL" Name="axi_gpio_wrapper_control_sets_placed.rpt"/>
-  <File Type="PWROPT-TIMING" Name="axi_gpio_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="axi_gpio_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="OPT-DCP" Name="axi_gpio_wrapper_opt.dcp"/>
-  <File Type="OPT-DRC" Name="axi_gpio_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="axi_gpio_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-TIMING" Name="axi_gpio_wrapper_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="axi_gpio_wrapper_drc_routed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="axi_gpio_wrapper_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="axi_gpio_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="axi_gpio_wrapper_drc_routed.pb"/>
-  <File Type="PHYSOPT-DCP" Name="axi_gpio_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="axi_gpio_wrapper_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="axi_gpio_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-PWR" Name="axi_gpio_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="axi_gpio_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="axi_gpio_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DCP" Name="axi_gpio_wrapper_routed.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="axi_gpio_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="axi_gpio_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC-RPX" Name="axi_gpio_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="axi_gpio_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="axi_gpio_wrapper_power_summary_routed.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/axi_gpio/axi_gpio.bd">
@@ -111,9 +111,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

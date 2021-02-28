@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Sun Feb 28 15:32:19 2021
+| Date                      : Sun Feb 28 23:02:16 2021
 | Host                      : Manjaro running 64-bit Manjaro Linux
 | Command                   : report_io -file axi_gpio_wrapper_io_placed.rpt
 | Design                    : axi_gpio_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           131 |
+|           132 |
 +---------------+
 
 
@@ -309,7 +309,7 @@ Table of Contents
 | P12        |                        |            | VCCINT                  | VCCINT      |                   |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P13        |                        |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | P14        |                        | High Range | IO_L6P_T0_34            | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| P15        |                        | High Range | IO_L24P_T3_34           | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| P15        | AXI_GPIO_KEY_tri_io[1] | High Range | IO_L24P_T3_34           | BIDIR       | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P16        | AXI_GPIO_KEY_tri_io[0] | High Range | IO_L24N_T3_34           | BIDIR       | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P17        |                        |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | P18        |                        | High Range | IO_L23N_T3_34           | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

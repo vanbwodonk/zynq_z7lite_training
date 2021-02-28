@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8B73084CBE7AB5",
+      "boundary_crc": "0xAC2CAE9A5E70A508",
       "device": "xc7z020clg400-2",
       "name": "axi_gpio",
       "synth_flow_mode": "None",
@@ -718,7 +718,7 @@
         "xci_name": "axi_gpio_axi_gpio_0_0",
         "parameters": {
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "2"
           },
           "C_INTERRUPT_PRESENT": {
             "value": "1"
@@ -851,16 +851,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -927,18 +927,6 @@
       }
     },
     "interface_nets": {
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "axi_gpio_0/S_AXI"
-        ]
-      },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "AXI_GPIO_KEY",
-          "axi_gpio_0/GPIO"
-        ]
-      },
       "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
@@ -951,10 +939,22 @@
           "processing_system7_0/DDR"
         ]
       },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "AXI_GPIO_KEY",
+          "axi_gpio_0/GPIO"
+        ]
+      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "axi_gpio_0/S_AXI"
         ]
       }
     },

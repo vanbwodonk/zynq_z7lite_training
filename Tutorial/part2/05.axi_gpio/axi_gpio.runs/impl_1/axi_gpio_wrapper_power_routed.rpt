@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Sun Feb 28 15:32:51 2021
+| Date             : Sun Feb 28 23:02:59 2021
 | Host             : Manjaro running 64-bit Manjaro Linux
 | Command          : report_power -file axi_gpio_wrapper_power_routed.rpt -pb axi_gpio_wrapper_power_summary_routed.pb -rpx axi_gpio_wrapper_power_routed.rpx
 | Design           : axi_gpio_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.418        |
+| Total On-Chip Power (W)  | 1.419        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.279        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |     1388 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      408 |     53200 |            0.77 |
-|   Register              |    <0.001 |      582 |    106400 |            0.55 |
+| Slice Logic             |    <0.001 |     1405 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      415 |     53200 |            0.78 |
+|   Register              |    <0.001 |      594 |    106400 |            0.56 |
 |   CARRY4                |    <0.001 |       18 |     13300 |            0.14 |
 |   LUT as Shift Register |    <0.001 |       60 |     17400 |            0.34 |
 |   Others                |     0.000 |      192 |       --- |             --- |
-| Signals                 |    <0.001 |      959 |       --- |             --- |
-| I/O                     |    <0.001 |        1 |       125 |            0.80 |
+| Signals                 |     0.002 |      971 |       --- |             --- |
+| I/O                     |    <0.001 |        2 |       125 |            1.60 |
 | PS7                     |     1.276 |        1 |       --- |             --- |
 | Static Power            |     0.139 |          |           |                 |
-| Total                   |     1.418 |          |           |                 |
+| Total                   |     1.419 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.003 |      0.013 |
+| Vccint    |       1.000 |     0.017 |       0.004 |      0.013 |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun Feb 28 15:32:52 2021
+| Date         : Sun Feb 28 23:02:59 2021
 | Host         : Manjaro running 64-bit Manjaro Linux
 | Command      : report_clock_utilization -file axi_gpio_wrapper_clock_utilization_routed.rpt
 | Design       : axi_gpio_wrapper
