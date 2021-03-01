@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../timer_interrupt.srcs/sources_1/bd/timer_interrupt/ipshared/ec67/hdl" --include "../../../../timer_interrupt.srcs/sources_1/bd/timer_interrupt/ipshared/70cf/hdl" --include "../../../../timer_interrupt.srcs/sources_1/bd/timer_interrupt/ip/timer_interrupt_processing_system7_0_0" \
+"../../../bd/timer_interrupt/ip/timer_interrupt_processing_system7_0_0/sim/timer_interrupt_processing_system7_0_0.v" \
+"../../../bd/timer_interrupt/sim/timer_interrupt.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
