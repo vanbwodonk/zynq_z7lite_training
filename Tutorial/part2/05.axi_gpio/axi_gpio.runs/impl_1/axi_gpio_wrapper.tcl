@@ -67,21 +67,21 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3132-Manjaro/incrSyn
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3228-tekPC/incrSyn
   create_project -in_memory -part xc7z020clg400-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/wt [current_project]
-  set_property parent.project_path /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.xpr [current_project]
-  set_property ip_output_repo /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/wt [current_project]
+  set_property parent.project_path /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.xpr [current_project]
+  set_property ip_output_repo /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1/axi_gpio_wrapper.dcp
+  add_files -quiet /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.runs/synth_1/axi_gpio_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/axi_gpio.bd
+  add_files /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/axi_gpio.bd
   set_param project.isImplRun false
-  read_xdc /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc
+  read_xdc /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc
   set_param project.isImplRun true
   link_design -top axi_gpio_wrapper -part xc7z020clg400-2
   set_param project.isImplRun false

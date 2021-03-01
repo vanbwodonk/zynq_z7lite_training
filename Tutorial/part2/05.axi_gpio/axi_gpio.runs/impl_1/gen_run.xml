@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1614527968">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1614568862">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="axi_gpio_wrapper.drc"/>
   <File Type="BG-BGN" Name="axi_gpio_wrapper.bgn"/>

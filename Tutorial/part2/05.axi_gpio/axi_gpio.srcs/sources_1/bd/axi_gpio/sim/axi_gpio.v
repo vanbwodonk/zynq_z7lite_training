@@ -1,19 +1,18 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Sun Feb 28 22:26:30 2021
-//Host        : Manjaro running 64-bit Manjaro Linux
+//Date        : Mon Mar  1 10:08:41 2021
+//Host        : tekPC running 64-bit Manjaro Linux
 //Command     : generate_target axi_gpio.bd
 //Design      : axi_gpio
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "axi_gpio,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=axi_gpio,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=1,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "axi_gpio.hwdef" *) 
+(* CORE_GENERATION_INFO = "axi_gpio,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=axi_gpio,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=2,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "axi_gpio.hwdef" *) 
 module axi_gpio
    (AXI_GPIO_KEY_tri_i,
-    AXI_GPIO_KEY_tri_o,
-    AXI_GPIO_KEY_tri_t,
+    AXI_GPIO_LED_tri_o,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -36,8 +35,7 @@ module axi_gpio
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb);
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 AXI_GPIO_KEY TRI_I" *) input [1:0]AXI_GPIO_KEY_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 AXI_GPIO_KEY TRI_O" *) output [1:0]AXI_GPIO_KEY_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 AXI_GPIO_KEY TRI_T" *) output [1:0]AXI_GPIO_KEY_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 AXI_GPIO_LED " *) output [1:0]AXI_GPIO_LED_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -60,9 +58,8 @@ module axi_gpio
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
 
+  wire [1:0]axi_gpio_0_GPIO2_TRI_O;
   wire [1:0]axi_gpio_0_GPIO_TRI_I;
-  wire [1:0]axi_gpio_0_GPIO_TRI_O;
-  wire [1:0]axi_gpio_0_GPIO_TRI_T;
   wire axi_gpio_0_ip2intc_irpt;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -144,13 +141,11 @@ module axi_gpio
   wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
 
-  assign AXI_GPIO_KEY_tri_o[1:0] = axi_gpio_0_GPIO_TRI_O;
-  assign AXI_GPIO_KEY_tri_t[1:0] = axi_gpio_0_GPIO_TRI_T;
+  assign AXI_GPIO_LED_tri_o[1:0] = axi_gpio_0_GPIO2_TRI_O;
   assign axi_gpio_0_GPIO_TRI_I = AXI_GPIO_KEY_tri_i[1:0];
   axi_gpio_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
-        .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
-        .gpio_io_t(axi_gpio_0_GPIO_TRI_T),
+       (.gpio2_io_o(axi_gpio_0_GPIO2_TRI_O),
+        .gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),

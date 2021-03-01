@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Sun Feb 28 22:26:30 2021
-//Host        : Manjaro running 64-bit Manjaro Linux
+//Date        : Mon Mar  1 10:08:41 2021
+//Host        : tekPC running 64-bit Manjaro Linux
 //Command     : generate_target axi_gpio_wrapper.bd
 //Design      : axi_gpio_wrapper
 //Purpose     : IP block netlist
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module axi_gpio_wrapper
-   (AXI_GPIO_KEY_tri_io,
+   (AXI_GPIO_KEY_tri_i,
+    AXI_GPIO_LED_tri_o,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -32,7 +33,8 @@ module axi_gpio_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb);
-  inout [1:0]AXI_GPIO_KEY_tri_io;
+  input [1:0]AXI_GPIO_KEY_tri_i;
+  output [1:0]AXI_GPIO_LED_tri_o;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,14 +57,8 @@ module axi_gpio_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
 
-  wire [0:0]AXI_GPIO_KEY_tri_i_0;
-  wire [1:1]AXI_GPIO_KEY_tri_i_1;
-  wire [0:0]AXI_GPIO_KEY_tri_io_0;
-  wire [1:1]AXI_GPIO_KEY_tri_io_1;
-  wire [0:0]AXI_GPIO_KEY_tri_o_0;
-  wire [1:1]AXI_GPIO_KEY_tri_o_1;
-  wire [0:0]AXI_GPIO_KEY_tri_t_0;
-  wire [1:1]AXI_GPIO_KEY_tri_t_1;
+  wire [1:0]AXI_GPIO_KEY_tri_i;
+  wire [1:0]AXI_GPIO_LED_tri_o;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -85,20 +81,9 @@ module axi_gpio_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
 
-  IOBUF AXI_GPIO_KEY_tri_iobuf_0
-       (.I(AXI_GPIO_KEY_tri_o_0),
-        .IO(AXI_GPIO_KEY_tri_io[0]),
-        .O(AXI_GPIO_KEY_tri_i_0),
-        .T(AXI_GPIO_KEY_tri_t_0));
-  IOBUF AXI_GPIO_KEY_tri_iobuf_1
-       (.I(AXI_GPIO_KEY_tri_o_1),
-        .IO(AXI_GPIO_KEY_tri_io[1]),
-        .O(AXI_GPIO_KEY_tri_i_1),
-        .T(AXI_GPIO_KEY_tri_t_1));
   axi_gpio axi_gpio_i
-       (.AXI_GPIO_KEY_tri_i({AXI_GPIO_KEY_tri_i_1,AXI_GPIO_KEY_tri_i_0}),
-        .AXI_GPIO_KEY_tri_o({AXI_GPIO_KEY_tri_o_1,AXI_GPIO_KEY_tri_o_0}),
-        .AXI_GPIO_KEY_tri_t({AXI_GPIO_KEY_tri_t_1,AXI_GPIO_KEY_tri_t_0}),
+       (.AXI_GPIO_KEY_tri_i(AXI_GPIO_KEY_tri_i),
+        .AXI_GPIO_LED_tri_o(AXI_GPIO_LED_tri_o),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),

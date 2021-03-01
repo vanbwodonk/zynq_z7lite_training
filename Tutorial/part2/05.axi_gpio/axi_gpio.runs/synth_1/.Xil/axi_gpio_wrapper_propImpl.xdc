@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/axi_gpio_processing_system7_0_0.xdc rfile:../../../axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/axi_gpio_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:axi_gpio_i/processing_system7_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc rfile:../../../axi_gpio.srcs/constrs_1/new/axi_gpio.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/axi_gpio_processing_system7_0_0.xdc rfile:../../../axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/axi_gpio_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:axi_gpio_i/processing_system7_0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc rfile:../../../axi_gpio.srcs/constrs_1/new/axi_gpio.xdc id:2} [current_design]
 current_instance axi_gpio_i/processing_system7_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.6
@@ -264,7 +264,11 @@ set_property PACKAGE_PIN "B10" [get_ports "PS_SRSTB"]
 set_property src_info {type:SCOPED_XDC file:1 line:721 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "E7" [get_ports "PS_CLK"]
 current_instance
-set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN P16 [get_ports {AXI_GPIO_KEY_tri_io[0]}]
-set_property src_info {type:XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN P15 [get_ports {AXI_GPIO_KEY_tri_io[1]}]
+set_property src_info {type:XDC file:2 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P16 [get_ports {AXI_GPIO_KEY_tri_i[0]}]
+set_property src_info {type:XDC file:2 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P15 [get_ports {AXI_GPIO_LED_tri_o[0]}]
+set_property src_info {type:XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T12 [get_ports {AXI_GPIO_KEY_tri_i[1]}]
+set_property src_info {type:XDC file:2 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U12 [get_ports {AXI_GPIO_LED_tri_o[1]}]

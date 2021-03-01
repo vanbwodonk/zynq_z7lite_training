@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAC2CAE9A5E70A508",
+      "boundary_crc": "0x4B5390DBC937AECB",
       "device": "xc7z020clg400-2",
       "name": "axi_gpio",
       "synth_flow_mode": "None",
@@ -84,6 +84,10 @@
         }
       },
       "AXI_GPIO_KEY": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+      },
+      "AXI_GPIO_LED": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
@@ -717,10 +721,28 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "axi_gpio_axi_gpio_0_0",
         "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "1"
+          },
+          "C_ALL_INPUTS_2": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS_2": {
+            "value": "1"
+          },
+          "C_DOUT_DEFAULT_2": {
+            "value": "0xFFFFFFFF"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "2"
+          },
           "C_GPIO_WIDTH": {
             "value": "2"
           },
           "C_INTERRUPT_PRESENT": {
+            "value": "1"
+          },
+          "C_IS_DUAL": {
             "value": "1"
           }
         }
@@ -851,16 +873,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -939,6 +961,12 @@
           "processing_system7_0/DDR"
         ]
       },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "axi_gpio_0/S_AXI"
+        ]
+      },
       "axi_gpio_0_GPIO": {
         "interface_ports": [
           "AXI_GPIO_KEY",
@@ -951,10 +979,10 @@
           "processing_system7_0/FIXED_IO"
         ]
       },
-      "ps7_0_axi_periph_M00_AXI": {
+      "axi_gpio_0_GPIO2": {
         "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "axi_gpio_0/S_AXI"
+          "AXI_GPIO_LED",
+          "axi_gpio_0/GPIO2"
         ]
       }
     },

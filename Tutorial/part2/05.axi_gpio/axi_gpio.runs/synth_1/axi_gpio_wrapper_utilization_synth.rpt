@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun Feb 28 23:01:25 2021
-| Host         : Manjaro running 64-bit Manjaro Linux
+| Date         : Mon Mar  1 10:22:24 2021
+| Host         : tekPC running 64-bit Manjaro Linux
 | Command      : report_utilization -file axi_gpio_wrapper_utilization_synth.rpt -pb axi_gpio_wrapper_utilization_synth.pb
 | Design       : axi_gpio_wrapper
 | Device       : 7z020clg400-2
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  621 |     0 |     53200 |  1.17 |
-|   LUT as Logic             |  555 |     0 |     53200 |  1.04 |
+| Slice LUTs*                |  629 |     0 |     53200 |  1.18 |
+|   LUT as Logic             |  563 |     0 |     53200 |  1.06 |
 |   LUT as Memory            |   66 |     0 |     17400 |  0.38 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   66 |     0 |           |       |
-| Slice Registers            |  697 |     0 |    106400 |  0.66 |
-|   Register as Flip Flop    |  697 |     0 |    106400 |  0.66 |
+| Slice Registers            |  718 |     0 |    106400 |  0.67 |
+|   Register as Flip Flop    |  718 |     0 |    106400 |  0.67 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 24    |          Yes |         Set |            - |
-| 673   |          Yes |       Reset |            - |
+| 30    |          Yes |         Set |            - |
+| 688   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |    2 |     0 |       125 |   1.60 |
+| Bonded IOB                  |    4 |     0 |       125 |   3.20 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |
@@ -148,19 +148,19 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     |  673 |         Flop & Latch |
-| LUT3     |  258 |                  LUT |
-| LUT6     |  147 |                  LUT |
+| FDRE     |  688 |         Flop & Latch |
+| LUT3     |  261 |                  LUT |
+| LUT6     |  144 |                  LUT |
 | BIBUF    |  130 |                   IO |
 | LUT1     |  126 |                  LUT |
-| LUT5     |   84 |                  LUT |
-| LUT4     |   62 |                  LUT |
+| LUT5     |   85 |                  LUT |
+| LUT4     |   70 |                  LUT |
 | SRLC32E  |   47 |   Distributed Memory |
-| LUT2     |   37 |                  LUT |
-| FDSE     |   24 |         Flop & Latch |
+| LUT2     |   38 |                  LUT |
+| FDSE     |   30 |         Flop & Latch |
 | SRL16E   |   19 |   Distributed Memory |
 | CARRY4   |   18 |           CarryLogic |
-| OBUFT    |    2 |                   IO |
+| OBUF     |    2 |                   IO |
 | IBUF     |    2 |                   IO |
 | PS7      |    1 | Specialized Resource |
 +----------+------+----------------------+

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3132-Manjaro/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3228-tekPC/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-2
@@ -26,23 +26,23 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/wt [current_project]
-set_property parent.project_path /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.xpr [current_project]
+set_property webtalk.parent_dir /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/wt [current_project]
+set_property parent.project_path /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/ip [current_project]
+set_property ip_output_repo /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/hdl/axi_gpio_wrapper.v
-add_files /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/axi_gpio.bd
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/axi_gpio_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/axi_gpio_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/axi_gpio_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/axi_gpio_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_auto_pc_0/axi_gpio_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/axi_gpio_ooc.xdc]
+read_verilog -library xil_defaultlib /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/hdl/axi_gpio_wrapper.v
+add_files /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/axi_gpio.bd
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_processing_system7_0_0/axi_gpio_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/axi_gpio_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/axi_gpio_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_axi_gpio_0_0/axi_gpio_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_rst_ps7_0_50M_0/axi_gpio_rst_ps7_0_50M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/ip/axi_gpio_auto_pc_0/axi_gpio_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/sources_1/bd/axi_gpio/axi_gpio_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,8 +52,8 @@ set_property used_in_implementation false [get_files -all /home/drw/Documents/1.
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc
-set_property used_in_implementation false [get_files /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc]
+read_xdc /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc
+set_property used_in_implementation false [get_files /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/05.axi_gpio/axi_gpio.srcs/constrs_1/new/axi_gpio.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
