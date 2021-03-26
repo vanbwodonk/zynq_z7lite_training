@@ -1,0 +1,106 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Fri Mar 26 12:10:30 2021
+| Host         : tekPC running 64-bit Manjaro Linux
+| Command      : report_methodology -file ps_lwip_wrapper_methodology_drc_routed.rpt -pb ps_lwip_wrapper_methodology_drc_routed.pb -rpx ps_lwip_wrapper_methodology_drc_routed.rpx
+| Design       : ps_lwip_wrapper
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 14
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 2          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 12         |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net ENET0_GMII_RX_CLK_0_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): ps_lwip_i/ENET0_GMII_RX_CLK_0, ENET0_GMII_RX_CLK_0_IBUF_inst/O
+Related violations: <none>
+
+CKLD-2#2 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net ENET0_GMII_TX_CLK_0_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): ps_lwip_i/ENET0_GMII_TX_CLK_0, ENET0_GMII_TX_CLK_0_IBUF_inst/O
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_RXD_i_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_RXD_i_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_RXD_i_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_RXD_i_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_RX_DV_i_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_TXD_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_TXD_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_TXD_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_TXD_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/ENET0_GMII_TX_EN_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/PS7_i/EMIOENET0GMIIRXCLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin ps_lwip_i/processing_system7_0/inst/PS7_i/EMIOENET0GMIITXCLK is not reached by a timing clock
+Related violations: <none>
+
+

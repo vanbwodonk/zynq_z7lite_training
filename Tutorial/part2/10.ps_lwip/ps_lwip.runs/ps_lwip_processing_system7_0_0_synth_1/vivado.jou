@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar 26 12:08:39 2021
+# Process ID: 7184
+# Current directory: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/10.ps_lwip/ps_lwip.runs/ps_lwip_processing_system7_0_0_synth_1
+# Command line: vivado -log ps_lwip_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ps_lwip_processing_system7_0_0.tcl
+# Log file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/10.ps_lwip/ps_lwip.runs/ps_lwip_processing_system7_0_0_synth_1/ps_lwip_processing_system7_0_0.vds
+# Journal file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/10.ps_lwip/ps_lwip.runs/ps_lwip_processing_system7_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source ps_lwip_processing_system7_0_0.tcl -notrace
