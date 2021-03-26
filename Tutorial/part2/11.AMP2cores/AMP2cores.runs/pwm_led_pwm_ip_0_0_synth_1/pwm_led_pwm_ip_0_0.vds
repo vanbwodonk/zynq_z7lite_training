@@ -1,0 +1,347 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar 26 15:05:02 2021
+# Process ID: 39708
+# Current directory: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.runs/pwm_led_pwm_ip_0_0_synth_1
+# Command line: vivado -log pwm_led_pwm_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pwm_led_pwm_ip_0_0.tcl
+# Log file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.runs/pwm_led_pwm_ip_0_0_synth_1/pwm_led_pwm_ip_0_0.vds
+# Journal file: /home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.runs/pwm_led_pwm_ip_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source pwm_led_pwm_ip_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/07.custom_ip/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top pwm_led_pwm_ip_0_0 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 39807 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1345.941 ; gain = 23.734 ; free physical = 1213 ; free virtual = 7798
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pwm_led_pwm_ip_0_0' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ip/pwm_led_pwm_ip_0_0/synth/pwm_led_pwm_ip_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'pwm_ip_v1_0' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pwm_ip_v1_0_S00_AXI' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip_v1_0_S00_AXI.v:231]
+INFO: [Synth 8-226] default block is never used [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip_v1_0_S00_AXI.v:372]
+INFO: [Synth 8-6157] synthesizing module 'pwm_ip' [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_ip' (1#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_ip_v1_0_S00_AXI' (2#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_ip_v1_0' (3#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ipshared/816c/hdl/pwm_ip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_led_pwm_ip_0_0' (4#1) [/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.srcs/sources_1/bd/pwm_led/ip/pwm_led_pwm_ip_0_0/synth/pwm_led_pwm_ip_0_0.v:56]
+WARNING: [Synth 8-3331] design pwm_ip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design pwm_ip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design pwm_ip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design pwm_ip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design pwm_ip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design pwm_ip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1391.691 ; gain = 69.484 ; free physical = 1142 ; free virtual = 7725
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1391.691 ; gain = 69.484 ; free physical = 1192 ; free virtual = 7776
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1391.691 ; gain = 69.484 ; free physical = 1192 ; free virtual = 7776
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1721.051 ; gain = 0.000 ; free physical = 552 ; free virtual = 7136
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1721.051 ; gain = 0.000 ; free physical = 551 ; free virtual = 7135
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1723.051 ; gain = 2.000 ; free physical = 542 ; free virtual = 7126
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 627 ; free virtual = 7215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 627 ; free virtual = 7215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 629 ; free virtual = 7217
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "duty_cycle" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inc_flag" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 629 ; free virtual = 7217
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pwm_ip 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module pwm_ip_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design pwm_led_pwm_ip_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design pwm_led_pwm_ip_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design pwm_led_pwm_ip_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design pwm_led_pwm_ip_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design pwm_led_pwm_ip_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design pwm_led_pwm_ip_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'inst/pwm_ip_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/pwm_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/pwm_ip_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/pwm_ip_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/pwm_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/pwm_ip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 599 ; free virtual = 7192
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 245 ; free virtual = 6840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 241 ; free virtual = 6836
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 225 ; free virtual = 6820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    14|
+|2     |LUT1   |     7|
+|3     |LUT2   |    38|
+|4     |LUT3   |     3|
+|5     |LUT4   |    51|
+|6     |LUT5   |    12|
+|7     |LUT6   |    42|
+|8     |FDRE   |   202|
+|9     |FDSE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------------+--------------------+------+
+|      |Instance                     |Module              |Cells |
++------+-----------------------------+--------------------+------+
+|1     |top                          |                    |   370|
+|2     |  inst                       |pwm_ip_v1_0         |   370|
+|3     |    pwm_ip_v1_0_S00_AXI_inst |pwm_ip_v1_0_S00_AXI |   370|
+|4     |      u_pwm_ip               |pwm_ip              |   140|
++------+-----------------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.051 ; gain = 400.844 ; free physical = 213 ; free virtual = 6805
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1723.051 ; gain = 69.484 ; free physical = 252 ; free virtual = 6843
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1723.059 ; gain = 400.844 ; free physical = 252 ; free virtual = 6844
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1728.051 ; gain = 0.000 ; free physical = 175 ; free virtual = 6626
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1728.051 ; gain = 406.109 ; free physical = 229 ; free virtual = 6681
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1728.051 ; gain = 0.000 ; free physical = 229 ; free virtual = 6680
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.runs/pwm_led_pwm_ip_0_0_synth_1/pwm_led_pwm_ip_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pwm_led_pwm_ip_0_0, cache-ID = 5de844735ff4a3d0
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1752.062 ; gain = 0.000 ; free physical = 300 ; free virtual = 6754
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/arif/Documents/1.GitSVN/8.GitHub/zynq_z7lite_training/Tutorial/part2/11.AMP2cores/AMP2cores.runs/pwm_led_pwm_ip_0_0_synth_1/pwm_led_pwm_ip_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pwm_led_pwm_ip_0_0_utilization_synth.rpt -pb pwm_led_pwm_ip_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 26 15:05:35 2021...
