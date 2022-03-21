@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Mon Mar 21 14:10:08 2022
+# Process ID: 70715
+# Current directory: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/12.QSPI_Flash_ReadWrite/12.QSPI_Flash_ReadWrite.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/12.QSPI_Flash_ReadWrite/12.QSPI_Flash_ReadWrite.sdk/webtalk/webtalk.log
+# Journal file: /home/drw/Documents/1.GitSVN/4.GitHub/zynq_z7lite_training/Tutorial/part2/12.QSPI_Flash_ReadWrite/12.QSPI_Flash_ReadWrite.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
